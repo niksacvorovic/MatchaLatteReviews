@@ -1,7 +1,7 @@
 ﻿namespace MatchaLatteReviews.Domen.Enumeracije
 {
-    public enum Status
+    public enum Period
     {
-        ZaPregled, Odobren, Odbijen
+        Godisnja, Mesecna
     }
 }
