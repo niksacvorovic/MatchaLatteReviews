@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace MatchaLatteReviews.Domen.Modeli
 {
+    [JsonDerivedType(typeof(Korisnik), 0)]
+    [JsonDerivedType(typeof(RegistrovaniKorisnik), 1)]
+    [JsonDerivedType(typeof(Urednik), 2)]
     public class Korisnik
     {
         private int korisnikId;

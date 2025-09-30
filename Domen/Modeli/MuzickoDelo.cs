@@ -21,8 +21,8 @@ namespace MatchaLatteReviews.Domen.Modeli
         public List<Izdanje> Izdanja { get => izdanja; set => izdanja = value; }
 
         [JsonConstructor]
-        public MuzickoDelo(string naslov, int id, int ocena, string sadrzaj, DateTime datum, Status odobren, int pregledi, int autorId, int recenzijeIds,
-            int zanroviIds, Tip tipDela, string naziv, int trajanje, List<Izdanje> izdanja) : base(naslov, id, ocena, sadrzaj, datum, odobren, pregledi, autorId, recenzijeIds, zanroviIds)
+        public MuzickoDelo(string naslov, int id, int ocena, string sadrzaj, DateTime datum, Status odobren, int pregledi, int autorId, List<int> recenzijeIds,
+            List<int> zanroviIds, Tip tipDela, string naziv, int trajanje, List<Izdanje> izdanja) : base(naslov, id, ocena, sadrzaj, datum, odobren, pregledi, autorId, recenzijeIds, zanroviIds)
         {
             TipDela = tipDela;
             Naziv = naziv;

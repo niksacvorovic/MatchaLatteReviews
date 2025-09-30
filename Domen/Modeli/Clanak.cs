@@ -5,6 +5,8 @@ using System.Text.Json.Serialization;
 
 namespace MatchaLatteReviews.Domen.Modeli
 {
+    [JsonDerivedType(typeof(MuzickoDelo), 0)]
+    [JsonDerivedType(typeof(Izvodjac), 1)]
     public class Clanak
     {
         private string naslov;
@@ -15,8 +17,8 @@ namespace MatchaLatteReviews.Domen.Modeli
         private Status odobren;
         private int pregledi;
         private int autorId;
-        private int recenzijeIds;
-        private int zanroviIds;
+        private List<int> recenzijeIds;
+        private List<int> zanroviIds;
         private Urednik autor;
         private List<Recenzija> recenzije;
         private List<Zanr> zanrovi;
@@ -30,8 +32,8 @@ namespace MatchaLatteReviews.Domen.Modeli
         public Status Odobren { get => odobren; set => odobren = value; }
         public int Pregledi { get => pregledi; set => pregledi = value; }
         public int AutorId { get => autorId; set => autorId = value; }
-        public int RecenzijeIds { get => recenzijeIds; set => recenzijeIds = value; }
-        public int ZanroviIds { get => zanroviIds; set => zanroviIds = value; }
+        public List<int> RecenzijeIds { get => recenzijeIds; set => recenzijeIds = value; }
+        public List<int> ZanroviIds { get => zanroviIds; set => zanroviIds = value; }
 
         [JsonIgnore]
         public Urednik Autor { get => autor; set => autor = value; }
@@ -41,7 +43,7 @@ namespace MatchaLatteReviews.Domen.Modeli
         public List<Zanr> Zanrovi { get => zanrovi; set => zanrovi = value; }
 
         [JsonConstructor]
-        public Clanak(string naslov, int id, int ocena, string sadrzaj, DateTime datum, Status odobren, int pregledi, int autorId, int recenzijeIds, int zanroviIds)
+        public Clanak(string naslov, int id, int ocena, string sadrzaj, DateTime datum, Status odobren, int pregledi, int autorId, List<int> recenzijeIds, List<int> zanroviIds)
         {
             Naslov = naslov;
             Id = id;
