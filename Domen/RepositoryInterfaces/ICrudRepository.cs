@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MatchaLatteReviews.Domen.InterfejsiRepozitorijuma
+namespace MatchaLatteReviews.Domen.RepositoryInterfaces
 {
     public interface ICrudRepository<T> where T : class
     {

@@ -88,6 +88,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Application\Constants\Constants.cs" />
+    <Compile Include="Repositories\JsonPersistenceContext.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +103,8 @@
     <Compile Include="Domen\Enumeracije\Status.cs" />
     <Compile Include="Domen\Enumeracije\Tip.cs" />
     <Compile Include="Domen\Enumeracije\Uloga.cs" />
+    <Compile Include="Domen\RepositoryInterfaces\ICrudRepository.cs" />
+    <Compile Include="Domen\RepositoryInterfaces\IPersistenceContext.cs" />
     <Compile Include="Domen\Modeli\Anketa.cs" />
     <Compile Include="Domen\Modeli\Clanak.cs" />
     <Compile Include="Domen\Modeli\Drzava.cs" />
