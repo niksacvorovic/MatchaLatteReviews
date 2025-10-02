@@ -6,9 +6,9 @@ namespace MatchaLatteReviews.Domen.RepositoryInterfaces
     {
         IEnumerable<T> GetAll();
         T Add(T entity);
-        T GetById(string id);
+        T GetById(int id);
         T Update(T entity);
-        void DeleteById(string id);
+        void DeleteById(int id);
         void SaveAll(IEnumerable<T> entities);
     }
 }
