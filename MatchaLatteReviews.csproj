@@ -92,6 +92,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Application\Constants\Constants.cs" />
+    <Compile Include="DependencyInjection\Injector.cs" />
     <Compile Include="Domen\RepositoryInterfaces\IUserRepository.cs" />
     <Compile Include="Repositories\JsonPersistenceContext.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
