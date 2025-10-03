@@ -38,6 +38,9 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.9, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.9\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -88,6 +91,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Application\Constants\Constants.cs" />
+    <Compile Include="DependencyInjection\Injector.cs" />
+    <Compile Include="Domen\RepositoryInterfaces\IUserRepository.cs" />
+    <Compile Include="Repositories\JsonPersistenceContext.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +109,8 @@
     <Compile Include="Domen\Enumeracije\Status.cs" />
     <Compile Include="Domen\Enumeracije\Tip.cs" />
     <Compile Include="Domen\Enumeracije\Uloga.cs" />
+    <Compile Include="Domen\RepositoryInterfaces\ICrudRepository.cs" />
+    <Compile Include="Domen\RepositoryInterfaces\IPersistenceContext.cs" />
     <Compile Include="Domen\Modeli\Anketa.cs" />
     <Compile Include="Domen\Modeli\Clanak.cs" />
     <Compile Include="Domen\Modeli\Drzava.cs" />
@@ -150,6 +160,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
