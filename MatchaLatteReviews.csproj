@@ -94,9 +94,11 @@
     <Compile Include="Application\Constants\Constants.cs" />
     <Compile Include="DependencyInjection\Injector.cs" />
     <Compile Include="Domen\RepositoryInterfaces\IArticleRepository.cs" />
+    <Compile Include="Domen\RepositoryInterfaces\IReviewRepository.cs" />
     <Compile Include="Domen\RepositoryInterfaces\IUserRepository.cs" />
     <Compile Include="Repositories\ArticleRepository.cs" />
     <Compile Include="Repositories\JsonPersistenceContext.cs" />
+    <Compile Include="Repositories\ReviewRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -164,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
