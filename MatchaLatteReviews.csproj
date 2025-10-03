@@ -93,7 +93,9 @@
     </ApplicationDefinition>
     <Compile Include="Application\Constants\Constants.cs" />
     <Compile Include="DependencyInjection\Injector.cs" />
+    <Compile Include="Domen\RepositoryInterfaces\IArticleRepository.cs" />
     <Compile Include="Domen\RepositoryInterfaces\IUserRepository.cs" />
+    <Compile Include="Repositories\ArticleRepository.cs" />
     <Compile Include="Repositories\JsonPersistenceContext.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Page Include="MainWindow.xaml">
