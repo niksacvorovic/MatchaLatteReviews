@@ -92,6 +92,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Application\Constants\Constants.cs" />
+    <Compile Include="Application\Services\UserService.cs" />
+    <Compile Include="Application\Utilities\MessageHelper.cs" />
     <Compile Include="DependencyInjection\Injector.cs" />
     <Compile Include="Domen\RepositoryInterfaces\IArticleRepository.cs" />
     <Compile Include="Domen\RepositoryInterfaces\IReviewRepository.cs" />
@@ -100,10 +102,6 @@
     <Compile Include="Repositories\JsonPersistenceContext.cs" />
     <Compile Include="Repositories\ReviewRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -132,9 +130,14 @@
     <Compile Include="Domen\Modeli\Ucesce.cs" />
     <Compile Include="Domen\Modeli\Urednik.cs" />
     <Compile Include="Domen\Modeli\Zanr.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="Stores\UserStore.cs" />
+    <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
+    <Compile Include="WPF\ViewModel\RelayCommand.cs" />
+    <Compile Include="WPF\View\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -166,7 +169,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="WPF\View\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

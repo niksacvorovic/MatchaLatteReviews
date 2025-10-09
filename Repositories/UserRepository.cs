@@ -55,6 +55,11 @@ namespace MatchaLatteReviews.Repositories
             return users;
         }
 
+        public Korisnik GetByUsername(string username)
+        {
+           return GetAll().FirstOrDefault(u => u.KorisnickoIme.Equals(username, StringComparison.OrdinalIgnoreCase));
+        }
+        
         public Korisnik GetById(int id)
         {
             return GetAll().FirstOrDefault(u => u.KorisnikId == id);
