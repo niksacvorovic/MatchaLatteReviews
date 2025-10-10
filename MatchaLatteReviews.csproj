@@ -92,19 +92,24 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Application\Constants\Constants.cs" />
+    <Compile Include="Application\Services\EditorService.cs" />
     <Compile Include="Application\Services\RegisteredUserService.cs" />
     <Compile Include="Application\Services\UserService.cs" />
     <Compile Include="Application\Utilities\MessageHelper.cs" />
+    <Compile Include="Application\Utilities\UserValidator.cs" />
     <Compile Include="DependencyInjection\Injector.cs" />
     <Compile Include="Domain\Enums\Role.cs" />
     <Compile Include="Domain\Model\Article.cs" />
     <Compile Include="Domain\Model\Editor.cs" />
+    <Compile Include="Domain\Model\Genre.cs" />
     <Compile Include="Domain\Model\RegisteredUser.cs" />
     <Compile Include="Domain\Model\Review.cs" />
     <Compile Include="Domain\Model\User.cs" />
+    <Compile Include="Domain\RepositoryInterfaces\IGenreRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IPersistenceContext.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IUserRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\RepositoryInterfaces.cs" />
+    <Compile Include="Repositories\GenreRepository.cs" />
     <Compile Include="Repositories\JsonPersistenceContext.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="App.xaml.cs">
@@ -112,6 +117,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Stores\UserStore.cs" />
+    <Compile Include="WPF\ViewModel\EditorRegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\RelayCommand.cs" />
@@ -120,6 +126,9 @@
     </Compile>
     <Compile Include="WPF\View\EditorPanel.xaml.cs">
       <DependentUpon>EditorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\EditorRegisterPage.xaml.cs">
+      <DependentUpon>EditorRegisterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -173,6 +182,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\EditorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\EditorRegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

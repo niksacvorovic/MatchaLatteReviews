@@ -23,5 +23,18 @@ namespace MatchaLatteReviews.WPF.View
         {
             InitializeComponent();
         }
+
+        private void RegisterEditor_Click(object sender, RoutedEventArgs e)
+        {
+            EditorRegisterPage editorRegisterPage = new EditorRegisterPage();
+            editorRegisterPage.Show();
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+        }
     }
 }
