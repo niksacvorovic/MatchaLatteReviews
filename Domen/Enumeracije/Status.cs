@@ -1,7 +1,0 @@
-﻿namespace MatchaLatteReviews.Domen.Enumeracije
-{
-    public enum Status
-    {
-        ZaPregled, Odobren, Odbijen
-    }
-}

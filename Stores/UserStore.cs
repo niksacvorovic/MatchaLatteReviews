@@ -1,12 +1,12 @@
-﻿using MatchaLatteReviews.Domen.Modeli;
+﻿using MatchaLatteReviews.Domain.Model;
 
 namespace MatchaLatteReviews.Stores
 
 {
     public class UserStore
     {
-        public Korisnik CurrentUser { get; private set; }
-        public void SetCurrentUser(Korisnik user)
+        public User CurrentUser { get; private set; }
+        public void SetCurrentUser(User user)
         {
             CurrentUser = user;
         }

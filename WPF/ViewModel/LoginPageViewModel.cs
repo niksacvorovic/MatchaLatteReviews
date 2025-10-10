@@ -1,15 +1,16 @@
 ﻿using MatchaLatteReviews.Application.Services;
 using MatchaLatteReviews.Application.Utilities;
 using MatchaLatteReviews.DependencyInjection;
-using MatchaLatteReviews.Domen.Enumeracije;
+using MatchaLatteReviews.Domain.Enums;
 using MatchaLatteReviews.Stores;
+using MatchaLatteReviews.WPF.View;
 using System;
 using System.ComponentModel;
 using System.Windows.Input;
 
 namespace MatchaLatteReviews.WPF.ViewModel
 {
-    internal class LoginPageViewModel : INotifyPropertyChanged
+    public class LoginPageViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -43,13 +44,13 @@ namespace MatchaLatteReviews.WPF.ViewModel
                     MessageHelper.ShowError("User with this username does not exist.");
                     return;
                 }
-                if (user.Lozinka != Password)
+                if (user.Password != Password)
                 {
                     MessageHelper.ShowError("Incorrect password.");
                     return;
                 }
                 _userStore.SetCurrentUser(user);
-                RedirectBasedOnRole(user.Uloga);
+                RedirectBasedOnRole(user.Role);
                 _closeWindow();
             }
             catch (Exception exception)
@@ -57,17 +58,17 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 MessageHelper.ShowError($"Login failed: {exception.Message}");
             }
         }
-        private void RedirectBasedOnRole(Uloga role)
+        private void RedirectBasedOnRole(Role role)
         {
             switch (role)
             {
-                case Uloga.RegistrovaniKorisnik:
+                case Role.RegisteredUser:
                     OpenRegisteredUserPanel();
                     break;
-                case Uloga.Urednik:
+                case Role.Editor:
                     OpenEditorPanel();
                     break;
-                case Uloga.Administrator:
+                case Role.Administrator:
                     OpenAdministratorPanel();
                     break;
                 default:
@@ -77,15 +78,21 @@ namespace MatchaLatteReviews.WPF.ViewModel
         }
         private void OpenAdministratorPanel()
         {
-            throw new NotImplementedException();
+            var adminPanel = new AdministratorPanel();
+            adminPanel.Show();
+            _closeWindow();
         }
         private void OpenEditorPanel()
         {
-            throw new NotImplementedException();
+            var editorPanel = new EditorPanel();
+            editorPanel.Show();
+            _closeWindow();
         }
         private void OpenRegisteredUserPanel()
         {
-            throw new NotImplementedException();
+            var userPanel = new RegisteredUserPanel();
+            userPanel.Show();
+            _closeWindow();
         }
     }
 }

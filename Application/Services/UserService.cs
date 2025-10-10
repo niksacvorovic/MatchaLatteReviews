@@ -1,5 +1,5 @@
-﻿using MatchaLatteReviews.Domen.Modeli;
-using MatchaLatteReviews.Domen.RepositoryInterfaces;
+﻿using MatchaLatteReviews.Domain.Model;
+using MatchaLatteReviews.Domain.RepositoryInterfaces;
 using System;
 
 namespace MatchaLatteReviews.Application.Services
@@ -13,7 +13,7 @@ namespace MatchaLatteReviews.Application.Services
             _userRepository = userRepository;
         }
 
-        internal Korisnik GetByUsername(string username)
+        public User GetByUsername(string username)
         {
             return _userRepository.GetByUsername(username);
         }

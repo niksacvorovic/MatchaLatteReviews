@@ -1,32 +1,12 @@
 [
   {
     "$id": "1",
-    "KorisnikId": 1,
-    "KorisnickoIme": "dea",
-    "Lozinka": "123",
-    "Ime": "Dea",
-    "Prezime": "Sevic",
-    "Javni": true,
-    "Uloga": 1
-  },
-  {
-    "$id": "2",
-    "KorisnikId": 23,
-    "KorisnickoIme": "deaS",
-    "Lozinka": "123",
-    "Ime": "Dea",
-    "Prezime": "Sevic",
-    "Javni": true,
-    "Uloga": 1
-  },
-  {
-    "$id": "3",
-    "KorisnikId": 234,
-    "KorisnickoIme": "deaSe",
-    "Lozinka": "123",
-    "Ime": "Dea",
-    "Prezime": "Sevic",
-    "Javni": true,
-    "Uloga": 1
+    "UserId": "41fc6bad-8183-49a9-be2a-548f8502cd5e",
+    "Username": "admin",
+    "Password": "admin",
+    "FirstName": "",
+    "LastName": "",
+    "IsPublic": false,
+    "Role": 2
   }
 ]

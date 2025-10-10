@@ -5,19 +5,18 @@ using System.Windows.Controls;
 namespace MatchaLatteReviews.WPF.View
 {
     /// <summary>
-    /// Interaction logic for LoginPage.xaml
+    /// Interaction logic for RegisterPage.xaml
     /// </summary>
-    public partial class LoginPage : Window
+    public partial class RegisterPage : Window
     {
-        public LoginPage()
+        public RegisterPage()
         {
             InitializeComponent();
-            DataContext = new LoginPageViewModel(this.Close);
+            this.DataContext = new RegisterViewModel(this.Close);
         }
-
         private void OnPasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (DataContext is LoginPageViewModel vm) 
+            if (DataContext is RegisterViewModel vm)
             {
                 vm.Password = ((PasswordBox)sender).Password;
             }
@@ -25,8 +24,8 @@ namespace MatchaLatteReviews.WPF.View
 
         private void OnHyperlinkClicked(object sender, RoutedEventArgs e)
         {
-            RegisterPage register = new RegisterPage();
-            register.Show();
+            LoginPage login = new LoginPage();
+            login.Show();
             this.Close();
         }
 

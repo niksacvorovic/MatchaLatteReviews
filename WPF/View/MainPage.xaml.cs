@@ -1,4 +1,6 @@
 ﻿using MatchaLatteReviews.Application.Constants;
+using MatchaLatteReviews.DependencyInjection;
+using MatchaLatteReviews.Domain.RepositoryInterfaces;
 using System;
 using System.IO;
 using System.Windows;
@@ -19,6 +21,13 @@ namespace MatchaLatteReviews.WPF.View
         {
             LoginPage loginPage = new LoginPage();
             loginPage.Show();
+            this.Close();
+        }
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterPage registerPage = new RegisterPage();
+            registerPage.Show();
             this.Close();
         }
     }

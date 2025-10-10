@@ -92,52 +92,46 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Application\Constants\Constants.cs" />
+    <Compile Include="Application\Services\RegisteredUserService.cs" />
     <Compile Include="Application\Services\UserService.cs" />
     <Compile Include="Application\Utilities\MessageHelper.cs" />
     <Compile Include="DependencyInjection\Injector.cs" />
-    <Compile Include="Domen\RepositoryInterfaces\IArticleRepository.cs" />
-    <Compile Include="Domen\RepositoryInterfaces\IReviewRepository.cs" />
-    <Compile Include="Domen\RepositoryInterfaces\IUserRepository.cs" />
-    <Compile Include="Repositories\ArticleRepository.cs" />
+    <Compile Include="Domain\Enums\Role.cs" />
+    <Compile Include="Domain\Model\Article.cs" />
+    <Compile Include="Domain\Model\Editor.cs" />
+    <Compile Include="Domain\Model\RegisteredUser.cs" />
+    <Compile Include="Domain\Model\Review.cs" />
+    <Compile Include="Domain\Model\User.cs" />
+    <Compile Include="Domain\RepositoryInterfaces\IPersistenceContext.cs" />
+    <Compile Include="Domain\RepositoryInterfaces\IUserRepository.cs" />
+    <Compile Include="Domain\RepositoryInterfaces\RepositoryInterfaces.cs" />
     <Compile Include="Repositories\JsonPersistenceContext.cs" />
-    <Compile Include="Repositories\ReviewRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Domen\Enumeracije\Format.cs" />
-    <Compile Include="Domen\Enumeracije\Period.cs" />
-    <Compile Include="Domen\Enumeracije\Status.cs" />
-    <Compile Include="Domen\Enumeracije\Tip.cs" />
-    <Compile Include="Domen\Enumeracije\Uloga.cs" />
-    <Compile Include="Domen\RepositoryInterfaces\ICrudRepository.cs" />
-    <Compile Include="Domen\RepositoryInterfaces\IPersistenceContext.cs" />
-    <Compile Include="Domen\Modeli\Anketa.cs" />
-    <Compile Include="Domen\Modeli\Clanak.cs" />
-    <Compile Include="Domen\Modeli\Drzava.cs" />
-    <Compile Include="Domen\Modeli\Glas.cs" />
-    <Compile Include="Domen\Modeli\Izdanje.cs" />
-    <Compile Include="Domen\Modeli\Izvodjac.cs" />
-    <Compile Include="Domen\Modeli\Korisnik.cs" />
-    <Compile Include="Domen\Modeli\MatchaLatteReviews.cs" />
-    <Compile Include="Domen\Modeli\MuzickoDelo.cs" />
-    <Compile Include="Domen\Modeli\Plejlista.cs" />
-    <Compile Include="Domen\Modeli\Recenzija.cs" />
-    <Compile Include="Domen\Modeli\RegistrovaniKorisnik.cs" />
-    <Compile Include="Domen\Modeli\Reklama.cs" />
-    <Compile Include="Domen\Modeli\TopLista.cs" />
-    <Compile Include="Domen\Modeli\Ucesce.cs" />
-    <Compile Include="Domen\Modeli\Urednik.cs" />
-    <Compile Include="Domen\Modeli\Zanr.cs" />
     <Compile Include="Stores\UserStore.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
+    <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\RelayCommand.cs" />
+    <Compile Include="WPF\View\AdministratorPanel.xaml.cs">
+      <DependentUpon>AdministratorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\EditorPanel.xaml.cs">
+      <DependentUpon>EditorPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WPF\View\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\RegisteredUserPanel.xaml.cs">
+      <DependentUpon>RegisteredUserPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -167,20 +161,34 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="WPF\img\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="WPF\View\AdministratorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\EditorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WPF\View\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\RegisteredUserPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\RegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

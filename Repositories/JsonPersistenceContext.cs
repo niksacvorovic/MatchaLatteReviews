@@ -1,5 +1,5 @@
 ﻿using MatchaLatteReviews.Application.Constants;
-using MatchaLatteReviews.Domen.RepositoryInterfaces;
+using MatchaLatteReviews.Domain.RepositoryInterfaces;
 using System.IO;
 
 namespace MatchaLatteReviews.Repositories
@@ -10,7 +10,12 @@ namespace MatchaLatteReviews.Repositories
 
         public JsonPersistenceContext(string entityName)
         {
-            _filePath = Path.Combine(Constants.ProjectRoot, "Data", $"{entityName}.json");
+            var dataFolder = Path.Combine(Constants.ProjectRoot, "Data");
+            if (!Directory.Exists(dataFolder))
+            {
+                Directory.CreateDirectory(dataFolder);
+            }
+            _filePath = Path.Combine(dataFolder, $"{entityName}.json");
             if (!File.Exists(_filePath))
             {
                 File.WriteAllText(_filePath, "[]");

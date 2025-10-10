@@ -1,4 +1,4 @@
-﻿namespace MatchaLatteReviews.Domen.RepositoryInterfaces
+﻿namespace MatchaLatteReviews.Domain.RepositoryInterfaces
 {
     public interface IPersistenceContext
     {

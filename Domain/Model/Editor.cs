@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MatchaLatteReviews.Domen.Enumeracije
+namespace MatchaLatteReviews.Domain.Model
 {
-    public enum Tip
+    internal class Editor
     {
-        Album, EP, Izvodjenje, Singl, Pesma
     }
 }

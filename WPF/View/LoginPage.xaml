@@ -72,6 +72,10 @@
                 <Run Text="Don't have an account?" />
                 <Hyperlink Click="OnHyperlinkClicked" NavigateUri="LoginView.xaml" Foreground="#8ba888">Register in here</Hyperlink>
             </TextBlock>
+            <TextBlock HorizontalAlignment="Center">
+                <Run Text=""/>
+                <Hyperlink Click="OnMainPageClicked" NavigateUri="LoginView.xaml" Foreground="#8ba888">Main page</Hyperlink>
+            </TextBlock>
         </StackPanel>
     </Grid>
 </Window>

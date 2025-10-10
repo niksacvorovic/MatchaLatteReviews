@@ -1,7 +1,7 @@
-﻿using MatchaLatteReviews.Application.Services;
-using MatchaLatteReviews.Domen.RepositoryInterfaces;
+﻿using MatchaLatteReviews.Domain.RepositoryInterfaces;
 using MatchaLatteReviews.Repositories;
 using MatchaLatteReviews.Stores;
+using MatchaLatteReviews.Application.Services;
 using System;
 using System.Collections.Generic;
 
@@ -16,14 +16,16 @@ namespace MatchaLatteReviews.DependencyInjection
 
             var userRepository = new UserRepository(userContext);
 
-            var UserService = new UserService(userRepository);
 
             var userStore = new UserStore();
 
-
             _implementations[typeof(IUserRepository)] = userRepository;
 
-            _implementations[typeof(UserService)] = UserService;
+            var userService = new UserService(userRepository);
+            var registeredUserService = new RegisteredUserService();
+
+            _implementations[typeof(UserService)] = userService;
+            _implementations[typeof(RegisteredUserService)] = registeredUserService;
 
             _implementations[typeof(UserStore)] = userStore;
         }
