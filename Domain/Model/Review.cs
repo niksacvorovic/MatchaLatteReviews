@@ -30,6 +30,17 @@ namespace MatchaLatteReviews.Domain.Model
         public Article Article { get => article; set => article = value; }
 
         [JsonConstructor]
+        public Review(string reviewId, int rating, string comment, bool isPublic, bool isApproved, string authorId, string articleId)
+        {
+            ReviewId = reviewId;
+            Rating = rating;
+            Comment = comment;
+            IsPublic = isPublic;
+            IsApproved = isApproved;
+            AuthorId = authorId;
+            ArticleId = articleId;
+        }
+
         public Review(int rating, string comment, bool isPublic, bool isApproved, string authorId, string articleId)
         {
             ReviewId = Guid.NewGuid().ToString();

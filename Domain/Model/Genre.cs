@@ -11,10 +11,17 @@ namespace MatchaLatteReviews.Domain.Model
         public string Name { get => name; set => name = value; }
 
         [JsonConstructor]
+        public Genre(string id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
         public Genre(string name)
         {
             Id = Guid.NewGuid().ToString();
             Name = name;
         }
+
     }
 }

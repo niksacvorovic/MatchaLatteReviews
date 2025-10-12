@@ -15,15 +15,18 @@ namespace MatchaLatteReviews.DependencyInjection
         {
             var userContext = new JsonPersistenceContext("users");
             var genreContext = new JsonPersistenceContext("genres");
+            var articleContext = new JsonPersistenceContext("articles");
 
             var userRepository = new UserRepository(userContext);
             var genreRepository = new GenreRepository(genreContext);
+            var articleRepository = new ArticleRepository(articleContext);
 
 
             var userStore = new UserStore();
 
             _implementations[typeof(IUserRepository)] = userRepository;
             _implementations[typeof(IGenreRepository)] = genreRepository;
+            _implementations[typeof(IArticleRepository)] = articleRepository;
 
             var userValidator = new UserValidator();
             _implementations[typeof(UserValidator)] = userValidator;

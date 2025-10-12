@@ -25,6 +25,24 @@ namespace MatchaLatteReviews.Domain.Model
 
         [JsonConstructor]
         public RegisteredUser(
+            string userId,
+            string username,
+            string password,
+            string firstName,
+            string lastName,
+            bool isPublic,
+            Role role,
+            bool premium,
+            List<string> reviewIds,
+            List<string> favoriteIds
+        ) : base(userId, username, password, firstName, lastName, isPublic, role)
+        {
+            Premium = premium;
+            ReviewIds = reviewIds;
+            FavoriteIds = favoriteIds;
+        }
+
+        public RegisteredUser(
             string username,
             string password,
             string firstName,

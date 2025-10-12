@@ -26,6 +26,14 @@ namespace MatchaLatteReviews.Domain.Model
         public List<Genre> Genres { get => genres; set => genres = value; }
 
         [JsonConstructor]
+        public Editor(string userId, string username, string password, string firstName, string lastName, bool isPublic, Role role, List<string> articleIds, List<string> taskListIds, List<string> genreIds)
+           : base(userId, username, password, firstName, lastName, isPublic, role)
+        {
+            ArticleIds = articleIds;
+            TaskListIds = taskListIds;
+            GenresIds = genreIds;
+        }
+
         public Editor(string username, string password, string firstName, string lastName, bool isPublic, Role role, List<string> articleIds, List<string> taskListIds, List<string> genreIds)
            : base(username, password, firstName, lastName, isPublic, role) 
         {

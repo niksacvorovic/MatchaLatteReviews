@@ -26,6 +26,17 @@ namespace MatchaLatteReviews.Domain.Model
         public Role Role { get => role; set => role = value; }
 
         [JsonConstructor]
+        public User(string userId, string username, string password, string firstName, string lastName, bool isPublic, Role role)
+        {
+            UserId = userId;
+            Username = username;
+            Password = password;
+            FirstName = firstName;
+            LastName = lastName;
+            IsPublic = isPublic;
+            Role = role;
+        }
+
         public User(string username, string password, string firstName, string lastName, bool isPublic, Role role)
         {
             UserId = Guid.NewGuid().ToString();
