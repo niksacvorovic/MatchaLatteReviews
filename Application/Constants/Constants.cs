@@ -5,6 +5,6 @@ namespace MatchaLatteReviews.Application.Constants
 {
     public static class Constants
     {
-        public static readonly string ProjectRoot = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+        public static readonly string ProjectRoot = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\.."));
     }
 }

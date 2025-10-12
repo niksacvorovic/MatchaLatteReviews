@@ -1,9 +1,4 @@
-﻿using MatchaLatteReviews.DependencyInjection;
-using MatchaLatteReviews.Domen.Modeli;
-using MatchaLatteReviews.Domen.RepositoryInterfaces;
-using System.Windows;
-
-namespace MatchaLatteReviews
+﻿namespace MatchaLatteReviews
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -1,32 +1,47 @@
 [
   {
     "$id": "1",
-    "KorisnikId": 1,
-    "KorisnickoIme": "dea",
-    "Lozinka": "123",
-    "Ime": "Dea",
-    "Prezime": "Sevic",
-    "Javni": true,
-    "Uloga": 1
+    "UserId": "41fc6bad-8183-49a9-be2a-548f8502cd5e",
+    "Username": "admin",
+    "Password": "admin",
+    "FirstName": "",
+    "LastName": "",
+    "IsPublic": false,
+    "Role": 2
   },
   {
     "$id": "2",
-    "KorisnikId": 23,
-    "KorisnickoIme": "deaS",
-    "Lozinka": "123",
-    "Ime": "Dea",
-    "Prezime": "Sevic",
-    "Javni": true,
-    "Uloga": 1
+    "$type": "MatchaLatteReviews.Domain.Model.Editor, MatchaLatteReviews",
+    "ArticleIds": [],
+    "TaskListIds": [],
+    "GenresIds": [
+      "Pop"
+    ],
+    "Articles": null,
+    "TaskList": null,
+    "Genres": null,
+    "UserId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
+    "Username": "marko_m",
+    "Password": "Marko123",
+    "FirstName": "Marko",
+    "LastName": "Miloševic",
+    "IsPublic": true,
+    "Role": 0
   },
   {
     "$id": "3",
-    "KorisnikId": 234,
-    "KorisnickoIme": "deaSe",
-    "Lozinka": "123",
-    "Ime": "Dea",
-    "Prezime": "Sevic",
-    "Javni": true,
-    "Uloga": 1
+    "$type": "MatchaLatteReviews.Domain.Model.RegisteredUser, MatchaLatteReviews",
+    "Premium": false,
+    "ReviewIds": [],
+    "FavoriteIds": [],
+    "Reviews": null,
+    "Favorites": null,
+    "UserId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "Username": "ana_j",
+    "Password": "Ana12345",
+    "FirstName": "Ana",
+    "LastName": "Jovanović",
+    "IsPublic": false,
+    "Role": 1
   }
 ]

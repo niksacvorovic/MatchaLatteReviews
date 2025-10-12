@@ -1,0 +1,102 @@
+[
+  {
+    "$id": "1",
+    "Id": "e559e571-e097-4d80-96f3-e10583b92160",
+    "Name": "Rock"
+  },
+  {
+    "$id": "2",
+    "Id": "2ab4a244-95ca-4e98-beea-4dce3faea328",
+    "Name": "Pop"
+  },
+  {
+    "$id": "3",
+    "Id": "87bbf664-040b-45d6-bbe9-0c3706cf13d6",
+    "Name": "Jazz"
+  },
+  {
+    "$id": "4",
+    "Id": "6bf6386b-9954-4a8b-b22d-4e2babb97797",
+    "Name": "Blues"
+  },
+  {
+    "$id": "5",
+    "Id": "bf36b54d-9dc4-4cfb-97a9-56e05100180b",
+    "Name": "Classical"
+  },
+  {
+    "$id": "6",
+    "Id": "0eec2070-7a50-49ca-bf45-42104fc0e88b",
+    "Name": "Hip-Hop"
+  },
+  {
+    "$id": "7",
+    "Id": "48f372e5-0303-4d46-9b56-a42f3d14e6ef",
+    "Name": "R&B"
+  },
+  {
+    "$id": "8",
+    "Id": "88c8504f-3b17-4358-98a5-b137f9f8f634",
+    "Name": "Country"
+  },
+  {
+    "$id": "9",
+    "Id": "9692c5b9-740c-4e96-8125-7080caa91a14",
+    "Name": "Reggae"
+  },
+  {
+    "$id": "10",
+    "Id": "8fd101bf-cb34-42d6-bd3a-e561a8ef5688",
+    "Name": "Electronic"
+  },
+  {
+    "$id": "11",
+    "Id": "94a5d97f-18f2-4c61-9e54-579bbca7f847",
+    "Name": "Dance"
+  },
+  {
+    "$id": "12",
+    "Id": "d904e6cd-8466-4e71-81ea-f553d27acfce",
+    "Name": "Metal"
+  },
+  {
+    "$id": "13",
+    "Id": "abc67b42-930f-482c-a013-af8189ad0763",
+    "Name": "Funk"
+  },
+  {
+    "$id": "14",
+    "Id": "fc104e99-c24a-4385-aa6a-54751b097f2f",
+    "Name": "Soul"
+  },
+  {
+    "$id": "15",
+    "Id": "b317e6a7-92b1-4617-8884-863b54deef32",
+    "Name": "Punk"
+  },
+  {
+    "$id": "16",
+    "Id": "f36e965c-31e8-46c3-9df8-250caad1a27c",
+    "Name": "Folk"
+  },
+  {
+    "$id": "17",
+    "Id": "6a210e7b-9e61-4673-af7e-84cd6bc13aa3",
+    "Name": "Indie"
+  },
+  {
+    "$id": "18",
+    "Id": "b618872a-fb67-4d46-bd2c-3c2753c49364",
+    "Name": "Disco"
+  },
+  {
+    "$id": "19",
+    "Id": "5fb08091-1632-473c-a983-6690055811b7",
+    "Name": "Gospel"
+  },
+  {
+    "$id": "20",
+    "Id": "1f07ee98-f1a1-4e16-9129-5fef5615c006",
+    "Name": "Latin"
+  }
+]
