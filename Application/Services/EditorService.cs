@@ -33,5 +33,13 @@ namespace MatchaLatteReviews.Application.Services
         {
             _validator.ValidateUser(editor);
         }
+
+        public void AddToTaskList(string username, Article article)
+        {
+            Editor assignedEditor = (Editor)_userRepository.GetByUsername(username);
+            assignedEditor.Articles.Add(article);
+            assignedEditor.ArticleIds.Add(article.Id);
+        }
+
     }
 }

@@ -32,12 +32,16 @@ namespace MatchaLatteReviews.DependencyInjection
             _implementations[typeof(UserValidator)] = userValidator;
 
             var userService = new UserService(userRepository);
+            var genreService = new GenreService();
             var editorService = new EditorService();
             var registeredUserService = new RegisteredUserService();
+            var taskListService = new TaskListService();
 
             _implementations[typeof(UserService)] = userService;
+            _implementations[typeof(GenreService)] = genreService;
             _implementations[typeof(RegisteredUserService)] = registeredUserService;
             _implementations[typeof(EditorService)] = editorService;
+            _implementations[typeof(TaskListService)] = taskListService;
 
             _implementations[typeof(UserStore)] = userStore;
         }

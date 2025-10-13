@@ -93,19 +93,26 @@
     </ApplicationDefinition>
     <Compile Include="Application\Constants\Constants.cs" />
     <Compile Include="Application\Services\EditorService.cs" />
+    <Compile Include="Application\Services\GenreService.cs" />
     <Compile Include="Application\Services\RegisteredUserService.cs" />
     <Compile Include="Application\Services\UserService.cs" />
     <Compile Include="Application\Utilities\MessageHelper.cs" />
     <Compile Include="Application\Utilities\UserValidator.cs" />
     <Compile Include="DependencyInjection\Injector.cs" />
+    <Compile Include="Domain\Enums\Format.cs" />
     <Compile Include="Domain\Enums\Role.cs" />
     <Compile Include="Domain\Enums\Status.cs" />
+    <Compile Include="Domain\Enums\Type.cs" />
     <Compile Include="Domain\Model\Article.cs" />
+    <Compile Include="Domain\Model\Artist.cs" />
+    <Compile Include="Domain\Model\Country.cs" />
     <Compile Include="Domain\Model\Editor.cs" />
     <Compile Include="Domain\Model\Genre.cs" />
+    <Compile Include="Domain\Model\Music.cs" />
     <Compile Include="Domain\Model\RegisteredUser.cs" />
     <Compile Include="Domain\Model\Review.cs" />
     <Compile Include="Domain\Model\User.cs" />
+    <Compile Include="Domain\Model\Version.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IArticleRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IGenreRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IPersistenceContext.cs" />
@@ -120,10 +127,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Stores\UserStore.cs" />
+    <Compile Include="WPF\ViewModel\AddGenreFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditorRegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\RelayCommand.cs" />
+    <Compile Include="WPF\ViewModel\TaskListUpdateFormViewModel.cs" />
+    <Compile Include="WPF\View\AddGenreForm.xaml.cs">
+      <DependentUpon>AddGenreForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WPF\View\AdministratorPanel.xaml.cs">
       <DependentUpon>AdministratorPanel.xaml</DependentUpon>
     </Compile>
@@ -144,6 +156,9 @@
     </Compile>
     <Compile Include="WPF\View\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\TaskListUpdateForm.xaml.cs">
+      <DependentUpon>TaskListUpdateForm.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +195,10 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="WPF\View\AddGenreForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WPF\View\AdministratorPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -205,6 +224,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\RegisterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\TaskListUpdateForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

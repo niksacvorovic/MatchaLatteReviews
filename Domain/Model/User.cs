@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Text.Json.Serialization;
 using MatchaLatteReviews.Domain.Enums;
+using Newtonsoft.Json;
 
 namespace MatchaLatteReviews.Domain.Model
 {
-    [JsonDerivedType(typeof(User), 0)]
-    [JsonDerivedType(typeof(RegisteredUser), 1)]
-    [JsonDerivedType(typeof(Editor), 2)]
     public class User
     {
         private string userId;

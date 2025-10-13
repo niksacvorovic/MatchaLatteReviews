@@ -36,5 +36,16 @@ namespace MatchaLatteReviews.WPF.View
             mainPage.Show();
             this.Close();
         }
+
+        private void AddNewGenre_Click(object sender, RoutedEventArgs e)
+        {
+            AddGenreForm addGenreForm = new AddGenreForm();
+            addGenreForm.ShowDialog();
+        }
+
+        private void AddToTaskList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
