@@ -92,6 +92,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Application\Constants\Constants.cs" />
+    <Compile Include="Application\Services\CountryService.cs" />
     <Compile Include="Application\Services\EditorService.cs" />
     <Compile Include="Application\Services\GenreService.cs" />
     <Compile Include="Application\Services\RegisteredUserService.cs" />
@@ -114,11 +115,13 @@
     <Compile Include="Domain\Model\User.cs" />
     <Compile Include="Domain\Model\Version.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IArticleRepository.cs" />
+    <Compile Include="Domain\RepositoryInterfaces\ICountryRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IGenreRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IPersistenceContext.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IUserRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\RepositoryInterfaces.cs" />
     <Compile Include="Repositories\ArticleRepository.cs" />
+    <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Repositories\GenreRepository.cs" />
     <Compile Include="Repositories\JsonPersistenceContext.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
@@ -127,12 +130,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Stores\UserStore.cs" />
+    <Compile Include="WPF\ViewModel\AddCountryFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\AddGenreFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditorRegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\RelayCommand.cs" />
     <Compile Include="WPF\ViewModel\TaskListUpdateFormViewModel.cs" />
+    <Compile Include="WPF\View\AddCountryForm.xaml.cs">
+      <DependentUpon>AddCountryForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WPF\View\AddGenreForm.xaml.cs">
       <DependentUpon>AddGenreForm.xaml</DependentUpon>
     </Compile>
@@ -195,6 +202,10 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="WPF\View\AddCountryForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WPF\View\AddGenreForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

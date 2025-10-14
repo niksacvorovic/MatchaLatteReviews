@@ -2,7 +2,6 @@
 using MatchaLatteReviews.Application.Utilities;
 using MatchaLatteReviews.DependencyInjection;
 using MatchaLatteReviews.Domain.Model;
-using MatchaLatteReviews.WPF.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,33 +12,33 @@ using System.Windows.Input;
 
 namespace MatchaLatteReviews.WPF.ViewModel
 {
-    public class AddGenreFormViewModel : INotifyPropertyChanged
+    public class AddCountryFormViewModel : INotifyPropertyChanged
     {
-        private readonly GenreService _genreService;
+        private readonly CountryService _countryService;
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        public AddGenreFormViewModel(Action close)
+        public AddCountryFormViewModel(Action close)
         {
-            _genreService = Injector.CreateInstance<GenreService>();
-            AddGenreCommand = new RelayCommand(_ => AddGenre());
+            _countryService = Injector.CreateInstance<CountryService>();
+            AddCountryCommand = new RelayCommand(_ => AddCountry());
             _close = close;
         }
 
         private Action _close;
-        public ICommand AddGenreCommand { get; }
+        public ICommand AddCountryCommand { get; }
 
         public string Name { get; set; }
 
-        private void AddGenre()
+        private void AddCountry()
         {
-            Genre newGenre = new Genre(Name);
+            Country newCountry = new Country(Name);
             try
             {
-                _genreService.Add(newGenre);
-                MessageHelper.ShowInfo($"{newGenre.Name} genre added!");
+                _countryService.Add(newCountry);
+                MessageHelper.ShowInfo($"Country of {newCountry.Name} added!");
                 _close();
             }
             catch (Exception exception)
