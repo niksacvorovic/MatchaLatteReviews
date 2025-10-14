@@ -132,7 +132,6 @@
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\RelayCommand.cs" />
-    <Compile Include="WPF\ViewModel\TaskListUpdateFormViewModel.cs" />
     <Compile Include="WPF\View\AddGenreForm.xaml.cs">
       <DependentUpon>AddGenreForm.xaml</DependentUpon>
     </Compile>
@@ -156,9 +155,6 @@
     </Compile>
     <Compile Include="WPF\View\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WPF\View\TaskListUpdateForm.xaml.cs">
-      <DependentUpon>TaskListUpdateForm.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -224,10 +220,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\RegisterPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WPF\View\TaskListUpdateForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -30,6 +30,25 @@
   },
   {
     "$id": "3",
+    "$type": "MatchaLatteReviews.Domain.Model.Editor, MatchaLatteReviews",
+    "ArticleIds": [],
+    "TaskListIds": [],
+    "GenresIds": [
+      "Pop"
+    ],
+    "Articles": null,
+    "TaskList": null,
+    "Genres": null,
+    "UserId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
+    "Username": "editor",
+    "Password": "pass123",
+    "FirstName": "Jovan",
+    "LastName": "Stricevic",
+    "IsPublic": true,
+    "Role": 0
+  },
+  {
+    "$id": "4",
     "$type": "MatchaLatteReviews.Domain.Model.RegisteredUser, MatchaLatteReviews",
     "Premium": false,
     "ReviewIds": [],

@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MatchaLatteReviews.Domain.Model;
+using MatchaLatteReviews.Stores;
 
 namespace MatchaLatteReviews.WPF.View
 {
@@ -18,10 +20,31 @@ namespace MatchaLatteReviews.WPF.View
     /// Interaction logic for EditorPanel.xaml
     /// </summary>
     public partial class EditorPanel : Window
-    {
-        public EditorPanel()
+    {       
+        public EditorPanel(UserStore e)
         {
-            InitializeComponent();
+            InitializeComponent(); // mora biti prvo
+            DataContext = e.GetCurrentUser();
+        }
+
+        public void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            var user = DataContext as Editor; // ili Editor ako koristiš Editor
+            if (user != null)
+            {
+                MessageBox.Show($"Ime: {user.FirstName}\nPrezime: {user.LastName}\nUsername: {user.Username}");
+            }
+            else
+            {
+                MessageBox.Show("DataContext je null ili nije tipa User.");
+            }
+        }
+
+        public void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
         }
     }
 }
