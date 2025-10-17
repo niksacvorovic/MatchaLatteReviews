@@ -20,10 +20,10 @@ namespace MatchaLatteReviews.WPF.View
     /// </summary>
     public partial class AddMusicForm : Window
     {
-        public AddMusicForm()
+        public AddMusicForm(string editorId)
         {
             InitializeComponent();
-            DataContext = new AddMusicFormViewModel(this.Close);
+            DataContext = new AddMusicFormViewModel(this.Close, editorId);
         }
     }
 }

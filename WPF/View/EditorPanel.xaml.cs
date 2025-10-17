@@ -21,8 +21,10 @@ namespace MatchaLatteReviews.WPF.View
     /// </summary>
     public partial class EditorPanel : Window
     {       
+        private UserStore _userStore;
         public EditorPanel(UserStore e)
         {
+            _userStore = e;
             InitializeComponent(); // mora biti prvo
             DataContext = e.GetCurrentUser();
         }
@@ -49,7 +51,7 @@ namespace MatchaLatteReviews.WPF.View
 
         public void AddMusicButton_Click(object sender, RoutedEventArgs e)
         {
-            AddMusicForm addArticle = new AddMusicForm();
+            AddMusicForm addArticle = new AddMusicForm(_userStore.GetCurrentUser().UserId);
             addArticle.Show();
         }
 

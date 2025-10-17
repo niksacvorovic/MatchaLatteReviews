@@ -10,7 +10,7 @@ namespace MatchaLatteReviews.Domain.Model
         private string id;
         private string title;   //title of the work, name of the artist...
         private int rating;     //1, 2, 3, 4, 5
-        private string EditorId; //id of the editor who wrote the article
+        private string editorId; //id of the editor who wrote the article
         private string content; //description?
         private DateTime date;  //publication date
         private Status status;  //ForReview, Approved, Declined
@@ -25,6 +25,7 @@ namespace MatchaLatteReviews.Domain.Model
         public string Id { get => id; set => id = value; }
         public string Title { get => title; set => title = value; }
         public int Rating { get => rating; set => rating = value; }
+        public string EditorId { get => editorId; set => editorId = value; }
         public string Content { get => content; set => content = value; }
         public DateTime Date { get => date; set => date = value; }
         public Status Status { get => status; set => status = value; }
