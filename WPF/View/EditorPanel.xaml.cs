@@ -46,5 +46,22 @@ namespace MatchaLatteReviews.WPF.View
             mainPage.Show();
             this.Close();
         }
+
+        public void AddMusicalWorkButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddMusicalWorkForm addArticle = new AddMusicalWorkForm();
+            addArticle.Show();
+        }
+
+        public void AddArtistButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ova funkcionalnost još nije implementirana.");
+        }
+
+        public void AddPerformanceButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ova funkcionalnost još nije implementirana.");
+        }
+
     }
 }

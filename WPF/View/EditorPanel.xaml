@@ -113,8 +113,10 @@
                     </StackPanel>
 
                     <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0">
-                        <Button Style="{StaticResource HoverButtonStyle}" Content="Update Info" Click ="UpdateButton_Click" Width="150" Margin="0,20,0,0"/>
-                        <Button Style="{StaticResource HoverButtonStyle}" Content="Add article" Width="150" Margin="0,20,0,0"/>
+                        <Button Style="{StaticResource HoverButtonStyle}" Content="Update Info" Click ="UpdateButton_Click" Width="150" Margin="0,10,0,0" Height="30"/>
+                        <Button Style="{StaticResource HoverButtonStyle}" Content="Add Musical work" Click ="AddMusicalWorkButton_Click" Width="150" Margin="0,10,0,0" Height="30"/>
+                        <Button Style="{StaticResource HoverButtonStyle}" Content="Add Performance" Click ="AddPerformanceButton_Click" Width="150" Margin="0,10,0,0" Height="30"/>
+                        <Button Style="{StaticResource HoverButtonStyle}" Content="Add Artis" Click ="AddArtistButton_Click" Width="150" Margin="0,10,0,0" Height="30"/>
                     </StackPanel>
                 </Grid>
                 

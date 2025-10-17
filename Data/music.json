@@ -1,0 +1,18 @@
+[
+  {
+    "$id": "1",
+    "Title": "naslov",
+    "Rating": 4,
+    "EditorId": 3,
+    "Content": "neki content kao sta ja znam",
+    "Date": "1995-10-17",
+    "Status": "Approved",
+    "Views": 10,
+    "ReviewIds": [],
+    "GenreIds":[],
+    
+    "Type":"Single",
+    "Length":124,
+    "Versions":[]
+  }
+]

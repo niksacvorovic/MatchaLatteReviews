@@ -135,6 +135,9 @@
     <Compile Include="WPF\View\AddGenreForm.xaml.cs">
       <DependentUpon>AddGenreForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WPF\View\AddMusicalWorkForm.xaml.cs">
+      <DependentUpon>AddMusicalWorkForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WPF\View\AdministratorPanel.xaml.cs">
       <DependentUpon>AdministratorPanel.xaml</DependentUpon>
     </Compile>
@@ -192,6 +195,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="WPF\View\AddGenreForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\AddMusicalWorkForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
