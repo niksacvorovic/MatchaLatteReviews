@@ -62,18 +62,21 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 ReleaseDate = DateTime.Now;
             }
 
-            if (!int.TryParse(LengthString, out int length))
+            int parsedLength;
+            if (!int.TryParse(LengthString, out parsedLength))
             {
-                // fallback ili poruka o grešci
-                Length = 0;
+                parsedLength = 0;
             }
 
-            if (!Enum.TryParse<MatchaLatteReviews.Domain.Enums.Type>(TypeString, out var parsedType))
+            Length = parsedLength;
+
+            MatchaLatteReviews.Domain.Enums.Type parsedType;
+            if (!Enum.TryParse(TypeString, out parsedType))
             {
-                parsedType = MatchaLatteReviews.Domain.Enums.Type.Album;
+                parsedType = 0;
             }
 
-            type = parsedType;  // property Type
+            type = parsedType;
 
             //List<MatchaLatteReviews.Domain.Model.Version> versions = new List<MatchaLatteReviews.Domain.Model.Version>();
             //MessageBox.Show("Title: " + Title + "\nContent: " + Content + "\nRating: " + Rating + "\nRelease Date: " + ReleaseDate + "\nType: " + Type + "\nLength: " + Length);

@@ -65,7 +65,7 @@ namespace MatchaLatteReviews.Repositories
         public void SaveAll(IEnumerable<Music> musics)
         {
             string content = JsonConvert.SerializeObject(musics, Formatting.Indented, _serializerSettings);
-            MessageBox.Show(content);
+            //MessageBox.Show(content);
             _context.SaveContent(content);
         }
 

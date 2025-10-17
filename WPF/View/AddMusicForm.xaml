@@ -42,12 +42,12 @@
             <DatePicker SelectedDate="{Binding ReleaseDate, Mode=TwoWay}" Width="300" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="3"/>
 
             <Label Content="Type:" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Column="0" Grid.Row="4"/>
-            <ComboBox ItemsSource="{Binding Types}" SelectedItem="{Binding Type, Mode=TwoWay}"  Width="300" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="4">
+            <ComboBox ItemsSource="{Binding Types}" SelectedItem="{Binding TypeString, Mode=TwoWay}"  Width="300" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="4">
                 
             </ComboBox>
 
             <Label Content="Length:" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Column="0" Grid.Row="5"/>
-            <TextBox Text="{Binding Length, Mode=TwoWay}" Width="300" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="5"/>
+            <TextBox Text="{Binding LengthString, Mode=TwoWay}" Width="300" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="5"/>
 
             <Label Content="Mozda fali nesto za verzije:" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Column="0" Grid.Row="6"/>
 
