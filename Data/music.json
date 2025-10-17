@@ -1,18 +1,32 @@
 [
   {
     "$id": "1",
-    "Title": "naslov",
-    "Rating": 4,
-    "EditorId": 3,
-    "Content": "neki content kao sta ja znam",
-    "Date": "1995-10-17",
-    "Status": "Approved",
-    "Views": 10,
+    "Type": 0,
+    "Length": 0,
+    "Versions": [],
+    "Id": "23890074-8682-41f4-9bc2-9f42b4118fd9",
+    "Title": "title",
+    "Rating": 3,
+    "Content": "content a123fs",
+    "Date": "0001-01-20T00:00:00",
+    "Status": 1,
+    "Views": 0,
     "ReviewIds": [],
-    "GenreIds":[],
-    
-    "Type":"Single",
-    "Length":124,
-    "Versions":[]
+    "GenreIds": []
+  },
+  {
+    "$id": "2",
+    "Type": 0,
+    "Length": 0,
+    "Versions": [],
+    "Id": "ba5e91ec-458d-4d63-922a-adc92e33a088",
+    "Title": "novi title",
+    "Rating": 3,
+    "Content": "contnetn lepa brena",
+    "Date": "0001-01-21T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "ReviewIds": [],
+    "GenreIds": []
   }
 ]

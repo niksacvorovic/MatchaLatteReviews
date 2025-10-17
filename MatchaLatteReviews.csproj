@@ -94,6 +94,7 @@
     <Compile Include="Application\Constants\Constants.cs" />
     <Compile Include="Application\Services\EditorService.cs" />
     <Compile Include="Application\Services\GenreService.cs" />
+    <Compile Include="Application\Services\MusicService.cs" />
     <Compile Include="Application\Services\RegisteredUserService.cs" />
     <Compile Include="Application\Services\UserService.cs" />
     <Compile Include="Application\Utilities\MessageHelper.cs" />
@@ -115,12 +116,14 @@
     <Compile Include="Domain\Model\Version.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IArticleRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IGenreRepository.cs" />
+    <Compile Include="Domain\RepositoryInterfaces\IMusicRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IPersistenceContext.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IUserRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\RepositoryInterfaces.cs" />
     <Compile Include="Repositories\ArticleRepository.cs" />
     <Compile Include="Repositories\GenreRepository.cs" />
     <Compile Include="Repositories\JsonPersistenceContext.cs" />
+    <Compile Include="Repositories\MusicRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -128,6 +131,7 @@
     </Compile>
     <Compile Include="Stores\UserStore.cs" />
     <Compile Include="WPF\ViewModel\AddGenreFormViewModel.cs" />
+    <Compile Include="WPF\ViewModel\AddMusicFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditorRegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
@@ -135,8 +139,8 @@
     <Compile Include="WPF\View\AddGenreForm.xaml.cs">
       <DependentUpon>AddGenreForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WPF\View\AddMusicalWorkForm.xaml.cs">
-      <DependentUpon>AddMusicalWorkForm.xaml</DependentUpon>
+    <Compile Include="WPF\View\AddMusicForm.xaml.cs">
+      <DependentUpon>AddMusicForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\AdministratorPanel.xaml.cs">
       <DependentUpon>AdministratorPanel.xaml</DependentUpon>
@@ -198,7 +202,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WPF\View\AddMusicalWorkForm.xaml">
+    <Page Include="WPF\View\AddMusicForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

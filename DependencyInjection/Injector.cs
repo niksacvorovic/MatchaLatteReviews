@@ -16,10 +16,12 @@ namespace MatchaLatteReviews.DependencyInjection
             var userContext = new JsonPersistenceContext("users");
             var genreContext = new JsonPersistenceContext("genres");
             var articleContext = new JsonPersistenceContext("articles");
+            var musicContext = new JsonPersistenceContext("music");
 
             var userRepository = new UserRepository(userContext);
             var genreRepository = new GenreRepository(genreContext);
             var articleRepository = new ArticleRepository(articleContext);
+            var musicRepository = new MusicRepository(musicContext);
 
 
             var userStore = new UserStore();
@@ -27,10 +29,12 @@ namespace MatchaLatteReviews.DependencyInjection
             _implementations[typeof(IUserRepository)] = userRepository;
             _implementations[typeof(IGenreRepository)] = genreRepository;
             _implementations[typeof(IArticleRepository)] = articleRepository;
+            _implementations[typeof(IMusicRepository)] = musicRepository;
 
             var userValidator = new UserValidator();
             _implementations[typeof(UserValidator)] = userValidator;
 
+            var musicService = new MusicService(musicRepository);
             var userService = new UserService(userRepository);
             var genreService = new GenreService();
             var editorService = new EditorService();
@@ -40,6 +44,7 @@ namespace MatchaLatteReviews.DependencyInjection
             _implementations[typeof(GenreService)] = genreService;
             _implementations[typeof(RegisteredUserService)] = registeredUserService;
             _implementations[typeof(EditorService)] = editorService;
+            _implementations[typeof(MusicService)] = musicService;
 
             _implementations[typeof(UserStore)] = userStore;
         }

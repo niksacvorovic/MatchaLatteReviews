@@ -22,7 +22,7 @@ namespace MatchaLatteReviews.Domain.Model
 
         [JsonConstructor]
         public Music(string id, string title, int rating, string content, DateTime date, Status status, int views,
-            string editorId, List<string> reviewIds, List<string> genreIds, Type type, string name, int length, List<Version> versions) :
+            string editorId, List<string> reviewIds, List<string> genreIds, Type type, int length, List<Version> versions) :
             base(id, title, rating, content, date, status, views, editorId, reviewIds, genreIds)
         {
             Type = type;
@@ -32,7 +32,7 @@ namespace MatchaLatteReviews.Domain.Model
         }
 
         public Music(string title, int rating, string content, DateTime date, Status status, int views,
-            string editorId, List<string> reviewIds, List<string> genreIds, Type type, string name, int length, List<Version> versions) :
+            string editorId, List<string> reviewIds, List<string> genreIds, Type type, int length, List<Version> versions) :
             base(title, rating, content, date, status, views, editorId, reviewIds, genreIds)
         {
             Type = type;

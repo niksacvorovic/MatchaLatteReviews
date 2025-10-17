@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MatchaLatteReviews.WPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,20 +18,12 @@ namespace MatchaLatteReviews.WPF.View
     /// <summary>
     /// Interaction logic for AddMusicalWorkForm.xaml
     /// </summary>
-    public partial class AddMusicalWorkForm : Window
+    public partial class AddMusicForm : Window
     {
-        public AddMusicalWorkForm()
+        public AddMusicForm()
         {
             InitializeComponent();
-        }
-        public void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        public void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ova funkcionalnost još nije implementirana.");
+            DataContext = new AddMusicFormViewModel(this.Close);
         }
     }
 }

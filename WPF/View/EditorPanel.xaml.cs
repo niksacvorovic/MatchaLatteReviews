@@ -47,9 +47,9 @@ namespace MatchaLatteReviews.WPF.View
             this.Close();
         }
 
-        public void AddMusicalWorkButton_Click(object sender, RoutedEventArgs e)
+        public void AddMusicButton_Click(object sender, RoutedEventArgs e)
         {
-            AddMusicalWorkForm addArticle = new AddMusicalWorkForm();
+            AddMusicForm addArticle = new AddMusicForm();
             addArticle.Show();
         }
 
