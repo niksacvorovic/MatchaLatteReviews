@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "$id": "1",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 0,
+    "Name": "",
+    "Length": 0,
+    "Versions": [],
+    "Id": "78b6e4c3-c2c2-42ec-909b-c0aab14418ab",
+    "Title": "BRAT",
+    "Rating": 0,
+    "Content": "",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 0,
+    "Views": 0,
+    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ]
+  }
+]

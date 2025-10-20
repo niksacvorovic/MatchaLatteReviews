@@ -21,7 +21,7 @@ namespace MatchaLatteReviews.Domain.Model
 
         [JsonConstructor]
         public Artist(string id, string title, int rating, string content, DateTime date, Status status, int views,
-            string editorId, List<string> reviewIds, List<string> genreIds, int debut, List<int> countryIds, List<Country> countries) : 
+            string editorId, List<string> reviewIds, List<string> genreIds, int debut, List<int> countryIds) : 
             base(id, title, rating, content, date, status, views, editorId, reviewIds, genreIds)
         {
             Debut = debut;
@@ -30,7 +30,7 @@ namespace MatchaLatteReviews.Domain.Model
         }
 
         public Artist(string title, int rating, string content, DateTime date, Status status, int views,
-            string editorId, List<string> reviewIds, List<string> genreIds, int debut, List<int> countryIds, List<Country> countries) :
+            string editorId, List<string> reviewIds, List<string> genreIds, int debut, List<int> countryIds) :
             base(title, rating, content, date, status, views, editorId, reviewIds, genreIds)
         {
             Debut = debut;

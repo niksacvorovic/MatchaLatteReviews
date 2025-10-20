@@ -9,15 +9,21 @@ namespace MatchaLatteReviews.Domain.Model
 {
     public class Country
     {
-        private int id;
+        private string id;
         private string name;
-        public int Id { get => id; set => id = value; }
+        public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
 
         [JsonConstructor]
-        public Country(int id, string name)
+        public Country(string id, string name)
         {
             Id = id;
+            Name = name;
+        }
+
+        public Country(string name)
+        {
+            Id = Guid.NewGuid().ToString();
             Name = name;
         }
     }
