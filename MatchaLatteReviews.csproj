@@ -110,6 +110,7 @@
     <Compile Include="Domain\Model\Editor.cs" />
     <Compile Include="Domain\Model\Genre.cs" />
     <Compile Include="Domain\Model\Music.cs" />
+    <Compile Include="Domain\Model\MusicItem.cs" />
     <Compile Include="Domain\Model\RegisteredUser.cs" />
     <Compile Include="Domain\Model\Review.cs" />
     <Compile Include="Domain\Model\User.cs" />

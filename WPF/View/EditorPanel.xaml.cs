@@ -1,5 +1,10 @@
-﻿using System;
+﻿using MatchaLatteReviews.Domain.Model;
+using MatchaLatteReviews.Domain.RepositoryInterfaces;
+using MatchaLatteReviews.Repositories;
+using MatchaLatteReviews.Stores;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +16,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using MatchaLatteReviews.Domain.Model;
-using MatchaLatteReviews.Stores;
 
 namespace MatchaLatteReviews.WPF.View
 {
@@ -22,12 +25,16 @@ namespace MatchaLatteReviews.WPF.View
     public partial class EditorPanel : Window
     {       
         private UserStore _userStore;
+        private MusicRepository _musicRepository;
+        public ObservableCollection<MusicItem> MusicItems { get; } = new ObservableCollection<MusicItem>();
+
         public EditorPanel(UserStore e)
         {
             _userStore = e;
             InitializeComponent(); // mora biti prvo
             DataContext = e.GetCurrentUser();
         }
+
 
         public void UpdateButton_Click(object sender, RoutedEventArgs e)
         {

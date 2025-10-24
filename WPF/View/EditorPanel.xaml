@@ -125,6 +125,22 @@
 
             <Grid Grid.Column="1">
                 <Label Content="Added articles" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,20"/>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding MusicItems}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="5">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Title}" FontWeight="Bold" FontSize="16"/>
+                                        <TextBlock Text="{Binding Content}" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Rating, StringFormat=Rating: {0}}"/>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
             </Grid>
 
             <Grid Grid.Column="2">
