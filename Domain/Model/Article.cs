@@ -9,6 +9,7 @@ namespace MatchaLatteReviews.Domain.Model
     {
         private string id;
         private string title;
+        private string image;
         private int rating;
         private string content;
         private DateTime date;
@@ -24,6 +25,8 @@ namespace MatchaLatteReviews.Domain.Model
 
         public string Id { get => id; set => id = value; }
         public string Title { get => title; set => title = value; }
+
+        public string Image { get => image; set => image = value; }
         public int Rating { get => rating; set => rating = value; }
         public string Content { get => content; set => content = value; }
         public DateTime Date { get => date; set => date = value; }
@@ -43,11 +46,12 @@ namespace MatchaLatteReviews.Domain.Model
         internal Editor Author { get => author; set => author = value; }
 
         [JsonConstructor]
-        public Article(string id, string title, int rating, string content, DateTime date, Status status, int views, 
+        public Article(string id, string title, string image, int rating, string content, DateTime date, Status status, int views, 
             string editorId, List<string> reviewIds, List<string> genreIds)
         {
             Id = id;
             Title = title;
+            Image = image;
             Rating = rating;
             Content = content;
             Date = date;
@@ -58,11 +62,12 @@ namespace MatchaLatteReviews.Domain.Model
             GenreIds = genreIds;
         }
 
-        public Article(string title, int rating, string content, DateTime date, Status status, int views, 
+        public Article(string title, string image, int rating, string content, DateTime date, Status status, int views, 
             string editorId, List<string> reviewIds, List<string> genreIds)
         {
             Id = Guid.NewGuid().ToString();
             Title = title;
+            Image = image;
             Rating = rating;
             Content = content;
             Date = date;

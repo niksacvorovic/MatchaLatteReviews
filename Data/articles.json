@@ -1,22 +1,147 @@
 [
   {
     "$id": "1",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 0,
-    "Name": "",
-    "Length": 0,
-    "Versions": [],
-    "Id": "78b6e4c3-c2c2-42ec-909b-c0aab14418ab",
-    "Title": "BRAT",
-    "Rating": 0,
-    "Content": "",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
+    "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
+    "Id": "2f6b0f1e-4c3a-4d7b-9e2d-6f0a1c3d9b21",
+    "Title": "Taylor Swift",
+    "Image": "art-tswift",
+    "Rating": 8,
+    "Content": "Taylor Alison Swift (born December 13, 1989) is an American singer-songwriter. An influential figure in popular culture, she is known for her autobiographical songwriting and artistic reinventions. ",
+    "Date": "2025-10-24T00:00:00",
+    "Status": "ForReview",
     "Views": 0,
-    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
+    "EditorId": null,
     "ReviewIds": [],
     "GenreIds": [
       "2ab4a244-95ca-4e98-beea-4dce3faea328"
-    ]
+    ],
+    "Debut": 2003,
+    "CountryIds": [1, 39],
+    "Countries": []
+  },
+  {
+    "$id": "2",
+    "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
+    "Id": "5a8d2e9c-0b6f-4f8a-93c1-7e2f0a9d4b65",
+    "Title": "Sabrina Carpenter",
+    "Image": "art-scarpenter",
+    "Rating": 7,
+    "Content": "Sabrina Annlynn Carpenter (born May 11, 1999) is an American singer, songwriter, and actress. She first gained prominence starring on the Disney Channel series Girl Meets World (2014–2017).",
+    "Date": "2025-10-24T00:00:00",
+    "Status": "ForReview",
+    "Views": 0,
+    "EditorId": null,
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ],
+    "Debut": 2008,
+    "CountryIds": [1, 39],
+    "Countries": []
+  },
+  {
+    "$id": "3",
+    "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
+    "Id": "9c1e7b2a-3f4d-4a8e-b972-0c6d5a1f3e28",
+    "Title": "Ariana Grande",
+    "Image": "art-agrande",
+    "Rating": 10,
+    "Content": "Ariana Grande-Butera is an American singer, songwriter, and actress. Known for her four-octave vocal range, which extends into the whistle register, she is regarded as an influential figure in popular music.",
+    "Date": "2025-10-24T00:00:00",
+    "Status": "ForReview",
+    "Views": 0,
+    "EditorId": null,
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ],
+    "Debut": 2008,
+    "CountryIds": [1, 39],
+    "Countries": []
+  },
+  {
+    "$id": "4",
+    "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
+    "Id": "e3b7a4d9-2c1f-4e6a-8b0d-1a2c3e4f5b67",
+    "Title": "Lana Del Rey",
+    "Image": "art-lanadelrey",
+    "Rating": 7,
+    "Content": "Elizabeth Woolridge Grant (born June 21, 1985), known professionally as Lana Del Rey, is an American singer-songwriter. Her music is noted for its melancholic exploration of glamor and romance, with frequent references to pop culture and 1950s–1970s Americana",
+    "Date": "2025-10-24T00:00:00",
+    "Status": "ForReview",
+    "Views": 0,
+    "EditorId": null,
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328",
+      "e559e571-e097-4d80-96f3-e10583b92160"
+    ],
+    "Debut": 2005,
+    "CountryIds": [1, 39],
+    "Countries": []
+  },
+  {
+    "$id": "5",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Id": "1f0a2b3c-4d5e-6f70-8191-0a2b3c4d5e6f",
+    "Title": "The Life Of A Showgirl",
+    "Image": "alb-showgirl",
+    "Rating": 9,
+    "Content": "Newest album of Taylor Swift.",
+    "Date": "2025-09-18T00:00:00",
+    "Status": "ForReview",
+    "Views": 0,
+    "EditorId": null,
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ],
+    "Type": 0,
+    "Name": "Taylor Swift",
+    "Length": 3114,
+    "Versions": []
+  },
+  {
+    "$id": "6",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Id": "7b6e5d4c-3a2f-4e1b-9c8d-7e6f5a4b3c2d",
+    "Title": "Man's best friend",
+    "Image": "alb-mbf",
+    "Rating": 9,
+    "Content": "Newest album of Sabrina Carpenter.",
+    "Date": "2025-09-18T00:00:00",
+    "Status": "ForReview",
+    "Views": 0,
+    "EditorId": null,
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ],
+    "Type": 0,
+    "Name": "Sabrina Carpenter",
+    "Length": 3000,
+    "Versions": []
+  },
+  {
+    "$id": "7",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Id": "0a1b2c3d-4e5f-6789-9abc-def012345678",
+    "Title": "The Fate of Ophelia",
+    "Image": "sng-ophelia",
+    "Rating": 10,
+    "Content": "Newest Taylor Swift's song. It is one of many on the album 'The life of a Showgirl'",
+    "Date": "2025-10-01T00:00:00",
+    "Status": "ForReview",
+    "Views": 0,
+    "EditorId": null,
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ],
+    "Type": 4,
+    "Name": "Taylor Swift",
+    "Length": 210,
+    "Versions": []
   }
 ]
+
