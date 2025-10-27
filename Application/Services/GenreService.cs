@@ -1,8 +1,10 @@
-﻿using MatchaLatteReviews.DependencyInjection;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using MatchaLatteReviews.DependencyInjection;
 using MatchaLatteReviews.Domain.Model;
 using MatchaLatteReviews.Domain.RepositoryInterfaces;
-using System;
-using System.Linq;
+using MatchaLatteReviews.Repositories;
 
 namespace MatchaLatteReviews.Application.Services
 {
@@ -23,6 +25,11 @@ namespace MatchaLatteReviews.Application.Services
                 throw new InvalidOperationException("Genre already exists!");
             }
             _genreRepository.Add(genre);
+        }
+
+        public IEnumerable<Genre> GetAll()
+        {
+            return _genreRepository.GetAll();
         }
     }
 }

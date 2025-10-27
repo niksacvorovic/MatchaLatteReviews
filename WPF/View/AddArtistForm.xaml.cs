@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MatchaLatteReviews.WPF.ViewModel;
 
 namespace MatchaLatteReviews.WPF.View
 {
@@ -19,9 +20,10 @@ namespace MatchaLatteReviews.WPF.View
     /// </summary>
     public partial class AddArtistForm : Window
     {
-        public AddArtistForm()
+        public AddArtistForm(string editorId)
         {
             InitializeComponent();
+            DataContext = new AddArtistFormViewModel(this.Close, editorId);
         }
     }
 }

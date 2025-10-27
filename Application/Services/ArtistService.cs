@@ -14,7 +14,7 @@ namespace MatchaLatteReviews.Application.Services
     {
         private IArticleRepository _articleRepository;
 
-        public ArtistService(IArticleRepository articleRepository)
+        public ArtistService()
         {
             _articleRepository = Injector.CreateInstance<IArticleRepository>();
         }
