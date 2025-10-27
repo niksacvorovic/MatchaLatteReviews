@@ -60,10 +60,6 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 _genreService.GetAll().Select(g => new SelectableGenre(g))
             );
 
-
-            //ArticleDate = DateTime.Now.Date;
-            //ArticleTime = DateTime.Now.ToString("HH:mm");
-
             AddArtistCommand = new RelayCommand(_ => AddArtist());
         }
 
@@ -83,8 +79,6 @@ namespace MatchaLatteReviews.WPF.ViewModel
             set { _selectedRating = value; OnPropertyChanged(nameof(SelectedRating)); }
         }
 
-        //public DateTime? ArticleDate { get; set; }
-        //public string ArticleTime { get; set; }
 
         // -------- Artist specific --------
         private string _debutText;
@@ -97,7 +91,6 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
         private void AddArtist()
         {
-            // ===== Validacija =====
             if (string.IsNullOrWhiteSpace(Title))
             {
                 MessageHelper.ShowError("Title is required.");
@@ -111,22 +104,9 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 return;
             }
 
-            //if (ArticleDate == null)
-            //{
-            //    MessageHelper.ShowError("Date is required.");
-            //    return;
-            //}
-
-            //if (!TimeSpan.TryParse(ArticleTime, out var t))
-            //{
-            //    MessageHelper.ShowError("Time must be in HH:mm format.");
-            //    return;
-            //}
-
-            //var finalDate = ArticleDate.Value.Date + t;
             var finalDate = DateTime.Now;
 
-            // Selekcije
+            // Selections
             List<string> selectedCountryIds = Countries.Where(c => c.IsSelected).Select(c => c.Country.Id).ToList();
             List<string> selectedGenreIds = Genres.Where(g => g.IsSelected).Select(g => g.Genre.Id).ToList();
 

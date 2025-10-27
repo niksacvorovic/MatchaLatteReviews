@@ -17,14 +17,14 @@ using MatchaLatteReviews.WPF.ViewModel;
 namespace MatchaLatteReviews.WPF.View
 {
     /// <summary>
-    /// Interaction logic for AddArtistForm.xaml
+    /// Interaction logic for EditArtistForm.xaml
     /// </summary>
-    public partial class AddArtistForm : Window
+    public partial class EditArtistForm : Window
     {
-        public AddArtistForm(string editorId)
+        public EditArtistForm(string artistId, string editorId)
         {
             InitializeComponent();
-            DataContext = new AddArtistFormViewModel(this.Close, editorId);
+            DataContext = new EditArtistFormViewModel(this.Close, artistId, editorId);
         }
 
         

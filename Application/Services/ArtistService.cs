@@ -32,7 +32,7 @@ namespace MatchaLatteReviews.Application.Services
         public void Update(Artist artist)
         {
             var articles = _articleRepository.GetAll();
-            if (articles.FirstOrDefault(a => a.Id.Equals(artist.Id)) != null)
+            if (articles.FirstOrDefault(a => a.Id.Equals(artist.Id)) == null)
             {
                 throw new InvalidOperationException("Artist does not exist!");
             }
@@ -42,12 +42,15 @@ namespace MatchaLatteReviews.Application.Services
         public void Delete(String id)
         {
             var articles = _articleRepository.GetAll();
-            if (articles.FirstOrDefault(a => a.Id.Equals(id)) != null)
+            if (articles.FirstOrDefault(a => a.Id.Equals(id)) == null)
             {
                 throw new InvalidOperationException("Artist does not exist!");
             }
             _articleRepository.DeleteById(id);
         }
 
+
+        public Artist GetById(string id)
+            => _articleRepository.GetAll().OfType<Artist>().FirstOrDefault(a => a.Id == id);
     }
 }

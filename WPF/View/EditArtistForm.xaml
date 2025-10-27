@@ -1,11 +1,11 @@
-﻿<Window x:Class="MatchaLatteReviews.WPF.View.AddArtistForm"
+﻿<Window x:Class="MatchaLatteReviews.WPF.View.EditArtistForm"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatchaLatteReviews.WPF.View"
         mc:Ignorable="d"
-        Title="AddArtistForm" Height="500" Width="800">
+        Title="EditArtistForm" Height="500" Width="800">
     <Grid Margin="12">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -14,13 +14,9 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Article meta -->
             <RowDefinition Height="Auto"/>
-            <!-- Content -->
             <RowDefinition Height="*"/>
-            <!-- Countries + Genres -->
             <RowDefinition Height="44"/>
-            <!-- Submit -->
         </Grid.RowDefinitions>
 
         <!-- ARTICLE META -->
@@ -36,46 +32,30 @@
                     <RowDefinition Height="32"/>
                     <RowDefinition Height="32"/>
                     <RowDefinition Height="32"/>
-
                 </Grid.RowDefinitions>
 
                 <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Name:</Label>
                 <TextBox Grid.Row="0" Grid.Column="1" Margin="4"
                          Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"/>
 
-
-                <Label  Grid.Column="2" Grid.Row="0" 
-                        Content="Rating:"
-                        VerticalAlignment="Center"/>
-
+                <Label  Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Content="Rating:"/>
                 <Grid Grid.Column="3" Grid.Row="0" Grid.RowSpan="3">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
-
                     <Slider Grid.Row="0"
-                            x:Name="OcenaSlider" 
-                            Minimum="1" 
-                            Maximum="10" 
+                            Minimum="1" Maximum="10"
                             Value="{Binding SelectedRating, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                            TickFrequency="1" 
-                            IsSnapToTickEnabled="True"
-                            VerticalAlignment="Center"
-                            Margin="4"/>
-
+                            TickFrequency="1" IsSnapToTickEnabled="True"
+                            VerticalAlignment="Center" Margin="4"/>
                     <TextBlock Grid.Row="1"
                                Text="{Binding SelectedRating, StringFormat='Rating: {0}'}"
-                               HorizontalAlignment="Center"
-                               FontWeight="Bold"
-                               Margin="4"/>
+                               HorizontalAlignment="Center" FontWeight="Bold" Margin="4"/>
                 </Grid>
 
-
-
-
                 <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Debut (year):</Label>
-                <TextBox Grid.Row="2" Grid.Column="1" Margin="4" 
+                <TextBox Grid.Row="2" Grid.Column="1" Margin="4"
                          Text="{Binding DebutText, UpdateSourceTrigger=PropertyChanged}"/>
             </Grid>
         </GroupBox>
@@ -125,8 +105,10 @@
             </GroupBox>
         </Grid>
 
+        
         <Button Grid.Row="3" Grid.ColumnSpan="2" Height="32"
-                Command="{Binding AddArtistCommand}">Add artist</Button>
-
+                Command="{Binding UpdateArtistCommand}">
+            Save changes
+        </Button>
     </Grid>
 </Window>

@@ -18,5 +18,49 @@
     "GenreIds": [
       "2ab4a244-95ca-4e98-beea-4dce3faea328"
     ]
+  },
+  {
+    "$id": "2",
+    "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
+    "Debut": 2012,
+    "CountryIds": [
+      "b1e5c5b0-1e51-4482-83d6-fa8fda6569d2"
+    ],
+    "Id": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707",
+    "Title": "Stromae",
+    "Rating": 8,
+    "Content": "Very popular French singer and songwriter.",
+    "Date": "2025-10-27T21:05:40.3362682+01:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "Vuk",
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ]
+  },
+  {
+    "$id": "3",
+    "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
+    "Debut": 2016,
+    "CountryIds": [
+      "7e849ebe-5bcf-4184-8339-3f48b9aa8263"
+    ],
+    "Id": "dbdf70bd-f858-47af-ac13-21f50fcf57ac",
+    "Title": "Jojo Siwa",
+    "Rating": 10,
+    "Content": "They dye their roots blonde.",
+    "Date": "2025-10-27T20:52:15.1780409+01:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "Vuk",
+    "ReviewIds": [],
+    "GenreIds": [
+      "e559e571-e097-4d80-96f3-e10583b92160",
+      "2ab4a244-95ca-4e98-beea-4dce3faea328",
+      "0eec2070-7a50-49ca-bf45-42104fc0e88b",
+      "48f372e5-0303-4d46-9b56-a42f3d14e6ef",
+      "6a210e7b-9e61-4673-af7e-84cd6bc13aa3"
+    ]
   }
 ]
