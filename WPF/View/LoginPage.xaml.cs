@@ -1,6 +1,7 @@
 ﻿using MatchaLatteReviews.WPF.ViewModel;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace MatchaLatteReviews.WPF.View
 {
@@ -35,6 +36,11 @@ namespace MatchaLatteReviews.WPF.View
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Close();
+        }
+
+        private void LoginPage_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter && DataContext is LoginPageViewModel vm) vm.LoginCommand.Execute(null);
         }
     }
 }

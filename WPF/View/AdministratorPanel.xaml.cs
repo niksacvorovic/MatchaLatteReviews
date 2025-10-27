@@ -54,5 +54,11 @@ namespace MatchaLatteReviews.WPF.View
             AddCountryForm addCountryForm = new AddCountryForm();
             addCountryForm.ShowDialog();
         }
+
+        private void ReviewArticles_Click(object sender, RoutedEventArgs e)
+        {
+            ReviewArticlesForm reviewArticlesForm = new ReviewArticlesForm();
+            reviewArticlesForm.ShowDialog();
+        }
     }
 }
