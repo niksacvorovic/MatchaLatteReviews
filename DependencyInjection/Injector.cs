@@ -17,11 +17,13 @@ namespace MatchaLatteReviews.DependencyInjection
             var genreContext = new JsonPersistenceContext("genres");
             var articleContext = new JsonPersistenceContext("articles");
             var countryContext = new JsonPersistenceContext("countries");
+            var reviewContext = new JsonPersistenceContext("reviews");
 
             var userRepository = new UserRepository(userContext);
             var genreRepository = new GenreRepository(genreContext);
             var articleRepository = new ArticleRepository(articleContext);
             var countryRepository = new CountryRepository(countryContext);
+            var reviewRepository = new ReviewRepository(reviewContext);
 
             var userStore = new UserStore();
 
@@ -29,6 +31,7 @@ namespace MatchaLatteReviews.DependencyInjection
             _implementations[typeof(IGenreRepository)] = genreRepository;
             _implementations[typeof(IArticleRepository)] = articleRepository;
             _implementations[typeof(ICountryRepository)] = countryRepository;
+            _implementations[typeof(IReviewRepository)] = reviewRepository;
 
             var userValidator = new UserValidator();
             _implementations[typeof(UserValidator)] = userValidator;

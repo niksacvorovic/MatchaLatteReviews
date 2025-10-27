@@ -79,7 +79,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 Article newArticle;
                 if (IsArtist)
                 {
-                    newArticle = new Artist(Title, 0, "", DateTime.MinValue, Domain.Enums.Status.ForReview, 0, null, new List<string>(), SelectedGenres.Select(g => g.Id).ToList(), 0, new List<int>());
+                    newArticle = new Artist(Title, 0, "", DateTime.MinValue, Domain.Enums.Status.ForReview, 0, null, new List<string>(), SelectedGenres.Select(g => g.Id).ToList(), 0, new List<string>());
                     _editorService.AddToTaskList(SelectedAuthorUsername, newArticle);
                 }
                 else
