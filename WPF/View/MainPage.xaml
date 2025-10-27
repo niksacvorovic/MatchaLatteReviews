@@ -56,7 +56,7 @@
             </Setter>
         </Style>
 
-        <!-- ===== Section header (bigger/bold) ===== -->
+        <!-- ===== Section header  ===== -->
         <Style x:Key="SectionHeader" TargetType="TextBlock">
             <Setter Property="FontSize" Value="28"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -65,7 +65,6 @@
             <Setter Property="Margin" Value="0,28,0,12"/>
         </Style>
 
-        <!-- ===== Slim, dark scrollbars (FIX: no duplicate PART_Track) ===== -->
         <!-- Brushes -->
         <SolidColorBrush x:Key="SbTrackBrush" Color="#0B0E14"/>
         <SolidColorBrush x:Key="SbThumbBrush" Color="#1A2330"/>
@@ -90,7 +89,7 @@
             </Style.Triggers>
         </Style>
 
-        <!-- Vertical template (pravilan smer nadole) -->
+        <!-- Vertical template -->
         <ControlTemplate x:Key="VerticalScrollBarTemplate" TargetType="ScrollBar">
             <Grid Background="{TemplateBinding Background}" Width="8">
                 <Track x:Name="PART_Track"
@@ -119,7 +118,7 @@
             </Grid>
         </ControlTemplate>
 
-        <!-- Horizontal template (normalan smer) -->
+        <!-- Horizontal template  -->
         <ControlTemplate x:Key="HorizontalScrollBarTemplate" TargetType="ScrollBar">
             <Grid Background="{TemplateBinding Background}" Height="8">
                 <Track x:Name="PART_Track"
@@ -149,12 +148,10 @@
 
 
 
-        <!-- Style that swaps templates by Orientation -->
         <Style TargetType="ScrollBar">
             <Setter Property="Background" Value="{StaticResource SbTrackBrush}"/>
             <Setter Property="BorderBrush" Value="{StaticResource SbTrackBrush}"/>
             <Setter Property="SnapsToDevicePixels" Value="True"/>
-            <!-- Default: vertical -->
             <Setter Property="Template" Value="{StaticResource VerticalScrollBarTemplate}"/>
             <Style.Triggers>
                 <Trigger Property="Orientation" Value="Horizontal">
@@ -166,7 +163,7 @@
 
         <!-- ===== DataTemplates ===== -->
 
-        <!-- Editors' Pick (no button) -->
+        <!-- Editors' Pick -->
         <DataTemplate x:Key="EditorsPickTemplate">
             <Border Style="{StaticResource CardBorder}">
                 <Grid Width="260">
@@ -196,7 +193,7 @@
             </Border>
         </DataTemplate>
 
-        <!-- Release (Album / EP / Single / Song) — no button; bigger title; type + rating -->
+        <!-- Release (Album / EP / Single / Song)  -->
         <DataTemplate x:Key="ReleaseTemplate">
             <Border Style="{StaticResource CardBorder}">
                 <StackPanel Width="200">
@@ -212,7 +209,7 @@
             </Border>
         </DataTemplate>
 
-        <!-- Artist — same size as Release; no bio/button -->
+        <!-- Artist  -->
         <DataTemplate x:Key="ArtistTemplate">
             <Border Style="{StaticResource CardBorder}">
                 <StackPanel Width="200">
@@ -223,7 +220,7 @@
             </Border>
         </DataTemplate>
 
-        <!-- Event (optional; left as-is) -->
+        <!-- Event  -->
         <DataTemplate x:Key="EventTemplate">
             <Border Style="{StaticResource CardBorder}" Padding="12">
                 <Grid>

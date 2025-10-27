@@ -12,13 +12,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 
 
-// aliasi
 using TypeEnum = MatchaLatteReviews.Domain.Enums.Type;
 using VersionModel = MatchaLatteReviews.Domain.Model.Version;
 
 namespace MatchaLatteReviews.WPF.ViewModel
 {
-    // DTO-ovi
     public class EditorsPickVM
     {
         public string Cover { get; set; }
@@ -33,10 +31,10 @@ namespace MatchaLatteReviews.WPF.ViewModel
     {
         public string Cover { get; set; }
         public string Title { get; set; }
-        public string Artist { get; set; }  // možeš ostaviti prazan
+        public string Artist { get; set; }  
         public int Year { get; set; }
-        public string Genre { get; set; }   // prazan
-        public string Format { get; set; }  // ne koristi se u kartici, može ostati
+        public string Genre { get; set; }  
+        public string Format { get; set; }  
         public double AvgRating { get; set; }
         public string Kind { get; set; }    // NEW: "Album" / "EP" / "Single" / "Song"
     }
@@ -47,7 +45,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         public string Name { get; set; }
         public string Genre { get; set; }
         public string BioOneLine { get; set; }
-        public string TypeBadge { get; set; } // zadržano u template-u (može ostati prazan)
+        public string TypeBadge { get; set; }
     }
 
     public class EventVM
@@ -88,7 +86,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
             var all = _articles.GetAll();
             var allList = all != null ? all.ToList() : new List<Article>();
 
-            // 1) Novi albumi/EP/singlovi – poslednjih 8 po datumu verzije
+            // 1) Novi albumi/EP/singlovi 
             var music = allList.OfType<Music>().ToList();
             var releases = music
                 .Where(m => m.Type == TypeEnum.Album || m.Type == TypeEnum.EP || m.Type == TypeEnum.Single)
@@ -104,7 +102,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
             foreach (var r in releases)
                 NewReleases.Add(MapRelease(r.Music, r.LastRelease));
 
-            // 2) Urednički izbor – PIN po Image ključu (npr. "alb-mbf")
+            // 2) Urednicki izbor 
             var pinnedImages = new[] { "alb-mbf", "alb-showgirl", "sng-ophelia" };
 
             foreach (var a in allList.Where(a => !string.IsNullOrWhiteSpace(a.Image) && pinnedImages.Contains(a.Image)))
@@ -128,7 +126,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 }
             }
 
-            // 3) Izdvojeni izvođači – prvih 8 Artist
+            // 3) Izdvojeni izvodjaci
             var artistList = allList.OfType<Artist>().Take(8).ToList();
             foreach (var art in artistList)
             {
@@ -138,11 +136,11 @@ namespace MatchaLatteReviews.WPF.ViewModel
                     Genre = "",
                     Photo = CoverByImage(art.Image),
                     BioOneLine = Truncate(art.Content, 110),
-                    TypeBadge = "" // po želji: "Solo"/"Bend" ili prazno
+                    TypeBadge = "" 
                 });
             }
 
-            // 4) Izvođenja/Događaji – Music sa Type == Performance
+            // 4) Izvodjenja/Dogadjaji 
             var perf = music
                 .Where(m => m.Type == TypeEnum.Performance)
                 .OrderByDescending(m => (m.Versions != null && m.Versions.Any()) ? m.Versions.Max(v => v.ReleaseDate) : m.Date)
@@ -164,7 +162,6 @@ namespace MatchaLatteReviews.WPF.ViewModel
             }
         }
 
-        // mapiranja / pomoćne
         private ReleaseVM MapRelease(Music m, VersionModel last)
         {
             return new ReleaseVM
@@ -176,7 +173,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 Format = (last != null ? last.Format.ToString() : ""),
                 AvgRating = m.Rating,
                 Cover = CoverByImage(m.Image),
-                Kind = m.Type.ToString()  // << ovo se prikazuje u XAML-u
+                Kind = m.Type.ToString()  
             };
         }
 
@@ -198,7 +195,6 @@ namespace MatchaLatteReviews.WPF.ViewModel
             return a != null ? a.Date : DateTime.MinValue;
         }
 
-        // NOVO: konvencija koristi Article.Image (bez ekstenzije) → WPF/img/covers/{Image}.jpg
         private static string CoverByImage(string imageKey)
         {
             if (string.IsNullOrWhiteSpace(imageKey))
@@ -214,14 +210,12 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
         private void ChildScroll_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
-            // Ako je delta vertikalna, prosledi je roditeljskom ScrollViewer-u
             if (sender is DependencyObject d)
             {
                 var parent = FindParentScrollViewer(d);
                 if (parent != null)
                 {
-                    e.Handled = true; // spreči da je pojede unutrašnji
-                    // Ponovo podigni isti događaj na roditelju
+                    e.Handled = true;
                     var ev = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta)
                     {
                         RoutedEvent = UIElement.MouseWheelEvent,

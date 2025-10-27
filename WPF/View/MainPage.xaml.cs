@@ -13,12 +13,12 @@ namespace MatchaLatteReviews.WPF.View
     /// <summary>
     /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class MainPage : Window // Ensure this matches the base class in all partial declarations
+    public partial class MainPage : Window
     {
         public MainPage()
         {
             InitializeComponent();
-            DataContext = new MainPageViewModel(); // VM sam iznutra rešava DI pomoću Injector-a DataContext = new MainPageViewModel(); // VM sam iznutra rešava DI pomoću Injector-a
+            DataContext = new MainPageViewModel(); 
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -41,7 +41,7 @@ namespace MatchaLatteReviews.WPF.View
                 var parent = FindParentScrollViewer(d);
                 if (parent != null)
                 {
-                    e.Handled = true; // spreči da ga pojede unutrašnji
+                    e.Handled = true;
                     var ev = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta)
                     {
                         RoutedEvent = UIElement.MouseWheelEvent,
