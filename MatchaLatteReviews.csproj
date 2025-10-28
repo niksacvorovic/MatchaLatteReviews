@@ -96,6 +96,7 @@
     <Compile Include="Application\Services\CountryService.cs" />
     <Compile Include="Application\Services\EditorService.cs" />
     <Compile Include="Application\Services\GenreService.cs" />
+    <Compile Include="Application\Services\MusicService.cs" />
     <Compile Include="Application\Services\RegisteredUserService.cs" />
     <Compile Include="Application\Services\ReviewService.cs" />
     <Compile Include="Application\Services\UserService.cs" />

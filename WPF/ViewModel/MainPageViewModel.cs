@@ -10,8 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using MatchaLatteReviews.Application.Services;
-
-
+using MatchaLatteReviews.Domain.Enums;
 using TypeEnum = MatchaLatteReviews.Domain.Enums.Type;
 using VersionModel = MatchaLatteReviews.Domain.Model.Version;
 
@@ -99,7 +98,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
         private void LoadFront()
         {
-            var all = _articles.GetAll();
+            var all = _articles.GetAll().Where(a => a.Status == Status.Approved);
             var allList = all != null ? all.ToList() : new List<Article>();
 
             var music = allList.OfType<Music>().ToList();

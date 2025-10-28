@@ -76,5 +76,7 @@ namespace MatchaLatteReviews.Domain.Model
             ReviewIds = reviewIds;
             GenreIds = genreIds;
         }
+
+        public override String ToString() => Title;
     }
 }

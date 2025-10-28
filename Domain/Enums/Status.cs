@@ -2,6 +2,6 @@
 {
     public enum Status
     {
-        ForReview, Approved, Declined
+        ForReview, Approved, Declined, Assigned
     }
 }
