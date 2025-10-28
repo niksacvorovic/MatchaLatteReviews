@@ -53,7 +53,6 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -88,13 +87,15 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Button Grid.Column="0" Grid.Row="0" Style="{StaticResource HoverButtonStyle}" Content="Logout" Click="Logout_Click" Margin="0,0,10,5"/>
                     <Button Grid.Column="1" Grid.Row="0" Style="{StaticResource HoverButtonStyle}" Content="Register editor" Click="RegisterEditor_Click" Margin="0,0,10,5"/>
                     <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource HoverButtonStyle}" Content="Add new genre" Click="AddNewGenre_Click" Margin="0,0,10,5"/>
-                    <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource HoverButtonStyle}" Content="Add to Task List" Click="AddToTaskList_Click" Margin="0,0,10,0"/>
-                    <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource HoverButtonStyle}" Content="Add new country" Click="AddNewCountry_Click" Margin="0,0,10,0"/>
-                    <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource HoverButtonStyle}" Content="Artists" Click="Artists_Click" Margin="0,0,10,0"/>
+                    <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource HoverButtonStyle}" Content="Add to Task List" Click="AddToTaskList_Click" Margin="0,0,10,5"/>
+                    <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource HoverButtonStyle}" Content="Add new country" Click="AddNewCountry_Click" Margin="0,0,10,5"/>
+                    <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource HoverButtonStyle}" Content="Review Articles" Click="ReviewArticles_Click" Margin="0,0,10,5"/>
+                    <Button Grid.Column="0" Grid.Row="3" Style="{StaticResource HoverButtonStyle}" Content="Manage Artists" Click="Artists_Click" Margin="0,0,10,0"/>
                 </Grid>
 
             </Grid>

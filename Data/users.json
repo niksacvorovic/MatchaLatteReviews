@@ -17,9 +17,6 @@
     "GenresIds": [
       "Pop"
     ],
-    "Articles": null,
-    "TaskList": null,
-    "Genres": null,
     "UserId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
     "Username": "marko_m",
     "Password": "Marko123",
@@ -34,13 +31,25 @@
     "Premium": false,
     "ReviewIds": [],
     "FavoriteIds": [],
-    "Reviews": null,
-    "Favorites": null,
     "UserId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
     "Username": "ana_j",
     "Password": "Ana12345",
     "FirstName": "Ana",
     "LastName": "Jovanović",
+    "IsPublic": false,
+    "Role": 1
+  },
+  {
+    "$id": "4",
+    "$type": "MatchaLatteReviews.Domain.Model.RegisteredUser, MatchaLatteReviews",
+    "Premium": false,
+    "ReviewIds": [],
+    "FavoriteIds": [],
+    "UserId": "d954a489-c60f-42d7-8725-c0af1ad75d52",
+    "Username": "vuk_dj",
+    "Password": "Vuk123",
+    "FirstName": "Vuk",
+    "LastName": "Đorđević",
     "IsPublic": false,
     "Role": 1
   }

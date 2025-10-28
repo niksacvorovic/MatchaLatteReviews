@@ -60,5 +60,11 @@ namespace MatchaLatteReviews.WPF.View
             ManageArtistsPage manageArtistsPage = new ManageArtistsPage();
             manageArtistsPage.ShowDialog();
         }
+
+        private void ReviewArticles_Click(object sender, RoutedEventArgs e)
+        {
+            ReviewArticlesForm reviewArticlesForm = new ReviewArticlesForm();
+            reviewArticlesForm.ShowDialog();
+        }
     }
 }

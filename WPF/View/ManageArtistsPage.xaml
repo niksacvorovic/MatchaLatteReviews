@@ -176,7 +176,8 @@
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" HorizontalAlignment="Right">
                 <Button Style="{StaticResource HoverButtonStyle}" Content="Add artist"
                         Command="{Binding AddNewArtistCommand}"/>
-                
+                <Button Style="{StaticResource HoverButtonStyle}" Content="Refresh" Margin="10,0,0,0"
+                        Command="{Binding RefreshCommand}"/>
             </StackPanel>
         </DockPanel>
 
