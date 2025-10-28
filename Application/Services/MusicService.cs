@@ -12,11 +12,11 @@ namespace MatchaLatteReviews.Application.Services
 {
     public class MusicService
     {
-        private IMusicRepository _musicRepository;
+        private IArticleRepository _musicRepository;
 
-        public MusicService(MusicRepository m)
+        public MusicService()
         {
-            _musicRepository = m;
+            _musicRepository = Injector.CreateInstance<IArticleRepository>();
         }
 
         public void Add(Music music)

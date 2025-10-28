@@ -92,10 +92,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Application\Constants\Constants.cs" />
+    <Compile Include="Application\Services\ArtistService.cs" />
+    <Compile Include="Application\Services\CountryService.cs" />
     <Compile Include="Application\Services\EditorService.cs" />
     <Compile Include="Application\Services\GenreService.cs" />
     <Compile Include="Application\Services\MusicService.cs" />
     <Compile Include="Application\Services\RegisteredUserService.cs" />
+    <Compile Include="Application\Services\ReviewService.cs" />
     <Compile Include="Application\Services\UserService.cs" />
     <Compile Include="Application\Utilities\MessageHelper.cs" />
     <Compile Include="Application\Utilities\UserValidator.cs" />
@@ -116,27 +119,45 @@
     <Compile Include="Domain\Model\User.cs" />
     <Compile Include="Domain\Model\Version.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IArticleRepository.cs" />
+    <Compile Include="Domain\RepositoryInterfaces\ICountryRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IGenreRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IMusicRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IPersistenceContext.cs" />
+    <Compile Include="Domain\RepositoryInterfaces\IReviewRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IUserRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\RepositoryInterfaces.cs" />
     <Compile Include="Repositories\ArticleRepository.cs" />
+    <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Repositories\GenreRepository.cs" />
     <Compile Include="Repositories\JsonPersistenceContext.cs" />
-    <Compile Include="Repositories\MusicRepository.cs" />
+    <Compile Include="Repositories\ReviewRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Stores\UserStore.cs" />
+    <Compile Include="WPF\ViewModel\AddArtistFormViewModel.cs" />
+    <Compile Include="WPF\ViewModel\AddCountryFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\AddGenreFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\AddMusicFormViewModel.cs" />
+    <Compile Include="WPF\ViewModel\ArticleViewModel.cs" />
+    <Compile Include="WPF\ViewModel\ArticleReviewsPageViewModel.cs" />
+    <Compile Include="WPF\ViewModel\EditArtistFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditorRegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
+    <Compile Include="WPF\ViewModel\MainPageViewModel.cs" />
+    <Compile Include="WPF\ViewModel\ManageArtistsViewModel.cs" />
     <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\RelayCommand.cs" />
+    <Compile Include="WPF\ViewModel\ReviewArticlesFormViewModel.cs" />
+    <Compile Include="WPF\ViewModel\TaskListUpdateFormViewModel.cs" />
+    <Compile Include="WPF\View\AddArtistForm.xaml.cs">
+      <DependentUpon>AddArtistForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\AddCountryForm.xaml.cs">
+      <DependentUpon>AddCountryForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WPF\View\AddGenreForm.xaml.cs">
       <DependentUpon>AddGenreForm.xaml</DependentUpon>
     </Compile>
@@ -145,6 +166,15 @@
     </Compile>
     <Compile Include="WPF\View\AdministratorPanel.xaml.cs">
       <DependentUpon>AdministratorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\ArticlePage.xaml.cs">
+      <DependentUpon>ArticlePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\ArticleReviewsPage.xaml.cs">
+      <DependentUpon>ArticleReviewsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\EditArtistForm.xaml.cs">
+      <DependentUpon>EditArtistForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\EditorPanel.xaml.cs">
       <DependentUpon>EditorPanel.xaml</DependentUpon>
@@ -158,11 +188,20 @@
     <Compile Include="WPF\View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WPF\View\ManageArtistsPage.xaml.cs">
+      <DependentUpon>ManageArtistsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WPF\View\RegisteredUserPanel.xaml.cs">
       <DependentUpon>RegisteredUserPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\ReviewArticlesForm.xaml.cs">
+      <DependentUpon>ReviewArticlesForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\TaskListUpdateForm.xaml.cs">
+      <DependentUpon>TaskListUpdateForm.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -192,13 +231,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="WPF\img\default_artist.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="WPF\img\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="WPF\View\AddArtistForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\AddCountryForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WPF\View\AddGenreForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -208,6 +257,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\AdministratorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\ArticlePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\ArticleReviewsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\EditArtistForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -227,6 +288,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WPF\View\ManageArtistsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WPF\View\RegisteredUserPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -235,9 +300,80 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WPF\View\ReviewArticlesForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\TaskListUpdateForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="WPF\img\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\brat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\ariana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\bruno.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\cardigan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\eternal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\evermore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\folklore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\lanadelrey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\michael.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\ophelia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\rihanna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\showgirl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\taylor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\thriller.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\willow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\erastour.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\jennie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\mantra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\ruby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\sweetener.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\tears.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

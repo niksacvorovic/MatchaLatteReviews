@@ -25,7 +25,7 @@ namespace MatchaLatteReviews.WPF.View
     public partial class EditorPanel : Window
     {       
         private UserStore _userStore;
-        private MusicRepository _musicRepository;
+        private ArticleRepository _musicRepository;
         public ObservableCollection<MusicItem> MusicItems { get; } = new ObservableCollection<MusicItem>();
 
         public EditorPanel(UserStore e)

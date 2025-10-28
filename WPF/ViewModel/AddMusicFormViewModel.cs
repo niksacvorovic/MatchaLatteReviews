@@ -18,16 +18,15 @@ namespace MatchaLatteReviews.WPF.ViewModel
 {
     public class AddMusicFormViewModel : INotifyPropertyChanged
     {
-        private string editorId;
         private readonly MusicService _musicService;
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        public AddMusicFormViewModel(Action close, string edId)
+        //TODO: popraviti ovo, editor id, sta sa tim?
+        public AddMusicFormViewModel(Action close, string editorId)
         {
-            editorId = edId;
             _musicService = Injector.CreateInstance<MusicService>();
 
             AddMusicCommand = new RelayCommand(_ => AddMusic());
@@ -43,17 +42,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         public string Title { get; set; }
         public string Content { get; set; }
         public int Rating { get; set; }
-        //public DateTime ReleaseDate { get; set; }
-        private DateTime _releaseDate = DateTime.Now; // default na danas
-        public DateTime ReleaseDate
-        {
-            get => _releaseDate;
-            set
-            {
-                _releaseDate = value;
-                OnPropertyChanged(nameof(ReleaseDate));
-            }
-        }
+        public DateTime ReleaseDate { get; set; }
         public string TypeString { get; set; }
         public MatchaLatteReviews.Domain.Enums.Type type;
 
@@ -90,10 +79,11 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
             type = parsedType;
 
-            //List<MatchaLatteReviews.Domain.Model.Version> versions = new List<MatchaLatteReviews.Domain.Model.Version>();
-            //MessageBox.Show("Title: " + Title + "\nContent: " + Content + "\nRating: " + Rating + "\nRelease Date: " + ReleaseDate + "\nType: " + Type + "\nLength: " + Length);
-            Music newMusic = new Music(Title, Rating, Content, ReleaseDate, Domain.Enums.Status.Approved, 0, editorId, new List<string>(), new List<string>(), type, Length, new List<MatchaLatteReviews.Domain.Model.Version>());
-
+            //TODO : dodati proveru za ostale parametre
+            Music newMusic = new Music("id", Title, "img", Rating, Content, DateTime.Now, Domain.Enums.Status.Approved, 0, 
+                "editorid", new List<string>(), new List<string>(), type, "name", Length, 
+                new List<MatchaLatteReviews.Domain.Model.Version>(), ReleaseDate);
+            
             try
             {
                 _musicService.Add(newMusic);
@@ -106,7 +96,6 @@ namespace MatchaLatteReviews.WPF.ViewModel
             }
             _close?.Invoke();
         }
-
         private void Back()
         {
             _close();
