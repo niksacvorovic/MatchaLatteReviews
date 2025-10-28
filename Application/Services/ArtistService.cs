@@ -54,8 +54,18 @@ namespace MatchaLatteReviews.Application.Services
             return _articleRepository.GetAll().OfType<Artist>();
         }
 
+        public IReadOnlyList<Artist> GetTopRated(int count = 6)
+        {
+            return _articleRepository.GetAll()
+                .OfType<Artist>()
+                .OrderByDescending(a => a.Rating)     
+                .ThenByDescending(a => a.Date)        
+                .Take(count)
+                .ToList();
+        }
 
         public Artist GetById(string id)
             => _articleRepository.GetAll().OfType<Artist>().FirstOrDefault(a => a.Id == id);
     }
+
 }
