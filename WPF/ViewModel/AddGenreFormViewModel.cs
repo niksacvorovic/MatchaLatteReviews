@@ -5,6 +5,7 @@ using MatchaLatteReviews.Domain.Model;
 using MatchaLatteReviews.WPF.View;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -25,11 +26,13 @@ namespace MatchaLatteReviews.WPF.ViewModel
         {
             _genreService = Injector.CreateInstance<GenreService>();
             AddGenreCommand = new RelayCommand(_ => AddGenre());
+            AllGenres = new ObservableCollection<Genre>(_genreService.GetAll());
             _close = close;
         }
 
         private Action _close;
         public ICommand AddGenreCommand { get; }
+        public ObservableCollection<Genre> AllGenres { get; set; }
 
         public string Name { get; set; }
 

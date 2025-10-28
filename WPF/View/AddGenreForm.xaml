@@ -5,16 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatchaLatteReviews.WPF.View"
         mc:Ignorable="d"
-        Title="AddGenreForm" Height="120" Width="200">
+        Title="AddGenreForm" Height="300" Width="250">
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <WrapPanel Grid.Row="0">
-            <Label>Genre name:</Label>
+        <Label>Existing Genres:</Label>
+        <ListBox Grid.Row="1" ItemsSource="{Binding AllGenres}"></ListBox>
+        <WrapPanel Grid.Row="2">
+            <Label>New Genre name:</Label>
             <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Width="80" VerticalAlignment="Center"></TextBox>
         </WrapPanel>
-        <Button Grid.Row="1" Margin="5" Command="{Binding AddGenreCommand}">Add genre</Button>
+        <Button Grid.Row="3" Margin="5" Command="{Binding AddGenreCommand}">Add genre</Button>
     </Grid>
 </Window>
