@@ -84,7 +84,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 }
                 else
                 {
-                    newArticle = new Music(Title, "", 0, "", DateTime.MinValue, Domain.Enums.Status.ForReview, 0, null, new List<string>(), SelectedGenres.Select(g => g.Id).ToList(), Domain.Enums.Type.Album, "", 0, new List<Domain.Model.Version>());
+                    newArticle = new Music(Title, "", 0, "", DateTime.MinValue, Domain.Enums.Status.ForReview, 0, null, new List<string>(), SelectedGenres.Select(g => g.Id).ToList(), Domain.Enums.Type.Album, "", 0, new List<Domain.Model.Version>(), DateTime.MinValue);
                     _editorService.AddToTaskList(SelectedAuthorUsername, newArticle);
                 }
                 MessageHelper.ShowInfo("Article successfully added to task list!");
