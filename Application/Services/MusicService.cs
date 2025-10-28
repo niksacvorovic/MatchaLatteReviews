@@ -12,21 +12,21 @@ namespace MatchaLatteReviews.Application.Services
 {
     public class MusicService
     {
-        private IArticleRepository _musicRepository;
+        private IArticleRepository _articleRepository;
 
         public MusicService()
         {
-            _musicRepository = Injector.CreateInstance<IArticleRepository>();
+            _articleRepository = Injector.CreateInstance<IArticleRepository>();
         }
 
         public void Add(Music music)
         {
-            var musics = _musicRepository.GetAll();
-            if (musics.FirstOrDefault(g => g.Title.Equals(music.Title)) != null)
+            var articles = _articleRepository.GetAll();
+            if (articles.FirstOrDefault(a => a.Id.Equals(music.Id)) != null)
             {
-                throw new InvalidOperationException("Music work already exists!");
+                throw new InvalidOperationException("Music already exists!");
             }
-            _musicRepository.Add(music);
+            _articleRepository.Add(music);
         }
     }
 }

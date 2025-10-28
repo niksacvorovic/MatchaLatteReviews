@@ -35,6 +35,19 @@ namespace MatchaLatteReviews.Repositories
             return article;
         }
 
+        public Article Add(Music music)
+        {
+            var articles = GetAll().ToList();
+
+            if (articles.Any(g => g.Title.Equals(music.Title)))
+            {
+                throw new InvalidOperationException($"Music with title {music.Title}  already exists.");
+            }
+            articles.Add(music);
+            SaveAll(articles);
+            return music;
+        }
+
         public void DeleteById(string id)
         {
             var articles = GetAll().ToList();

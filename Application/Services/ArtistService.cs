@@ -28,7 +28,6 @@ namespace MatchaLatteReviews.Application.Services
             _articleRepository.Add(artist);
         }
 
-
         public void Update(Artist artist)
         {
             var articles = _articleRepository.GetAll();
