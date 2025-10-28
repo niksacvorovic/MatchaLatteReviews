@@ -28,5 +28,9 @@ namespace MatchaLatteReviews.Application.Services
             _countryRepository.Add(country);
         }
 
+        public IEnumerable<Country> GetAll()
+        {
+            return _countryRepository.GetAll();
+        }
     }
 }
