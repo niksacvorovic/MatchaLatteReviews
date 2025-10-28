@@ -1,14 +1,20 @@
 ﻿using MatchaLatteReviews.Domain.Model;
 using MatchaLatteReviews.WPF.ViewModel;
+using MatchaLatteReviews.WPF.View;
 using System.Windows;
+using MatchaLatteReviews.DependencyInjection;   
+using MatchaLatteReviews.Stores;
 
 namespace MatchaLatteReviews.WPF.View
 {
     public partial class ArticlePage : Window
+
     {
+        private readonly UserStore _userStore;
         public ArticlePage(Article article)
         {
             InitializeComponent();
+            _userStore = Injector.CreateInstance<UserStore>();
             DataContext = new ArticleViewModel(article);
         }
 
@@ -16,8 +22,9 @@ namespace MatchaLatteReviews.WPF.View
         {
             if (DataContext is ArticleViewModel vm)
             {
-                var win = new LoginPage();
-                //var win = new ReviewsWindow(vm.Id, vm.Title); // 
+                var userId = _userStore.CurrentUser?.UserId ?? string.Empty;
+
+                var win = new ArticleReviewsPage(vm.Id, userId);
                 win.Owner = this;
                 win.ShowDialog();
             }
