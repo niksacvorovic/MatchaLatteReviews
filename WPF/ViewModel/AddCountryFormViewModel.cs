@@ -4,6 +4,7 @@ using MatchaLatteReviews.DependencyInjection;
 using MatchaLatteReviews.Domain.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -24,11 +25,13 @@ namespace MatchaLatteReviews.WPF.ViewModel
         {
             _countryService = Injector.CreateInstance<CountryService>();
             AddCountryCommand = new RelayCommand(_ => AddCountry());
+            AllCountries = new ObservableCollection<Country>(_countryService.GetAll());
             _close = close;
         }
 
         private Action _close;
         public ICommand AddCountryCommand { get; }
+        public ObservableCollection<Country> AllCountries { get; set; }
 
         public string Name { get; set; }
 

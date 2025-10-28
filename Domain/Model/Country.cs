@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO.Packaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,5 +27,7 @@ namespace MatchaLatteReviews.Domain.Model
             Id = Guid.NewGuid().ToString();
             Name = name;
         }
+
+        public override String ToString() => Name;
     }
 }
