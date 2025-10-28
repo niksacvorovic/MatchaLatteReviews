@@ -137,9 +137,11 @@
     <Compile Include="WPF\ViewModel\AddArtistFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\AddCountryFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\AddGenreFormViewModel.cs" />
+    <Compile Include="WPF\ViewModel\ArticleViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditArtistFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditorRegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
+    <Compile Include="WPF\ViewModel\MainPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\ManageArtistsViewModel.cs" />
     <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\RelayCommand.cs" />
@@ -155,6 +157,9 @@
     </Compile>
     <Compile Include="WPF\View\AdministratorPanel.xaml.cs">
       <DependentUpon>AdministratorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\ArticlePage.xaml.cs">
+      <DependentUpon>ArticlePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\EditArtistForm.xaml.cs">
       <DependentUpon>EditArtistForm.xaml</DependentUpon>
@@ -236,6 +241,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WPF\View\ArticlePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WPF\View\EditArtistForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -275,6 +284,69 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="WPF\img\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\brat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\ariana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\bruno.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\cardigan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\eternal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\evermore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\folklore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\lanadelrey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\michael.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\ophelia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\rihanna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\showgirl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\taylor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\thriller.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\willow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\erastour.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\jennie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\mantra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\ruby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\sweetener.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WPF\img\covers\tears.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
