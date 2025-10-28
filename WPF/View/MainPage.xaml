@@ -331,8 +331,7 @@
                 <TextBlock Style="{StaticResource SectionHeader}" Text="Performances"/>
                 <ItemsControl ItemsSource="{Binding Events}" ItemTemplate="{StaticResource EventTemplate}"/>
 
-                <TextBlock Margin="0,24,0,48" Foreground="#9AA1AC" FontSize="12"
-                           Text="*Klik na karticu otvara detalje (u prototipu za nekoliko primera)."/>
+               
             </StackPanel>
         </ScrollViewer>
     </Grid>
