@@ -41,6 +41,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         public ICommand AddNewArtistCommand { get; }
         public ICommand EditArtistCommand { get; }
         public ICommand DeleteArtistCommand { get; }
+        public ICommand RefreshCommand { get; }
 
         public ManageArtistsViewModel(Action openAdd, Action<Artist> openEdit)
         {
@@ -53,6 +54,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
             AddNewArtistCommand = new RelayCommand(_ => _openAdd());
             EditArtistCommand = new RelayCommand(a => Edit((ArtistListItemVM)a));
             DeleteArtistCommand = new RelayCommand(a => Delete((ArtistListItemVM)a));
+            RefreshCommand = new RelayCommand(_ => Refresh());
 
             Refresh();
         }
