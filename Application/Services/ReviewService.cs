@@ -85,11 +85,11 @@ namespace MatchaLatteReviews.Application.Services
                 string.Equals(r.AuthorId, userId));
         }
 
-        public double? GetArticleAverageRating(string articleId)
+        public double GetArticleAverageRating(string articleId)
         {
-            var list = GetArticleReviews(articleId).ToList();
-            if (list.Count == 0) return null;
-
+            var list = GetArticleReviews(articleId).Where(r => r.IsPublic).ToList();
+            if (list.Count == 0) return 0;
+            
             return list.Average(r => r.Rating);
         }
 
@@ -101,6 +101,8 @@ namespace MatchaLatteReviews.Application.Services
             if (string.IsNullOrWhiteSpace(review.AuthorId)) throw new ArgumentException("UserId is required.");
 
         }
+
+        
 
     }
 }

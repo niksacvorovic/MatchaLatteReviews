@@ -33,5 +33,10 @@ namespace MatchaLatteReviews.Application.Services
             registeredUser.Role = Domain.Enums.Role.RegisteredUser;
             _userRepository.Add(registeredUser);
         }
+
+        public RegisteredUser GetById(string id)
+        {
+            return (RegisteredUser)_userRepository.GetById(id);
+        }
     }
 }

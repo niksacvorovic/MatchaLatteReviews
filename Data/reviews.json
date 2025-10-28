@@ -1,1 +1,102 @@
-[]
+[
+  {
+    "$id": "1",
+    "ReviewId": "28df3d35-69f1-41b8-9723-989e1a922a05",
+    "Rating": 5,
+    "Comment": "I love his music",
+    "IsPublic": true,
+    "IsApproved": false,
+    "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "2",
+    "ReviewId": "fe0e9439-5365-4703-8b83-1fec87b8e6f2",
+    "Rating": 3,
+    "Comment": "Its okey I guess",
+    "IsPublic": true,
+    "IsApproved": false,
+    "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "3",
+    "ReviewId": "b52fcbdb-a84c-4b5b-a92a-7802ddec44c3",
+    "Rating": 1,
+    "Comment": "I dont like it at all",
+    "IsPublic": true,
+    "IsApproved": false,
+    "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "4",
+    "ReviewId": "9becf5ac-d0c8-499c-a42e-be272e2d9cff",
+    "Rating": 4,
+    "Comment": "Cao, top je",
+    "IsPublic": true,
+    "IsApproved": true,
+    "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "5",
+    "ReviewId": "85bc4fd6-4015-4aba-b408-95af498d1cdd",
+    "Rating": 3,
+    "Comment": "Nije nesto",
+    "IsPublic": true,
+    "IsApproved": false,
+    "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "6",
+    "ReviewId": "6a8ca465-a279-4a4e-af6e-1d6b6991025a",
+    "Rating": 5,
+    "Comment": "Jakoooooo mi se svidja",
+    "IsPublic": false,
+    "IsApproved": true,
+    "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "7",
+    "ReviewId": "3562dcef-98d2-409a-b1bf-7c7c0c86de5e",
+    "Rating": 5,
+    "Comment": "Top je",
+    "IsPublic": true,
+    "IsApproved": true,
+    "AuthorId": "d954a489-c60f-42d7-8725-c0af1ad75d52",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "8",
+    "ReviewId": "8cff22ef-9852-42fc-a33a-8a3c3c52f452",
+    "Rating": 4,
+    "Comment": "Neki primer recenzije",
+    "IsPublic": false,
+    "IsApproved": true,
+    "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "9",
+    "ReviewId": "0c260dc6-de34-42a5-ad3f-9e79bfff6b2c",
+    "Rating": 3,
+    "Comment": "Neki primer recenzije",
+    "IsPublic": false,
+    "IsApproved": true,
+    "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "10",
+    "ReviewId": "5f3e3b9b-b477-4791-b599-a92fa6a09880",
+    "Rating": 5,
+    "Comment": "Probaaa",
+    "IsPublic": false,
+    "IsApproved": true,
+    "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
+    "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  }
+]

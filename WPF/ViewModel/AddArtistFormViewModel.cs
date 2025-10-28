@@ -72,7 +72,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         private string _content;
         public string Content { get => _content; set { _content = value; OnPropertyChanged(nameof(Content)); } }
 
-        private int _selectedRating = 5; // default is 1
+        private int _selectedRating = 3; // default is 3
         public int SelectedRating
         {
             get => _selectedRating;
