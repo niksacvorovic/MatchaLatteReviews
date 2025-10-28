@@ -8,7 +8,7 @@
         Title="ManageArtistsPage" Height="450" Width="800">
     <Window.Resources>
         <Style x:Key="HoverButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="#1F2632"/>
+            <Setter Property="Background" Value="Black"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Width" Value="150"/>
@@ -172,7 +172,7 @@
 
         <!-- Toolbar -->
         <DockPanel Grid.Row="0" Margin="20,16,20,0">
-            <TextBlock Text="Artists" Style="{StaticResource SectionHeader}" Foreground="#0F141B" DockPanel.Dock="Left" Margin="0,0,16,0"/>
+            <TextBlock Text="Artists" Style="{StaticResource SectionHeader}" Foreground="Black" DockPanel.Dock="Left" Margin="0,0,16,0"/>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" HorizontalAlignment="Right">
                 <Button Style="{StaticResource HoverButtonStyle}" Content="Add artist"
                         Command="{Binding AddNewArtistCommand}"/>
