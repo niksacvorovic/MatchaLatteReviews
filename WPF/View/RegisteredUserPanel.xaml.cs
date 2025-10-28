@@ -1,5 +1,4 @@
-﻿using MatchaLatteReviews.WPF.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,19 +11,25 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MatchaLatteReviews.DependencyInjection;
+using MatchaLatteReviews.Stores;
+using MatchaLatteReviews.WPF.ViewModel;
 
 namespace MatchaLatteReviews.WPF.View
 {
     public partial class RegisteredUserPanel : Window
     {
+        private readonly UserStore _userStore;
         public RegisteredUserPanel()
         {
             InitializeComponent();
+            _userStore = Injector.CreateInstance<UserStore>();
             DataContext = new MainPageViewModel();
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
+            _userStore.LogOut();
             MainPage mainPage = new MainPage();
             mainPage.Show();
             this.Close();

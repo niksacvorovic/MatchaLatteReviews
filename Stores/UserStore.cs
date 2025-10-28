@@ -10,5 +10,10 @@ namespace MatchaLatteReviews.Stores
         {
             CurrentUser = user;
         }
+
+        public void LogOut()
+        {
+            CurrentUser = null;
+        }
     }
 }
