@@ -23,5 +23,6 @@ namespace MatchaLatteReviews.Domain.Model
             Name = name;
         }
 
+        public override String ToString() => Name;
     }
 }

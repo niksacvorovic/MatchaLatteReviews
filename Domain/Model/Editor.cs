@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace MatchaLatteReviews.Domain.Model
 {
-    internal class Editor : User
+    public class Editor : User
     {
         private List<string> articleIds;
         private List<string> taskListIds;

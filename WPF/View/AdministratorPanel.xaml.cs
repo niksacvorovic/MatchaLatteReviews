@@ -45,7 +45,20 @@ namespace MatchaLatteReviews.WPF.View
 
         private void AddToTaskList_Click(object sender, RoutedEventArgs e)
         {
+            TaskListUpdateForm taskListUpdateForm = new TaskListUpdateForm();
+            taskListUpdateForm.ShowDialog();
+        }
 
+        private void AddNewCountry_Click(object sender, RoutedEventArgs e)
+        {
+            AddCountryForm addCountryForm = new AddCountryForm();
+            addCountryForm.ShowDialog();
+        }
+
+        private void Artists_Click(object sender, RoutedEventArgs e)
+        {
+            ManageArtistsPage manageArtistsPage = new ManageArtistsPage();
+            manageArtistsPage.ShowDialog();
         }
     }
 }

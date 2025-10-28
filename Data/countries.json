@@ -1,0 +1,27 @@
+[
+  {
+    "$id": "1",
+    "Id": "7e849ebe-5bcf-4184-8339-3f48b9aa8263",
+    "Name": "United States"
+  },
+  {
+    "$id": "2",
+    "Id": "f73ec340-fa8b-4802-9c2e-8ac90527e15e",
+    "Name": "United Kingdom"
+  },
+  {
+    "$id": "3",
+    "Id": "b1e5c5b0-1e51-4482-83d6-fa8fda6569d2",
+    "Name": "France"
+  },
+  {
+    "$id": "4",
+    "Id": "2e187c9a-ed10-42d4-9a5d-70bbc7ea7979",
+    "Name": "South Korea"
+  },
+  {
+    "$id": "5",
+    "Id": "3b024430-c6bd-43f5-ab2d-a030d91cf4fa",
+    "Name": "Serbia"
+  }
+]

@@ -25,7 +25,6 @@ namespace MatchaLatteReviews.Domain.Model
 
         public string Id { get => id; set => id = value; }
         public string Title { get => title; set => title = value; }
-
         public string Image { get => image; set => image = value; }
         public int Rating { get => rating; set => rating = value; }
         public string Content { get => content; set => content = value; }
