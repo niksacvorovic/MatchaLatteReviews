@@ -162,6 +162,7 @@
     </Compile>
     <Compile Include="WPF\View\ArticlePage.xaml.cs">
       <DependentUpon>ArticlePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WPF\View\ArticleReviewsPage.xaml.cs">
       <DependentUpon>ArticleReviewsPage.xaml</DependentUpon>
     </Compile>
@@ -249,6 +250,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\ArticlePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WPF\View\ArticleReviewsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
