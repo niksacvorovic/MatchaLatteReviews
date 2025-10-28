@@ -140,6 +140,7 @@
     <Compile Include="WPF\ViewModel\EditArtistFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditorRegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
+    <Compile Include="WPF\ViewModel\ManageArtistsViewModel.cs" />
     <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\RelayCommand.cs" />
     <Compile Include="WPF\ViewModel\TaskListUpdateFormViewModel.cs" />
@@ -169,6 +170,9 @@
     </Compile>
     <Compile Include="WPF\View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\ManageArtistsPage.xaml.cs">
+      <DependentUpon>ManageArtistsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\RegisteredUserPanel.xaml.cs">
       <DependentUpon>RegisteredUserPanel.xaml</DependentUpon>
@@ -207,7 +211,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="WPF\img\default_artist.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="WPF\img\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -247,6 +253,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\ManageArtistsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

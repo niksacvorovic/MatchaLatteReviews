@@ -21,10 +21,10 @@ namespace MatchaLatteReviews.WPF.View
     /// </summary>
     public partial class EditArtistForm : Window
     {
-        public EditArtistForm(string artistId, string editorId)
+        public EditArtistForm(string artistId)
         {
             InitializeComponent();
-            DataContext = new EditArtistFormViewModel(this.Close, artistId, editorId);
+            DataContext = new EditArtistFormViewModel(this.Close, artistId);
         }
 
         

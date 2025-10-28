@@ -54,5 +54,11 @@ namespace MatchaLatteReviews.WPF.View
             AddCountryForm addCountryForm = new AddCountryForm();
             addCountryForm.ShowDialog();
         }
+
+        private void Artists_Click(object sender, RoutedEventArgs e)
+        {
+            ManageArtistsPage manageArtistsPage = new ManageArtistsPage();
+            manageArtistsPage.ShowDialog();
+        }
     }
 }

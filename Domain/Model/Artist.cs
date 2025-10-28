@@ -20,18 +20,18 @@ namespace MatchaLatteReviews.Domain.Model
         public List<Country> Countries { get => countries; set => countries = value; }
 
         [JsonConstructor]
-        public Artist(string id, string title, int rating, string content, DateTime date, Status status, int views,
+        public Artist(string id, string title, string image, int rating, string content, DateTime date, Status status, int views,
             string editorId, List<string> reviewIds, List<string> genreIds, int debut, List<string> countryIds) : 
-            base(id, title, rating, content, date, status, views, editorId, reviewIds, genreIds)
+            base(id, title, image, rating, content, date, status, views, editorId, reviewIds, genreIds)
         {
             Debut = debut;
             CountryIds = countryIds;
             Countries = countries;
         }
 
-        public Artist(string title, int rating, string content, DateTime date, Status status, int views,
+        public Artist(string title, string image, int rating, string content, DateTime date, Status status, int views,
             string editorId, List<string> reviewIds, List<string> genreIds, int debut, List<string> countryIds) :
-            base(title, rating, content, date, status, views, editorId, reviewIds, genreIds)
+            base(title, image, rating, content, date, status, views, editorId, reviewIds, genreIds)
         {
             Debut = debut;
             CountryIds = countryIds;

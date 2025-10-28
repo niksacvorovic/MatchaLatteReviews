@@ -94,6 +94,7 @@
                     <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource HoverButtonStyle}" Content="Add new genre" Click="AddNewGenre_Click" Margin="0,0,10,5"/>
                     <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource HoverButtonStyle}" Content="Add to Task List" Click="AddToTaskList_Click" Margin="0,0,10,0"/>
                     <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource HoverButtonStyle}" Content="Add new country" Click="AddNewCountry_Click" Margin="0,0,10,0"/>
+                    <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource HoverButtonStyle}" Content="Artists" Click="Artists_Click" Margin="0,0,10,0"/>
                 </Grid>
 
             </Grid>

@@ -115,6 +115,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
             var artist = new Artist(
                 title: Title,
+                image: "",
                 rating: SelectedRating,
                 content: Content ?? string.Empty,
                 date: finalDate,

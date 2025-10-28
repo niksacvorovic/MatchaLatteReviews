@@ -22,19 +22,16 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
         private readonly Artist _model;
 
-        private readonly string _editorId;
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string p) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(p));
 
-        public EditArtistFormViewModel(Action close, string artistId, string editorId)
+        public EditArtistFormViewModel(Action close, string artistId)
         {
             _artistService = Injector.CreateInstance<ArtistService>();
             _countryService = Injector.CreateInstance<CountryService>();
             _genreService = Injector.CreateInstance<GenreService>();
             _close = close;
             _model = _artistService.GetById(artistId) ?? throw new ArgumentNullException("Couldn not find chosen artist");
-            _editorId = editorId;
 
             
             Countries = new ObservableCollection<SelectableCountry>(

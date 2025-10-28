@@ -49,6 +49,11 @@ namespace MatchaLatteReviews.Application.Services
             _articleRepository.DeleteById(id);
         }
 
+        public IEnumerable<Artist> GetAll()
+        {
+            return _articleRepository.GetAll().OfType<Artist>();
+        }
+
 
         public Artist GetById(string id)
             => _articleRepository.GetAll().OfType<Artist>().FirstOrDefault(a => a.Id == id);
