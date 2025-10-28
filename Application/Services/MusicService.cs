@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MatchaLatteReviews.Application.Services
 {
@@ -22,10 +23,12 @@ namespace MatchaLatteReviews.Application.Services
         public void Add(Music music)
         {
             var articles = _articleRepository.GetAll();
+            
             if (articles.FirstOrDefault(a => a.Id.Equals(music.Id)) != null)
             {
                 throw new InvalidOperationException("Music already exists!");
             }
+
             _articleRepository.Add(music);
         }
     }

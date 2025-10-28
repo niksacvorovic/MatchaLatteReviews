@@ -142,24 +142,21 @@
   {
     "$id": "7",
     "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 3,
-    "Length": 226,
+    "Type": 0,
+    "Length": 154,
     "Versions": [],
-    "ReleaseDate": "2025-10-03T00:00:00",
-    "Id": "12s6a4c1-c2c2-52ec-709b-c5cbb14418ab",
-    "Title": "The Fate of Ophelia",
-    "Image": "ophelia",
+    "ReleaseDate": "2024-07-24T00:00:00",
+    "Id": "id",
+    "Title": "nova pesma test",
+    "Image": "img",
     "Rating": 5,
-    "EditorId": "",
-    "Content": "'The Fate of Ophelia' is a song by the American singer-songwriter Taylor Swift. It was released as the lead single from her twelfth studio album, The Life of a Showgirl, on October 3, 2025, through Republic Records.",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
+    "EditorId": "editorid",
+    "Content": "content jje nebitan",
+    "Date": "2025-10-28T23:12:37.3413522+01:00",
+    "Status": 1,
     "Views": 0,
     "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328",
-      "abc67b42-930f-482c-a013-af8189ad0763"
-    ]
+    "GenreIds": []
   },
   {
     "$id": "8",
@@ -389,7 +386,7 @@
     "Id": "15c6g5c1-c3c2-52gc-759s-c5aab14418ab",
     "Title": "sweetener",
     "Image": "sweetener",
-    "Rating": 4,
+    "Rating": 6,
     "EditorId": "",
     "Content": "Sweetener is the fourth studio album by American singer-songwriter Ariana Grande. It was released on August 17, 2018, through Republic Records. Grande co-wrote all the songs on the album except for the first track, and its production was handled by Pharrell Williams, Charles Anderson, Hit-Boy, Ilya Salmanzadeh, and Max Martin, with guest features from Williams, Nicki Minaj and Missy Elliott.",
     "Date": "0001-01-01T00:00:00",
@@ -542,19 +539,43 @@
     "$id": "25",
     "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
     "Type": 3,
+    "Length": 226,
+    "Versions": [],
+    "ReleaseDate": "2025-10-03T00:00:00",
+    "Id": "12s6a4c1-c2c2-52ec-709b-c5cbb14418ab",
+    "Title": "The Fate of Ophelia",
+    "Image": "ophelia",
+    "Rating": 5,
+    "EditorId": "",
+    "Content": "'The Fate of Ophelia' is a song by the American singer-songwriter Taylor Swift. It was released as the lead single from her twelfth studio album, The Life of a Showgirl, on October 3, 2025, through Republic Records.",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 0,
+    "Views": 0,
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328",
+      "abc67b42-930f-482c-a013-af8189ad0763"
+    ]
+  },
+  {
+    "$id": "26",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 3,
     "Length": 154,
     "Versions": [],
-    "ReleaseDate": "0001-01-25T00:00:00",
-    "Id": "id",
-    "Title": "nova pesma test",
+    "ReleaseDate": "2025-11-07T00:00:00",
+    "Id": "b2c7959e-7bac-4650-884a-c23cbbe3093f",
+    "Title": "titleTest",
     "Image": "img",
-    "Rating": 4,
-    "EditorId": "editorid",
-    "Content": "content jje nebitan",
-    "Date": "2025-10-28T23:12:37.3413522+01:00",
+    "Rating": 3,
+    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
+    "Content": "asdadasdasdas",
+    "Date": "2025-10-29T00:36:03.6349939+01:00",
     "Status": 1,
     "Views": 0,
     "ReviewIds": [],
-    "GenreIds": []
+    "GenreIds": [
+      "d904e6cd-8466-4e71-81ea-f553d27acfce"
+    ]
   }
 ]

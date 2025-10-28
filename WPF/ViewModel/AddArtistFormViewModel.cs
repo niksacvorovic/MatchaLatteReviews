@@ -40,7 +40,6 @@ namespace MatchaLatteReviews.WPF.ViewModel
         private readonly string _editorId;
 
 
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string p) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(p));
 
