@@ -1,12 +1,13 @@
-﻿using MatchaLatteReviews.DependencyInjection;
-using MatchaLatteReviews.Domain.Model;
-using MatchaLatteReviews.Domain.Enums;
-using MatchaLatteReviews.Domain.RepositoryInterfaces;   
+﻿using MatchaLatteReviews.Application.Constants;
 using MatchaLatteReviews.Application.Services;          
+using MatchaLatteReviews.DependencyInjection;
+using MatchaLatteReviews.Domain.Enums;
+using MatchaLatteReviews.Domain.Model;
+using MatchaLatteReviews.Domain.RepositoryInterfaces;   
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-
 using TypeEnum = MatchaLatteReviews.Domain.Enums.Type;
 
 namespace MatchaLatteReviews.WPF.ViewModel
@@ -123,7 +124,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         {
             if (string.IsNullOrWhiteSpace(imageKey))
                 return "pack://application:,,,/WPF/img/logo.png";
-            return $"pack://application:,,,/WPF/img/covers/{imageKey}.jpg";
+            return Path.Combine(Constants.ProjectRoot, $"WPF/img/covers/{imageKey}.jpg");
         }
     }
 

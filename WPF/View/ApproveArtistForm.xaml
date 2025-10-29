@@ -38,6 +38,10 @@
                 <TextBox Grid.Row="0" Grid.Column="1" Margin="4"
                      Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
 
+                <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="Image:"></Label>
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="4"
+                         Text="{Binding Image, UpdateSourceTrigger=PropertyChanged}"/>
+
                 <Label  Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Content="Rating:"/>
                 <Grid Grid.Column="3" Grid.Row="0" Grid.RowSpan="3">
                     <Grid.RowDefinitions>
@@ -56,7 +60,7 @@
 
                 <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Debut (year):</Label>
                 <TextBox Grid.Row="2" Grid.Column="1" Margin="4"
-                     Text="{Binding DebutText, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                     Text="{Binding DebutText, UpdateSourceTrigger=PropertyChanged}"/>
             </Grid>
         </GroupBox>
 
@@ -64,7 +68,7 @@
         <GroupBox Header="Content" Grid.Row="1" Grid.ColumnSpan="2" Padding="10" Margin="0,0,0,10">
             <TextBox AcceptsReturn="True" VerticalScrollBarVisibility="Auto" MinHeight="80" TextWrapping="Wrap"
                  MaxHeight="80"
-                 Text="{Binding Content, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                 Text="{Binding Content, UpdateSourceTrigger=PropertyChanged}"/>
         </GroupBox>
 
         <!-- COUNTRIES and GENRES -->
