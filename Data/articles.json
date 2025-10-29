@@ -558,47 +558,5 @@
     "GenreIds": [
       "2ab4a244-95ca-4e98-beea-4dce3faea328"
     ]
-  },
-  {
-    "$id": "26",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 0,
-    "Length": 499,
-    "Versions": [],
-    "ReleaseDate": "2025-10-21T00:00:00",
-    "Id": "e2e7cb82-1da9-4412-861b-fa69987c03b5",
-    "Title": "Nesto proba",
-    "Image": null,
-    "Rating": 2,
-    "EditorId": "Vuk",
-    "Content": "jdskddjskjksds",
-    "Date": "2025-10-29T22:04:37.8410895+01:00",
-    "Status": 0,
-    "Views": 0,
-    "ReviewIds": [],
-    "GenreIds": [
-      "e559e571-e097-4d80-96f3-e10583b92160"
-    ]
-  },
-  {
-    "$id": "27",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 2,
-    "Length": 150,
-    "Versions": [],
-    "ReleaseDate": "2025-11-08T00:00:00",
-    "Id": "30cc6020-c521-49e1-b4da-e2bdfc38d2bc",
-    "Title": "probaTitle",
-    "Image": "test",
-    "Rating": 5,
-    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
-    "Content": "nije bitan trenutno",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328"
-    ]
   }
 ]
