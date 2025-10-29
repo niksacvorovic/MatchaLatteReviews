@@ -41,9 +41,16 @@
     "$id": "4",
     "$type": "MatchaLatteReviews.Domain.Model.Editor, MatchaLatteReviews",
     "ArticleIds": [
-      "ab38c844-fee5-409b-b116-79918efa0ccd"
+      "ab38c844-fee5-409b-b116-79918efa0ccd",
+      "dedd0dc2-b2f9-4626-93ce-2afe8abf1bdb",
+      "3a490d6b-25f1-405f-b135-2016714ccbe7",
+      "4460a953-1680-445e-a98f-17cdaeca0219",
+      "de00cb4c-488f-4006-9d4a-53418403fe5c"
     ],
-    "TaskListIds": [],
+    "TaskListIds": [
+      "9b3bba51-e658-48c2-b21b-1da8e7b9a8b9",
+      "60e86ef9-b098-4f92-a76f-c1fe649a83c2"
+    ],
     "GenresIds": [
       "2ab4a244-95ca-4e98-beea-4dce3faea328"
     ],
