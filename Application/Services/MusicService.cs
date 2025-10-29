@@ -43,6 +43,15 @@ namespace MatchaLatteReviews.Application.Services
             _articleRepository.Update(music);
         }
 
+        public void Delete(string id)
+        {
+            var articles = _articleRepository.GetAll();
+            if (articles.FirstOrDefault(a => a.Id.Equals(id)) == null)
+                throw new InvalidOperationException("Music does not exist!");
+
+            _articleRepository.DeleteById(id);
+        }
+
 
         public IEnumerable<Music> GetAll()
         {
