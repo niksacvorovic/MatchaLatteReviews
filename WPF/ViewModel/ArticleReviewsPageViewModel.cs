@@ -181,8 +181,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
         private ReviewItemVM MapReview(Review r)
         {
-            // Ako u bazi čuvaš 1..10, ovde mapiraj: int rf = Math.Max(1, Math.Min(5, (int)Math.Round(r.Rating / 2.0)));
-            // int rf = Math.Max(1, Math.Min(5, r.Rating));
+            
             int rf = r.Rating;
 
             var authorName = _registeredUserService.GetById(r.AuthorId).Username ?? r.AuthorId ?? "Anonymous";
