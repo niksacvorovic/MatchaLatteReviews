@@ -6,6 +6,7 @@ using MatchaLatteReviews.Stores;
 using MatchaLatteReviews.WPF.View;
 using System;
 using System.ComponentModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace MatchaLatteReviews.WPF.ViewModel
@@ -84,9 +85,10 @@ namespace MatchaLatteReviews.WPF.ViewModel
         }
         private void OpenEditorPanel()
         {
-            var editorPanel = new EditorPanel();
+            //MessageBox.Show(_userStore.GetCurrentUser().FirstName + " " + _userStore.GetCurrentUser().LastName + " logged in successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            var editorPanel = new EditorPanel(_userStore);
             editorPanel.Show();
-            _closeWindow();
+            //_closeWindow();
         }
         private void OpenRegisteredUserPanel()
         {

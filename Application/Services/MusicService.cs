@@ -1,7 +1,13 @@
 ﻿using MatchaLatteReviews.DependencyInjection;
 using MatchaLatteReviews.Domain.Model;
 using MatchaLatteReviews.Domain.RepositoryInterfaces;
+using MatchaLatteReviews.Repositories;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,6 +22,17 @@ namespace MatchaLatteReviews.Application.Services
             _articleRepository = Injector.CreateInstance<IArticleRepository>();
         }
 
+        public void Add(Music music)
+        {
+            var articles = _articleRepository.GetAll();
+            
+            if (articles.FirstOrDefault(a => a.Id.Equals(music.Id)) != null)
+            {
+                throw new InvalidOperationException("Music already exists!");
+            }
+
+            _articleRepository.Add(music);
+        }
         public void Update(Music music)
         {
             var articles = _articleRepository.GetAll();

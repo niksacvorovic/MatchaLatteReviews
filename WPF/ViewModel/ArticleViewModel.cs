@@ -80,7 +80,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
                 var ms = _articles.GetAll()
                                   .OfType<Music>()
-                                  .Where(m => string.Equals(m.Name, ar.Title, StringComparison.OrdinalIgnoreCase))
+                                  .Where(m => string.Equals(m.Title, ar.Title, StringComparison.OrdinalIgnoreCase))
                                   .OrderByDescending(m => m.ReleaseDate)
                                   .ToList();
 
@@ -94,7 +94,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
             {
                 IsMusic = true;
                 MusicType = m.Type.ToString();
-                MusicName = m.Name;
+                MusicName = m.Title;
                 ReleaseDate = m.ReleaseDate;
                 MusicLength = m.Length;
                 VersionsCount = m.Versions?.Count ?? 0;

@@ -1,5 +1,10 @@
-﻿using System;
+﻿using MatchaLatteReviews.Domain.Model;
+using MatchaLatteReviews.Domain.RepositoryInterfaces;
+using MatchaLatteReviews.Repositories;
+using MatchaLatteReviews.Stores;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,10 +23,54 @@ namespace MatchaLatteReviews.WPF.View
     /// Interaction logic for EditorPanel.xaml
     /// </summary>
     public partial class EditorPanel : Window
-    {
-        public EditorPanel()
+    {       
+        private UserStore _userStore;
+        private ArticleRepository _musicRepository;
+        public ObservableCollection<MusicItem> MusicItems { get; } = new ObservableCollection<MusicItem>();
+
+        public EditorPanel(UserStore e)
         {
-            InitializeComponent();
+            _userStore = e;
+            InitializeComponent(); // mora biti prvo
+            DataContext = e.GetCurrentUser();
         }
+
+
+        public void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            var user = DataContext as Editor; // ili Editor ako koristiš Editor
+            if (user != null)
+            {
+                MessageBox.Show($"Ime: {user.FirstName}\nPrezime: {user.LastName}\nUsername: {user.Username}");
+            }
+            else
+            {
+                MessageBox.Show("DataContext je null ili nije tipa User.");
+            }
+        }
+
+        public void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Close();
+        }
+
+        public void AddMusicButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddMusicForm addArticle = new AddMusicForm(_userStore.GetCurrentUser().UserId);
+            addArticle.Show();
+        }
+
+        public void AddArtistButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ova funkcionalnost još nije implementirana.");
+        }
+
+        public void AddPerformanceButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ova funkcionalnost još nije implementirana.");
+        }
+
     }
 }

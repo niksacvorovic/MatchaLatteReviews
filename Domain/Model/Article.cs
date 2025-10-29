@@ -27,11 +27,11 @@ namespace MatchaLatteReviews.Domain.Model
         public string Title { get => title; set => title = value; }
         public string Image { get => image; set => image = value; }
         public int Rating { get => rating; set => rating = value; }
+        public string EditorId { get => editorId; set => editorId = value; }
         public string Content { get => content; set => content = value; }
         public DateTime Date { get => date; set => date = value; }
         public Status Status { get => status; set => status = value; }
         public int Views { get => views; set => views = value; }
-        public string EditorId { get => editorId; set => editorId = value; }
         public List<string> ReviewIds { get => reviewIds; set => reviewIds = value; }
         public List<string> GenreIds { get => genreIds; set => genreIds = value; }
 
@@ -43,7 +43,6 @@ namespace MatchaLatteReviews.Domain.Model
 
         [JsonIgnore]
         internal Editor Author { get => author; set => author = value; }
-
         [JsonConstructor]
         public Article(string id, string title, string image, int rating, string content, DateTime date, Status status, int views, 
             string editorId, List<string> reviewIds, List<string> genreIds)

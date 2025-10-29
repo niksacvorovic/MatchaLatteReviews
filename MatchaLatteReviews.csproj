@@ -113,6 +113,7 @@
     <Compile Include="Domain\Model\Editor.cs" />
     <Compile Include="Domain\Model\Genre.cs" />
     <Compile Include="Domain\Model\Music.cs" />
+    <Compile Include="Domain\Model\MusicItem.cs" />
     <Compile Include="Domain\Model\RegisteredUser.cs" />
     <Compile Include="Domain\Model\Review.cs" />
     <Compile Include="Domain\Model\User.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="Domain\RepositoryInterfaces\IArticleRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\ICountryRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IGenreRepository.cs" />
+    <Compile Include="Domain\RepositoryInterfaces\IMusicRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IPersistenceContext.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IReviewRepository.cs" />
     <Compile Include="Domain\RepositoryInterfaces\IUserRepository.cs" />
@@ -138,6 +140,7 @@
     <Compile Include="WPF\ViewModel\AddArtistFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\AddCountryFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\AddGenreFormViewModel.cs" />
+    <Compile Include="WPF\ViewModel\AddMusicFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\ApproveArtistFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\ArticleViewModel.cs" />
     <Compile Include="WPF\ViewModel\ArticleReviewsPageViewModel.cs" />
@@ -158,6 +161,9 @@
     </Compile>
     <Compile Include="WPF\View\AddGenreForm.xaml.cs">
       <DependentUpon>AddGenreForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\AddMusicForm.xaml.cs">
+      <DependentUpon>AddMusicForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\AdministratorPanel.xaml.cs">
       <DependentUpon>AdministratorPanel.xaml</DependentUpon>
@@ -247,6 +253,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\AddGenreForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\AddMusicForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
