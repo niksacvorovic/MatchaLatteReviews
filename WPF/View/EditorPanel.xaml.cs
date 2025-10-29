@@ -52,7 +52,7 @@ namespace MatchaLatteReviews.WPF.View
                 MessageBox.Show("DataContext je null ili nije tipa User.");
             }
         }
-
+        
         private void RefreshPage()
         {
             if (DataContext is EditorPanelViewModel vm) vm.Load(); 
@@ -111,8 +111,8 @@ namespace MatchaLatteReviews.WPF.View
 
                     if (vm.SelectedTask is Music music)
                     {
-                        //ApproveMusicForm form = new ApproveMusicForm(music);
-                        //form.ShowDialog();
+                        ApproveMusicForm form = new ApproveMusicForm(music);
+                        form.ShowDialog();
                     }
                     RefreshPage();
                 }
