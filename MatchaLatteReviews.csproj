@@ -146,6 +146,7 @@
     <Compile Include="WPF\ViewModel\ArticleViewModel.cs" />
     <Compile Include="WPF\ViewModel\ArticleReviewsPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditArtistFormViewModel.cs" />
+    <Compile Include="WPF\ViewModel\EditMusicFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditorPanelViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditorRegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
@@ -185,6 +186,9 @@
     </Compile>
     <Compile Include="WPF\View\EditArtistForm.xaml.cs">
       <DependentUpon>EditArtistForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\EditMusicForm.xaml.cs">
+      <DependentUpon>EditMusicForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\EditorPanel.xaml.cs">
       <DependentUpon>EditorPanel.xaml</DependentUpon>
@@ -290,6 +294,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\EditArtistForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\EditMusicForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

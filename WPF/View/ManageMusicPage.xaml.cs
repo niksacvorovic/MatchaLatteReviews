@@ -42,10 +42,11 @@ namespace MatchaLatteReviews.WPF.View
 
         private void OpenEditDialog(MatchaLatteReviews.Domain.Model.Music music)
         {
-            //var win = new EditMusicForm(music.Id);
-            //win.Owner = this;
-            //win.ShowDialog();
+            var win = new EditMusicForm(music.Id);
+            win.Owner = this;
+            win.ShowDialog();
             _vm.Refresh();
         }
+        
     }
 }

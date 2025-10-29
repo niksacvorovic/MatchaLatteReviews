@@ -43,6 +43,13 @@ namespace MatchaLatteReviews.Application.Services
             _articleRepository.Update(music);
         }
 
+        public Music GetById(string id)
+        {
+            var articles = _articleRepository.GetAll();
+            var music = articles.OfType<Music>().FirstOrDefault(a => a.Id.Equals(id));
+            return music;
+        }
+
         public void Delete(string id)
         {
             var articles = _articleRepository.GetAll();
