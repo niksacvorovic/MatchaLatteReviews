@@ -12,7 +12,7 @@ using MatchaLatteReviews.Domain.Enums;
 
 namespace MatchaLatteReviews.WPF.ViewModel
 {
-    public class ReviewArticlesFormViewModel
+    public class ReviewArticlesFormViewModel : INotifyPropertyChanged
     {
         private readonly ArtistService _artistService;
         private readonly MusicService _musicService;
