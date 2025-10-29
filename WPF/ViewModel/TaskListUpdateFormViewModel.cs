@@ -18,7 +18,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
     public class TaskListUpdateFormViewModel : INotifyPropertyChanged
     {
         private readonly EditorService _editorService;
-        private readonly IGenreRepository _genreRepository;
+        private readonly GenreService _genreService;
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
@@ -27,12 +27,12 @@ namespace MatchaLatteReviews.WPF.ViewModel
         public TaskListUpdateFormViewModel(Action close)
         {
             _editorService = Injector.CreateInstance<EditorService>();
-            _genreRepository = Injector.CreateInstance<IGenreRepository>();
+            _genreService = Injector.CreateInstance<GenreService>();
             AddToTaskListCommand = new RelayCommand(_ => AddToTaskList());
             AddGenreCommand = new RelayCommand(_ => AddGenre());
             AvailableAuthors = new List<string>();
             Genres = new ObservableCollection<Genre>();
-            foreach(var genre in _genreRepository.GetAll()) Genres.Add(genre);
+            foreach(var genre in _genreService.GetAll()) Genres.Add(genre);
             _close = close;
         }
 
@@ -79,12 +79,12 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 Article newArticle;
                 if (IsArtist)
                 {
-                    newArticle = new Artist(Title, "", 0, "", DateTime.MinValue, Domain.Enums.Status.ForReview, 0, null, new List<string>(), SelectedGenres.Select(g => g.Id).ToList(), 0, new List<string>());
+                    newArticle = new Artist(Title, "", 0, "", DateTime.MinValue, Domain.Enums.Status.Assigned, 0, null, new List<string>(), SelectedGenres.Select(g => g.Id).ToList(), 0, new List<string>());
                     _editorService.AddToTaskList(SelectedAuthorUsername, newArticle);
                 }
                 else
                 {
-                    newArticle = new Music(Title, "", 0, "", DateTime.MinValue, Domain.Enums.Status.ForReview, 0, null, new List<string>(), SelectedGenres.Select(g => g.Id).ToList(), Domain.Enums.Type.Album, "", 0, new List<Domain.Model.Version>(), DateTime.MinValue);
+                    newArticle = new Music(Title, "", 0, "", DateTime.MinValue, Domain.Enums.Status.Assigned, 0, null, new List<string>(), SelectedGenres.Select(g => g.Id).ToList(), Domain.Enums.Type.Album, "", 0, new List<Domain.Model.Version>(), DateTime.MinValue);
                     _editorService.AddToTaskList(SelectedAuthorUsername, newArticle);
                 }
                 MessageHelper.ShowInfo("Article successfully added to task list!");

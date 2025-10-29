@@ -53,6 +53,7 @@ namespace MatchaLatteReviews.DependencyInjection
             _implementations[typeof(ArtistService)] = artistService;
             _implementations[typeof(MusicService)] = musicService;
             _implementations[typeof(ReviewService)] = reviewService;
+            _implementations[typeof(MusicService)] = musicService;
 
 
             _implementations[typeof(UserStore)] = userStore;

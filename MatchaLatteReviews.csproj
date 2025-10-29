@@ -141,6 +141,7 @@
     <Compile Include="WPF\ViewModel\AddCountryFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\AddGenreFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\AddMusicFormViewModel.cs" />
+    <Compile Include="WPF\ViewModel\ApproveArtistFormViewModel.cs" />
     <Compile Include="WPF\ViewModel\ArticleViewModel.cs" />
     <Compile Include="WPF\ViewModel\ArticleReviewsPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditArtistFormViewModel.cs" />
@@ -166,6 +167,9 @@
     </Compile>
     <Compile Include="WPF\View\AdministratorPanel.xaml.cs">
       <DependentUpon>AdministratorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\ApproveArtistForm.xaml.cs">
+      <DependentUpon>ApproveArtistForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\ArticlePage.xaml.cs">
       <DependentUpon>ArticlePage.xaml</DependentUpon>
@@ -257,6 +261,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\AdministratorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\ApproveArtistForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MatchaLatteReviews.Application.Services
 {
@@ -30,6 +32,21 @@ namespace MatchaLatteReviews.Application.Services
             }
 
             _articleRepository.Add(music);
+        }
+        public void Update(Music music)
+        {
+            var articles = _articleRepository.GetAll();
+            if (articles.FirstOrDefault(a => a.Id.Equals(music.Id)) == null)
+            {
+                throw new InvalidOperationException("Artist does not exist!");
+            }
+            _articleRepository.Update(music);
+        }
+
+
+        public IEnumerable<Music> GetAll()
+        {
+            return _articleRepository.GetAll().OfType<Music>();
         }
     }
 }

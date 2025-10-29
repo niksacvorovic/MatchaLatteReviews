@@ -68,6 +68,9 @@ namespace MatchaLatteReviews.WPF.ViewModel
         private string _title;
         public string Title { get => _title; set { _title = value; OnPropertyChanged(nameof(Title)); } }
 
+        private string _image;
+        public string Image { get => _image; set { _image = value; OnPropertyChanged(nameof(Image)); } }
+
         private string _content;
         public string Content { get => _content; set { _content = value; OnPropertyChanged(nameof(Content)); } }
 
@@ -114,7 +117,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
             var artist = new Artist(
                 title: Title,
-                image: "",
+                image: Image,
                 rating: SelectedRating,
                 content: Content ?? string.Empty,
                 date: finalDate,

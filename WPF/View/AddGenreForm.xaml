@@ -5,20 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatchaLatteReviews.WPF.View"
         mc:Ignorable="d"
-        Title="AddGenreForm" Height="300" Width="250">
+        Title="AddGenreForm" Height="350" Width="250">
+    <Window.Resources>
+        <Style x:Key="HoverButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Width" Value="180"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1A1A1A"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="10,0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="8,0"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+    </Window.Resources>
+
     <Grid Margin="5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="65"/>
         </Grid.RowDefinitions>
         <Label>Existing Genres:</Label>
         <ListBox Grid.Row="1" ItemsSource="{Binding AllGenres}"></ListBox>
-        <WrapPanel Grid.Row="2">
-            <Label>New Genre name:</Label>
-            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Width="80" VerticalAlignment="Center"></TextBox>
-        </WrapPanel>
-        <Button Grid.Row="3" Margin="5" Command="{Binding AddGenreCommand}">Add genre</Button>
+        <Label Grid.Row="2">New Genre name:</Label>
+        <TextBox Grid.Row="3" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"></TextBox>
+        <Button Grid.Row="4" Margin="5" Command="{Binding AddGenreCommand}" Style="{StaticResource HoverButtonStyle}">
+            Add country
+        </Button>
     </Grid>
+
 </Window>

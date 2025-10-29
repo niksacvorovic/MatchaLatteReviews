@@ -1,17 +1,18 @@
-﻿using MatchaLatteReviews.DependencyInjection;
+﻿using MatchaLatteReviews.Application.Constants;
+using MatchaLatteReviews.Application.Services;
+using MatchaLatteReviews.DependencyInjection;
+using MatchaLatteReviews.Domain.Enums;
 using MatchaLatteReviews.Domain.Model;
 using MatchaLatteReviews.Domain.RepositoryInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using MatchaLatteReviews.Application.Services;
-
-
 using TypeEnum = MatchaLatteReviews.Domain.Enums.Type;
 using VersionModel = MatchaLatteReviews.Domain.Model.Version;
 
@@ -99,7 +100,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
         private void LoadFront()
         {
-            var all = _articles.GetAll();
+            var all = _articles.GetAll().Where(a => a.Status == Status.Approved);
             var allList = all != null ? all.ToList() : new List<Article>();
 
             var music = allList.OfType<Music>().ToList();
@@ -227,7 +228,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         {
             if (string.IsNullOrWhiteSpace(imageKey))
                 return "pack://application:,,,/WPF/img/default_artist.jpg";
-            return $"pack://application:,,,/WPF/img/covers/{imageKey}.jpg";
+            return Path.Combine(Constants.ProjectRoot, $"WPF/img/covers/{imageKey}.jpg");
         }
 
         private static string Truncate(string s, int n)

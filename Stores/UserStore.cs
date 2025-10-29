@@ -14,5 +14,9 @@ namespace MatchaLatteReviews.Stores
         {
             return CurrentUser;
         }
+        public void LogOut()
+        {
+            CurrentUser = null;
+        }
     }
 }
