@@ -43,6 +43,7 @@ namespace MatchaLatteReviews.DependencyInjection
             var countryService = new CountryService();
             var artistService = new ArtistService();
             var reviewService = new ReviewService();
+            var musicService = new MusicService();
 
             _implementations[typeof(UserService)] = userService;
             _implementations[typeof(GenreService)] = genreService;
@@ -51,6 +52,7 @@ namespace MatchaLatteReviews.DependencyInjection
             _implementations[typeof(CountryService)] = countryService;
             _implementations[typeof(ArtistService)] = artistService;
             _implementations[typeof(ReviewService)] = reviewService;
+            _implementations[typeof(MusicService)] = musicService;
 
 
             _implementations[typeof(UserStore)] = userStore;

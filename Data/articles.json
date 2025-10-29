@@ -1,28 +1,6 @@
 [
   {
     "$id": "1",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 0,
-    "Name": "Charli XCX",
-    "Length": 0,
-    "Versions": [],
-    "ReleaseDate": "2024-06-07T00:00:00",
-    "Id": "78b6e4c3-c2c2-42ec-909b-c0aab14418ab",
-    "Title": "BRAT",
-    "Image": "brat",
-    "Rating": 0,
-    "Content": "",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328"
-    ]
-  },
-  {
-    "$id": "2",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 1964,
     "CountryIds": [
@@ -49,7 +27,7 @@
     ]
   },
   {
-    "$id": "3",
+    "$id": "2",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 1990,
     "CountryIds": [
@@ -75,168 +53,7 @@
     ]
   },
   {
-    "$id": "4",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 0,
-    "Name": "Ariana Grande",
-    "Length": 2126,
-    "Versions": [],
-    "ReleaseDate": "2024-03-08T00:00:00",
-    "Id": "86b6e4c2-c2c2-42ec-909b-c5aab14418ab",
-    "Title": "eternal sunshine",
-    "Image": "eternal",
-    "Rating": 5,
-    "Content": "Eternal Sunshine is the seventh studio album by American singer-songwriter Ariana Grande. It was released on March 8, 2024, by Republic Records. Written and produced by Grande, Max Martin, Ilya Salmanzadeh, and Oscar Görres amongst others, Eternal Sunshine is a pop and R&B record with dance, synth-pop and house influences, characterized by mid-tempo synthesizers, subtle guitar and string elements.",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "EditorId": "",
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328",
-      "48f372e5-0303-4d46-9b56-a42f3d14e6ef"
-    ]
-  },
-  {
-    "$id": "5",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 0,
-    "Name": "Taylor Swift",
-    "Length": 2859,
-    "Versions": [],
-    "ReleaseDate": "2025-10-03T00:00:00",
-    "Id": "45c6s4c1-c2c2-52ec-709b-c5aab14418ab",
-    "Title": "The Life of a Showgirl",
-    "Image": "showgirl",
-    "Rating": 5,
-    "Content": "The Life of a Showgirl is the twelfth studio album by the American singer-songwriter Taylor Swift. It was released on October 3, 2025, through Republic Records. Swift recorded it in Sweden with the producers Max Martin and Shellback, during the European leg of the Eras Tour in 2024.",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "EditorId": "",
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328"
-    ]
-  },
-  {
-    "$id": "6",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 0,
-    "Name": "Michael Jackson",
-    "Length": 3543,
-    "Versions": [],
-    "ReleaseDate": "1982-11-29T00:00:00",
-    "Id": "12s6a4c1-c2c2-52ec-709b-c9cbb14418ab",
-    "Title": "thriller",
-    "Image": null,
-    "Rating": 5,
-    "Content": "Thriller is the sixth studio album by the American singer and songwriter Michael Jackson, released on November 29, 1982, by Epic Records. It was produced by Quincy Jones, who previously worked with Jackson on his album Off the Wall (1979)",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "EditorId": "",
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328",
-      "e559e571-e097-4d80-96f3-e10583b92160",
-      "48f372e5-0303-4d46-9b56-a42f3d14e6ef"
-    ]
-  },
-  {
-    "$id": "7",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 3,
-    "Name": "Taylor Swift",
-    "Length": 226,
-    "Versions": [],
-    "ReleaseDate": "2025-10-03T00:00:00",
-    "Id": "12s6a4c1-c2c2-52ec-709b-c5cbb14418ab",
-    "Title": "The Fate of Ophelia",
-    "Image": "ophelia",
-    "Rating": 5,
-    "Content": "'The Fate of Ophelia' is a song by the American singer-songwriter Taylor Swift. It was released as the lead single from her twelfth studio album, The Life of a Showgirl, on October 3, 2025, through Republic Records.",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "EditorId": "",
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328",
-      "abc67b42-930f-482c-a013-af8189ad0763"
-    ]
-  },
-  {
-    "$id": "8",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 0,
-    "Name": "Taylor Swift",
-    "Length": 3809,
-    "Versions": [],
-    "ReleaseDate": "2020-07-24T00:00:00",
-    "Id": "45c7j4c1-c1c2-52ec-709b-c5asb154189ab",
-    "Title": "Folklore",
-    "Image": "folklore",
-    "Rating": 5,
-    "Content": "Folklore (stylized in all lowercase) is the eighth studio album by the American singer-songwriter Taylor Swift. It was surprise-released on July 24, 2020, through Republic Records. Conceived during quarantine in early 2020, amidst the COVID-19 pandemic, the album explores themes of escapism, nostalgia, and romanticism. Swift recorded her vocals in her Los Angeles home studio and worked virtually with the producers Aaron Dessner and Jack Antonoff, who operated from their studios in the Hudson Valley and New York City.",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "EditorId": "",
-    "ReviewIds": [],
-    "GenreIds": [
-      "f36e965c-31e8-46c3-9df8-250caad1a27c",
-      "2ab4a244-95ca-4e98-beea-4dce3faea328"
-    ]
-  },
-  {
-    "$id": "9",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 0,
-    "Name": "Taylor Swift",
-    "Length": 3680,
-    "Versions": [],
-    "ReleaseDate": "2020-12-11T00:00:00",
-    "Id": "45c6h5c1-c3c2-52gc-709s-c5aab14418ab",
-    "Title": "Evermore",
-    "Image": "evermore",
-    "Rating": 5,
-    "Content": "Evermore (stylized in all lowercase) is the ninth studio album by the American singer-songwriter Taylor Swift. It was surprise-released on December 11, 2020, through Republic Records. Swift conceived Evermore as a 'sister record' to its predecessor, Folklore, which had been released in July. She recorded Evermore mainly with Aaron Dessner at his Long Pond Studio in the Hudson Valley.",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "EditorId": "",
-    "ReviewIds": [],
-    "GenreIds": [
-      "f36e965c-31e8-46c3-9df8-250caad1a27c",
-      "2ab4a244-95ca-4e98-beea-4dce3faea328"
-    ]
-  },
-  {
-    "$id": "10",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 3,
-    "Name": "Taylor Swift",
-    "Length": 240,
-    "Versions": [],
-    "ReleaseDate": "2020-07-27T00:00:00",
-    "Id": "12s7a4c2-c2c1-52ic-759b-c5csb14218ab",
-    "Title": "Cardigan",
-    "Image": "cardigan",
-    "Rating": 5,
-    "Content": "'Cardigan' (stylized in all lowercase) is a song by the American singer-songwriter Taylor Swift and the lead single from her eighth studio album, Folklore (2020). Republic Records released the song on July 27, 2020. Written by Swift and its producer, Aaron Dessner, 'Cardigan' is a folk, soft rock, and indie rock ballad, with a stripped-down arrangement of a piano, drums, and violins.",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "EditorId": "",
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328",
-      "abc67b42-930f-482c-a013-af8189ad0763"
-    ]
-  },
-  {
-    "$id": "11",
+    "$id": "3",
     "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
     "Type": 3,
     "Name": "Taylor Swift",
@@ -259,7 +76,7 @@
     ]
   },
   {
-    "$id": "12",
+    "$id": "4",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 2019,
     "CountryIds": [
@@ -280,7 +97,7 @@
     ]
   },
   {
-    "$id": "13",
+    "$id": "5",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 2005,
     "CountryIds": [
@@ -302,7 +119,7 @@
     ]
   },
   {
-    "$id": "14",
+    "$id": "6",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 2000,
     "CountryIds": [
@@ -323,7 +140,7 @@
     ]
   },
   {
-    "$id": "15",
+    "$id": "7",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 2016,
     "CountryIds": [
@@ -348,27 +165,7 @@
     ]
   },
   {
-    "$id": "16",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 2,
-    "Name": "Taylor Swift",
-    "Length": 9543,
-    "Versions": [],
-    "ReleaseDate": "2023-03-17T00:00:00",
-    "Id": "12s7a5c2-c2b1-42bc-749b-c5bsb15218ab",
-    "Title": "The Eras Tour",
-    "Image": "erastour",
-    "Rating": 5,
-    "Content": "The Eras Tour was the sixth concert tour by the American singer-songwriter Taylor Swift. It began in Glendale, Arizona, United States, on March 17, 2023, and concluded in Vancouver, British Columbia, Canada, on December 8, 2024. Spanning 149 shows in 51 cities across five continents, the Eras Tour had a large cultural and socioeconomic impact. It became the highest-grossing tour of all time and the first to earn over $1 billion and $2 billion in revenue.",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "EditorId": "",
-    "ReviewIds": [],
-    "GenreIds": []
-  },
-  {
-    "$id": "17",
+    "$id": "8",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 2008,
     "CountryIds": [
@@ -390,7 +187,7 @@
     ]
   },
   {
-    "$id": "18",
+    "$id": "9",
     "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
     "Type": 0,
     "Name": "Ariana Grande",
@@ -413,7 +210,7 @@
     ]
   },
   {
-    "$id": "19",
+    "$id": "10",
     "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
     "Type": 3,
     "Name": "Ariana Grande",
@@ -436,7 +233,7 @@
     ]
   },
   {
-    "$id": "20",
+    "$id": "11",
     "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
     "Type": 3,
     "Name": "Jennie",
@@ -459,7 +256,7 @@
     ]
   },
   {
-    "$id": "21",
+    "$id": "12",
     "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
     "Type": 0,
     "Name": "Jennie",
@@ -483,7 +280,7 @@
     ]
   },
   {
-    "$id": "22",
+    "$id": "13",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 2016,
     "CountryIds": [
@@ -506,7 +303,7 @@
     ]
   },
   {
-    "$id": "23",
+    "$id": "14",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 2003,
     "CountryIds": [
@@ -530,7 +327,7 @@
     ]
   },
   {
-    "$id": "24",
+    "$id": "15",
     "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
     "Debut": 2003,
     "CountryIds": [
@@ -551,5 +348,208 @@
       "48f372e5-0303-4d46-9b56-a42f3d14e6ef",
       "94a5d97f-18f2-4c61-9e54-579bbca7f847"
     ]
+  },
+  {
+    "$id": "16",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 0,
+    "Name": "Charli XCX",
+    "Length": 0,
+    "Versions": [],
+    "ReleaseDate": "2024-06-07T00:00:00",
+    "Id": "78b6e4c3-c2c2-42ec-909b-c0aab14418ab",
+    "Title": "BRAT",
+    "Image": "brat",
+    "Rating": 0,
+    "Content": "",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ]
+  },
+  {
+    "$id": "17",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 3,
+    "Name": "Taylor Swift",
+    "Length": 226,
+    "Versions": [],
+    "ReleaseDate": "2025-10-03T00:00:00",
+    "Id": "12s6a4c1-c2c2-52ec-709b-c5cbb14418ab",
+    "Title": "The Fate of Ophelia",
+    "Image": "ophelia",
+    "Rating": 5,
+    "Content": "'The Fate of Ophelia' is a song by the American singer-songwriter Taylor Swift. It was released as the lead single from her twelfth studio album, The Life of a Showgirl, on October 3, 2025, through Republic Records.",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "",
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328",
+      "abc67b42-930f-482c-a013-af8189ad0763"
+    ]
+  },
+  {
+    "$id": "18",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 0,
+    "Name": "Taylor Swift",
+    "Length": 3809,
+    "Versions": [],
+    "ReleaseDate": "2020-07-24T00:00:00",
+    "Id": "45c7j4c1-c1c2-52ec-709b-c5asb154189ab",
+    "Title": "Folklore",
+    "Image": "folklore",
+    "Rating": 5,
+    "Content": "Folklore (stylized in all lowercase) is the eighth studio album by the American singer-songwriter Taylor Swift. It was surprise-released on July 24, 2020, through Republic Records. Conceived during quarantine in early 2020, amidst the COVID-19 pandemic, the album explores themes of escapism, nostalgia, and romanticism. Swift recorded her vocals in her Los Angeles home studio and worked virtually with the producers Aaron Dessner and Jack Antonoff, who operated from their studios in the Hudson Valley and New York City.",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "",
+    "ReviewIds": [],
+    "GenreIds": [
+      "f36e965c-31e8-46c3-9df8-250caad1a27c",
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ]
+  },
+  {
+    "$id": "19",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 0,
+    "Name": "Ariana Grande",
+    "Length": 2126,
+    "Versions": [],
+    "ReleaseDate": "2024-03-08T00:00:00",
+    "Id": "86b6e4c2-c2c2-42ec-909b-c5aab14418ab",
+    "Title": "eternal sunshine",
+    "Image": "eternal",
+    "Rating": 5,
+    "Content": "Eternal Sunshine is the seventh studio album by American singer-songwriter Ariana Grande. It was released on March 8, 2024, by Republic Records. Written and produced by Grande, Max Martin, Ilya Salmanzadeh, and Oscar Görres amongst others, Eternal Sunshine is a pop and R&B record with dance, synth-pop and house influences, characterized by mid-tempo synthesizers, subtle guitar and string elements.",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "",
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328",
+      "48f372e5-0303-4d46-9b56-a42f3d14e6ef"
+    ]
+  },
+  {
+    "$id": "20",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 0,
+    "Name": "Taylor Swift",
+    "Length": 2859,
+    "Versions": [],
+    "ReleaseDate": "2025-10-03T00:00:00",
+    "Id": "45c6s4c1-c2c2-52ec-709b-c5aab14418ab",
+    "Title": "The Life of a Showgirl",
+    "Image": "showgirl",
+    "Rating": 5,
+    "Content": "The Life of a Showgirl is the twelfth studio album by the American singer-songwriter Taylor Swift. It was released on October 3, 2025, through Republic Records. Swift recorded it in Sweden with the producers Max Martin and Shellback, during the European leg of the Eras Tour in 2024.",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "",
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ]
+  },
+  {
+    "$id": "21",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 0,
+    "Name": "Michael Jackson",
+    "Length": 3543,
+    "Versions": [],
+    "ReleaseDate": "1982-11-29T00:00:00",
+    "Id": "12s6a4c1-c2c2-52ec-709b-c9cbb14418ab",
+    "Title": "thriller",
+    "Image": null,
+    "Rating": 5,
+    "Content": "Thriller is the sixth studio album by the American singer and songwriter Michael Jackson, released on November 29, 1982, by Epic Records. It was produced by Quincy Jones, who previously worked with Jackson on his album Off the Wall (1979)",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "",
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328",
+      "e559e571-e097-4d80-96f3-e10583b92160",
+      "48f372e5-0303-4d46-9b56-a42f3d14e6ef"
+    ]
+  },
+  {
+    "$id": "22",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 0,
+    "Name": "Taylor Swift",
+    "Length": 3680,
+    "Versions": [],
+    "ReleaseDate": "2020-12-11T00:00:00",
+    "Id": "45c6h5c1-c3c2-52gc-709s-c5aab14418ab",
+    "Title": "Evermore",
+    "Image": "evermore",
+    "Rating": 5,
+    "Content": "Evermore (stylized in all lowercase) is the ninth studio album by the American singer-songwriter Taylor Swift. It was surprise-released on December 11, 2020, through Republic Records. Swift conceived Evermore as a 'sister record' to its predecessor, Folklore, which had been released in July. She recorded Evermore mainly with Aaron Dessner at his Long Pond Studio in the Hudson Valley.",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "",
+    "ReviewIds": [],
+    "GenreIds": [
+      "f36e965c-31e8-46c3-9df8-250caad1a27c",
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ]
+  },
+  {
+    "$id": "23",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 3,
+    "Name": "Taylor Swift",
+    "Length": 240,
+    "Versions": [],
+    "ReleaseDate": "2020-07-27T00:00:00",
+    "Id": "12s7a4c2-c2c1-52ic-759b-c5csb14218ab",
+    "Title": "Cardigan",
+    "Image": "cardigan",
+    "Rating": 5,
+    "Content": "'Cardigan' (stylized in all lowercase) is a song by the American singer-songwriter Taylor Swift and the lead single from her eighth studio album, Folklore (2020). Republic Records released the song on July 27, 2020. Written by Swift and its producer, Aaron Dessner, 'Cardigan' is a folk, soft rock, and indie rock ballad, with a stripped-down arrangement of a piano, drums, and violins.",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "",
+    "ReviewIds": [],
+    "GenreIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328",
+      "abc67b42-930f-482c-a013-af8189ad0763"
+    ]
+  },
+  {
+    "$id": "24",
+    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
+    "Type": 2,
+    "Name": "Taylor Swift",
+    "Length": 9543,
+    "Versions": [],
+    "ReleaseDate": "2023-03-17T00:00:00",
+    "Id": "12s7a5c2-c2b1-42bc-749b-c5bsb15218ab",
+    "Title": "The Eras Tour",
+    "Image": "erastour",
+    "Rating": 5,
+    "Content": "The Eras Tour was the sixth concert tour by the American singer-songwriter Taylor Swift. It began in Glendale, Arizona, United States, on March 17, 2023, and concluded in Vancouver, British Columbia, Canada, on December 8, 2024. Spanning 149 shows in 51 cities across five continents, the Eras Tour had a large cultural and socioeconomic impact. It became the highest-grossing tour of all time and the first to earn over $1 billion and $2 billion in revenue.",
+    "Date": "0001-01-01T00:00:00",
+    "Status": 1,
+    "Views": 0,
+    "EditorId": "",
+    "ReviewIds": [],
+    "GenreIds": []
   }
 ]
