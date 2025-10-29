@@ -151,6 +151,7 @@
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\MainPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\ManageArtistsViewModel.cs" />
+    <Compile Include="WPF\ViewModel\ManageMusicPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\RegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\RelayCommand.cs" />
     <Compile Include="WPF\ViewModel\ReviewArticlesFormViewModel.cs" />
@@ -199,6 +200,9 @@
     </Compile>
     <Compile Include="WPF\View\ManageArtistsPage.xaml.cs">
       <DependentUpon>ManageArtistsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WPF\View\ManageMusicPage.xaml.cs">
+      <DependentUpon>ManageMusicPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPF\View\RegisteredUserPanel.xaml.cs">
       <DependentUpon>RegisteredUserPanel.xaml</DependentUpon>
@@ -306,6 +310,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WPF\View\ManageArtistsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\View\ManageMusicPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

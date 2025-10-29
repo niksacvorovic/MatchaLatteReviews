@@ -561,84 +561,23 @@
   },
   {
     "$id": "26",
-    "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
-    "Debut": 0,
-    "CountryIds": [],
-    "Id": "9b3bba51-e658-48c2-b21b-1da8e7b9a8b9",
-    "Title": "artistproba",
-    "Image": "",
-    "Rating": 0,
-    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
-    "Content": "",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 3,
-    "Views": 0,
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328"
-    ]
-  },
-  {
-    "$id": "27",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 4,
-    "Length": 100,
-    "Versions": [],
-    "ReleaseDate": "2025-11-08T00:00:00",
-    "Id": "4460a953-1680-445e-a98f-17cdaeca0219",
-    "Title": "title music",
-    "Image": "slikica",
-    "Rating": 5,
-    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
-    "Content": "contentn ije trenutno toliko bitan",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328"
-    ]
-  },
-  {
-    "$id": "28",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 2,
-    "Length": 250,
-    "Versions": [],
-    "ReleaseDate": "2026-01-01T00:00:00",
-    "Id": "de00cb4c-488f-4006-9d4a-53418403fe5c",
-    "Title": "Princeza Sirena",
-    "Image": "test",
-    "Rating": 2,
-    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
-    "Content": "content nije bita",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 0,
-    "Views": 0,
-    "ReviewIds": [],
-    "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328"
-    ]
-  },
-  {
-    "$id": "29",
     "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
     "Type": 0,
-    "Length": 0,
+    "Length": 499,
     "Versions": [],
-    "ReleaseDate": "0001-01-01T00:00:00",
-    "Id": "60e86ef9-b098-4f92-a76f-c1fe649a83c2",
-    "Title": "proba",
-    "Image": "",
-    "Rating": 0,
-    "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
-    "Content": "",
-    "Date": "0001-01-01T00:00:00",
-    "Status": 3,
+    "ReleaseDate": "2025-10-21T00:00:00",
+    "Id": "e2e7cb82-1da9-4412-861b-fa69987c03b5",
+    "Title": "Nesto proba",
+    "Image": null,
+    "Rating": 2,
+    "EditorId": "Vuk",
+    "Content": "jdskddjskjksds",
+    "Date": "2025-10-29T22:04:37.8410895+01:00",
+    "Status": 0,
     "Views": 0,
     "ReviewIds": [],
     "GenreIds": [
-      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+      "e559e571-e097-4d80-96f3-e10583b92160"
     ]
   }
 ]
