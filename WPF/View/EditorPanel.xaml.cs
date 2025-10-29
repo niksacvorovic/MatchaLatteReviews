@@ -69,12 +69,19 @@ namespace MatchaLatteReviews.WPF.View
         {
             AddMusicForm addArticle = new AddMusicForm(_userStore.GetCurrentUser().UserId);
             addArticle.Show();
+
+            
         }
 
         public void AddArtistButton_Click(object sender, RoutedEventArgs e)
         {
-            AddArtistForm addArtist = new AddArtistForm(_userStore.GetCurrentUser().UserId);
-            addArtist.Show();
+            //AddArtistForm addArtist = new AddArtistForm(_userStore.GetCurrentUser().UserId);
+            //addArtist.Show();
+            
+            var win = new AddArtistForm(_userStore.GetCurrentUser().UserId);
+            win.Owner = this;
+            win.ShowDialog();
+            
         }
 
         private void ViewArticle_Click(object sender, RoutedEventArgs e)

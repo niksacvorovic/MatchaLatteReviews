@@ -186,8 +186,8 @@
         <DockPanel Grid.Row="0" Margin="20,16,20,0">
             <TextBlock Text="Music" Style="{StaticResource SectionHeader}" DockPanel.Dock="Left"/>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" HorizontalAlignment="Right">
-                <Button Style="{StaticResource HoverButtonStyle}" Content="Add music"
-                        Command="{Binding AddNewMusicCommand}"/>
+                <!--<Button Style="{StaticResource HoverButtonStyle}" Content="Add music"
+                        Command="{Binding AddNewMusicCommand}"/>-->
                 <Button Style="{StaticResource HoverButtonStyle}" Content="Refresh" Margin="10,0,0,0"
                         Command="{Binding RefreshCommand}"/>
             </StackPanel>

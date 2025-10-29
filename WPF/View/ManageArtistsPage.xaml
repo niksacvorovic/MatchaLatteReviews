@@ -175,8 +175,8 @@
         <DockPanel Grid.Row="0" Margin="20,16,20,0">
             <TextBlock Text="Artists" Style="{StaticResource SectionHeader}" DockPanel.Dock="Left" Margin="0,0,16,0"/>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" HorizontalAlignment="Right">
-                <Button Style="{StaticResource HoverButtonStyle}" Content="Add artist"
-                        Command="{Binding AddNewArtistCommand}"/>
+                <!--<Button Style="{StaticResource HoverButtonStyle}" Content="Add artist"
+                        Command="{Binding AddNewArtistCommand}"/>-->
                 <Button Style="{StaticResource HoverButtonStyle}" Content="Refresh" Margin="10,0,0,0"
                         Command="{Binding RefreshCommand}"/>
             </StackPanel>
