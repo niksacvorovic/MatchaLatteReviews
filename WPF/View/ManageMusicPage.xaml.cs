@@ -34,7 +34,7 @@ namespace MatchaLatteReviews.WPF.View
         private void OpenAddDialog()
         {
             string editorId = "Vuk";
-            var win = new AddMusicForm(editorId); // pretpostavka da imaš ovaj form (analogno AddArtistForm)
+            var win = new AddMusicForm(editorId);
             win.Owner = this;
             win.ShowDialog();
             _vm.Refresh();
