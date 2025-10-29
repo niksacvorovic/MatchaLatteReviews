@@ -145,6 +145,7 @@
     <Compile Include="WPF\ViewModel\ArticleViewModel.cs" />
     <Compile Include="WPF\ViewModel\ArticleReviewsPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditArtistFormViewModel.cs" />
+    <Compile Include="WPF\ViewModel\EditorPanelViewModel.cs" />
     <Compile Include="WPF\ViewModel\EditorRegisterViewModel.cs" />
     <Compile Include="WPF\ViewModel\LoginPageViewModel.cs" />
     <Compile Include="WPF\ViewModel\MainPageViewModel.cs" />

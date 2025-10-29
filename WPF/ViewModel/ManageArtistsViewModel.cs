@@ -1,15 +1,17 @@
-﻿using System;
+﻿using MatchaLatteReviews.Application.Constants;
+using MatchaLatteReviews.Application.Services;
+using MatchaLatteReviews.Application.Utilities;
+using MatchaLatteReviews.DependencyInjection;
+using MatchaLatteReviews.Domain.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using MatchaLatteReviews.Application.Services;
-using MatchaLatteReviews.Application.Utilities;
-using MatchaLatteReviews.DependencyInjection;
-using MatchaLatteReviews.Domain.Model;
 
 namespace MatchaLatteReviews.WPF.ViewModel
 {
@@ -31,7 +33,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         private readonly Func<string, string> _coverByImage = imageKey =>
             string.IsNullOrWhiteSpace(imageKey)
                 ? "pack://application:,,,/WPF/img/default_artist.jpg"
-                : $"pack://application:,,,/WPF/img/covers/{imageKey}.jpg";
+                : Path.Combine(Constants.ProjectRoot, $"WPF/img/covers/{imageKey}.jpg");
 
         private readonly Action _openAdd;
         private readonly Action<Artist> _openEdit;

@@ -36,6 +36,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         private readonly ArtistService _artistService;
         private readonly CountryService _countryService;
         private readonly GenreService _genreService;
+        private readonly EditorService _editorService;
         private readonly Action _close;
         private readonly string _editorId;
 
@@ -48,6 +49,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
             _artistService = Injector.CreateInstance<ArtistService>();
             _countryService = Injector.CreateInstance<CountryService>();
             _genreService = Injector.CreateInstance<GenreService>();
+            _editorService = Injector.CreateInstance<EditorService>();
             _close = close;
             _editorId = editorId;
 
@@ -121,7 +123,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 rating: SelectedRating,
                 content: Content ?? string.Empty,
                 date: finalDate,
-                status: Domain.Enums.Status.Approved,
+                status: Domain.Enums.Status.ForReview,
                 views: 0,
                 editorId: _editorId,
                 reviewIds: reviewIds,
@@ -133,6 +135,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
             try
             {
                 _artistService.Add(artist);
+                _editorService.AddToArticles(_editorId, artist);
                 MessageHelper.ShowInfo($"Artist '{Title}' added!");
                 _close();
             }

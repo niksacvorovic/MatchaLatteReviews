@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MatchaLatteReviews.DependencyInjection;
+using MatchaLatteReviews.Domain.Enums;
 using MatchaLatteReviews.Domain.Model;
 using MatchaLatteReviews.Domain.RepositoryInterfaces;
 
@@ -57,6 +58,7 @@ namespace MatchaLatteReviews.Application.Services
         {
             return _articleRepository.GetAll()
                 .OfType<Artist>()
+                .Where(a => a.Status == Status.Approved)
                 .OrderByDescending(a => a.Rating)     
                 .ThenByDescending(a => a.Date)        
                 .Take(count)

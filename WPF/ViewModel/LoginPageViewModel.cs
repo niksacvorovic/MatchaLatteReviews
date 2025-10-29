@@ -86,7 +86,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         private void OpenEditorPanel()
         {
             //MessageBox.Show(_userStore.GetCurrentUser().FirstName + " " + _userStore.GetCurrentUser().LastName + " logged in successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-            var editorPanel = new EditorPanel(_userStore);
+            var editorPanel = new EditorPanel();
             editorPanel.Show();
             //_closeWindow();
         }

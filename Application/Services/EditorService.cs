@@ -30,6 +30,7 @@ namespace MatchaLatteReviews.Application.Services
             {
                 throw new InvalidOperationException("Username already exists.");
             }
+
             registeredEditor.Role = Domain.Enums.Role.Editor;
             _userRepository.Add(registeredEditor);
         }
@@ -44,7 +45,33 @@ namespace MatchaLatteReviews.Application.Services
             Editor assignedEditor = (Editor)_userRepository.GetByUsername(username);
             article.EditorId = assignedEditor.UserId;
             _articleRepository.Add(article);
-            assignedEditor.ArticleIds.Add(article.Id);
+            assignedEditor.TaskListIds.Add(article.Id);
+            _userRepository.Update(assignedEditor);
+        }
+
+        public void FinishTask(string editorId, Article article)
+        {
+            Editor author = (Editor)_userRepository.GetById(editorId);
+            author.TaskListIds.Remove(article.Id);
+            author.ArticleIds.Add(article.Id);
+            _userRepository.Update(author);
+        }
+
+        public void AddToArticles(string editorId, Article article)
+        {
+            Editor author = (Editor)_userRepository.GetById(editorId);
+            author.ArticleIds.Add(article.Id);
+            _userRepository.Update(author);
+        }
+
+        public Editor Get(string editorId)
+        {
+            Editor editor = (Editor)_userRepository.GetById(editorId);
+            editor.TaskList.Clear();
+            editor.Articles.Clear();
+            foreach(var id in editor.TaskListIds) editor.TaskList.Add(_articleRepository.GetById(id));
+            foreach(var id in editor.ArticleIds) editor.Articles.Add(_articleRepository.GetById(id));
+            return editor;
         }
 
         public List<string> GetEditorsForGenre(Genre genre)
@@ -53,7 +80,7 @@ namespace MatchaLatteReviews.Application.Services
             List<string> usernames = new List<string>();
             foreach (Editor editor in allEditors)
             {
-                if(editor.GenresIds.Contains(genre.Name)) usernames.Add(editor.Username);
+                if(editor.GenresIds.Contains(genre.Id)) usernames.Add(editor.Username);
             }
             return usernames;
         }

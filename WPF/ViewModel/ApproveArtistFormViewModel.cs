@@ -18,6 +18,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         private readonly ArtistService _artistService;
         private readonly CountryService _countryService;
         private readonly GenreService _genreService;
+        private readonly EditorService _editorService;
         private readonly Action _close;
 
         private readonly Artist _model;
@@ -30,6 +31,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
             _artistService = Injector.CreateInstance<ArtistService>();
             _countryService = Injector.CreateInstance<CountryService>();
             _genreService = Injector.CreateInstance<GenreService>();
+            _editorService = Injector.CreateInstance<EditorService>();
             _close = close;
             _model = artist;
 
@@ -98,13 +100,13 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 _model.Debut = debutYear;
                 _model.CountryIds = selectedCountryIds;
                 _model.GenreIds = selectedGenreIds;
-                _model.Status = Domain.Enums.Status.Approved; // approved
+                _model.Status = Domain.Enums.Status.ForReview; 
 
                 // Validate who is changing
                 // if (_model.EditorId != _editorId) { MessageHelper.ShowError("You cannot edit this artist."); return; }
 
                 _artistService.Update(_model);
-
+                _editorService.FinishTask(_model.EditorId, _model);
                 MessageHelper.ShowInfo($"Artist '{_model.Title}' approved.");
                 _close();
             }

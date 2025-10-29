@@ -32,6 +32,9 @@ namespace MatchaLatteReviews.Domain.Model
             ArticleIds = articleIds;
             TaskListIds = taskListIds;
             GenresIds = genreIds;
+            Articles = new List<Article>();
+            TaskList = new List<Article>();
+            Genres = new List<Genre>();
         }
 
         public Editor(string username, string password, string firstName, string lastName, bool isPublic, Role role, List<string> articleIds, List<string> taskListIds, List<string> genreIds)
@@ -40,6 +43,9 @@ namespace MatchaLatteReviews.Domain.Model
             ArticleIds = articleIds;
             TaskListIds = taskListIds;
             GenresIds = genreIds;
+            Articles = new List<Article>();
+            TaskList = new List<Article>();
+            Genres = new List<Genre>();
         }
     }
 }

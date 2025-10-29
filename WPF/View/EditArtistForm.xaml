@@ -38,6 +38,10 @@
                 <TextBox Grid.Row="0" Grid.Column="1" Margin="4"
                          Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"/>
 
+                <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="Image:"></Label>
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="4"
+                         Text="{Binding Image, UpdateSourceTrigger=PropertyChanged}"/>
+
                 <Label  Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Content="Rating:"/>
                 <Grid Grid.Column="3" Grid.Row="0" Grid.RowSpan="3">
                     <Grid.RowDefinitions>

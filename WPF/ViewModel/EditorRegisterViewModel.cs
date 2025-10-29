@@ -14,7 +14,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
     internal class EditorRegisterViewModel : INotifyPropertyChanged
     {
         private readonly EditorService _editorService;
-        private readonly IGenreRepository _genreRepository;
+        private readonly GenreService _genreService;
         private readonly Action _close;
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -26,7 +26,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         public EditorRegisterViewModel(Action close)
         {
             _editorService = Injector.CreateInstance<EditorService>();
-            _genreRepository = Injector.CreateInstance<IGenreRepository>();
+            _genreService = Injector.CreateInstance<GenreService>();
             _close = close;
 
             RegisterCommand = new RelayCommand(_ => RegisterEditor());
@@ -37,7 +37,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         
         private void LoadGenres()
         {
-            var genres = _genreRepository.GetAll().ToList();
+            var genres = _genreService.GetAll().ToList();
             Genres = new ObservableCollection<GenreSelectionViewModel>(
                 genres.Select(g => new GenreSelectionViewModel(g))
             );
@@ -95,7 +95,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
                     Domain.Enums.Role.Editor,
                     new System.Collections.Generic.List<string>(),
                     new System.Collections.Generic.List<string>(),
-                    selectedGenres.Select(g => g.Name).ToList() 
+                    selectedGenres.Select(g => g.Id).ToList() 
                 );
 
                 _editorService.Register(registeredEditor);

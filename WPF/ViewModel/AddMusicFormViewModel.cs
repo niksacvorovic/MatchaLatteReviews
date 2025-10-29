@@ -22,6 +22,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
     {
         private readonly MusicService _musicService;
         private readonly GenreService _genreService;
+        private readonly EditorService _editorService;
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -33,6 +34,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         {
             _musicService = Injector.CreateInstance<MusicService>();
             _genreService = Injector.CreateInstance<GenreService>();
+            _editorService = Injector.CreateInstance<EditorService>();
 
             Genres = new ObservableCollection<SelectableGenre>(
                 _genreService.GetAll().Select(g => new SelectableGenre(g))
@@ -71,6 +73,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
         private void AddMusic()
         {
             Title = this.Title;
+            ImageName = this.ImageName;
             Content = this.Content;
             Rating = this.Rating;
             ReleaseDate = this.ReleaseDate;
@@ -102,12 +105,13 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 ReleaseDate = DateTime.Now;
             }
 
-            Music newMusic = new Music(Title, ImageName, Rating, Content, DateTime.Now, Domain.Enums.Status.Approved, 0,
+            Music newMusic = new Music(Title, ImageName, Rating, Content, DateTime.Now, Domain.Enums.Status.ForReview, 0,
                 EditorId, new List<string>(), selectedGenreIds, type, "name", Length,
                 new List<MatchaLatteReviews.Domain.Model.Version>(), ReleaseDate ?? DateTime.Now);
             try
             {
                 _musicService.Add(newMusic);
+                _editorService.AddToArticles(EditorId, newMusic);
                 MessageHelper.ShowInfo($"{newMusic.Title} added!");
                 _close();
             }

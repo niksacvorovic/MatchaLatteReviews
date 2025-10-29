@@ -56,7 +56,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
                 return;
             }
 
-            if (SelectedGenres.Any(g => g.Name == SelectedGenre.Name))
+            if (SelectedGenres.Any(g => g.Id == SelectedGenre.Id))
             {
                 MessageHelper.ShowInfo("That genre is already added.");
                 return;
@@ -64,6 +64,7 @@ namespace MatchaLatteReviews.WPF.ViewModel
 
             SelectedGenres.Add(SelectedGenre);
             AvailableAuthors.AddRange(_editorService.GetEditorsForGenre(SelectedGenre));
+            AvailableAuthors = AvailableAuthors.Distinct().ToList();
             OnPropertyChanged(nameof(SelectedGenres));
             OnPropertyChanged(nameof(AvailableAuthors));
         }

@@ -16,6 +16,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MatchaLatteReviews.Application.Services;
+using MatchaLatteReviews.Application.Utilities;
+using MatchaLatteReviews.DependencyInjection;
+using MatchaLatteReviews.WPF.ViewModel;
 
 namespace MatchaLatteReviews.WPF.View
 {
@@ -24,15 +28,15 @@ namespace MatchaLatteReviews.WPF.View
     /// </summary>
     public partial class EditorPanel : Window
     {       
-        private UserStore _userStore;
-        private ArticleRepository _musicRepository;
-        public ObservableCollection<MusicItem> MusicItems { get; } = new ObservableCollection<MusicItem>();
+        private readonly UserStore _userStore;
 
-        public EditorPanel(UserStore e)
+        public EditorPanel()
         {
-            _userStore = e;
-            InitializeComponent(); // mora biti prvo
-            DataContext = e.GetCurrentUser();
+            _userStore = Injector.CreateInstance<UserStore>();
+            
+            InitializeComponent();
+            DataContext = new EditorPanelViewModel(_userStore.CurrentUser);
+            RefreshPage();
         }
 
 
@@ -47,6 +51,11 @@ namespace MatchaLatteReviews.WPF.View
             {
                 MessageBox.Show("DataContext je null ili nije tipa User.");
             }
+        }
+
+        private void RefreshPage()
+        {
+            if (DataContext is EditorPanelViewModel vm) vm.Load(); 
         }
 
         public void LogoutButton_Click(object sender, RoutedEventArgs e)
@@ -64,13 +73,46 @@ namespace MatchaLatteReviews.WPF.View
 
         public void AddArtistButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Ova funkcionalnost još nije implementirana.");
+            AddArtistForm addArtist = new AddArtistForm(_userStore.GetCurrentUser().UserId);
+            addArtist.Show();
         }
 
-        public void AddPerformanceButton_Click(object sender, RoutedEventArgs e)
+        private void ViewArticle_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Ova funkcionalnost još nije implementirana.");
+            if (DataContext is EditorPanelViewModel vm)
+                if (vm.SelectedAuthoredArticle != null)
+                {
+                    ArticlePage articlePage = new ArticlePage(vm.SelectedAuthoredArticle);
+                    articlePage.ShowDialog();
+                }
+                else
+                {
+                    MessageHelper.ShowInfo("Select an authored article to display it!");
+                }
         }
 
+        private void WriteArticle_Click(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is EditorPanelViewModel vm)
+                if (vm.SelectedTask != null)
+                {
+                    if (vm.SelectedTask is Artist artist)
+                    {
+                        ApproveArtistForm form = new ApproveArtistForm(artist);
+                        form.ShowDialog();
+                    }
+
+                    if (vm.SelectedTask is Music music)
+                    {
+                        //ApproveMusicForm form = new ApproveMusicForm(music);
+                        //form.ShowDialog();
+                    }
+                    RefreshPage();
+                }
+                else
+                {
+                    MessageHelper.ShowInfo("Select an article from the task list!");
+                }
+        }
     }
 }

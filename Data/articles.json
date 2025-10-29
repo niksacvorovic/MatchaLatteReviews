@@ -540,24 +540,23 @@
   },
   {
     "$id": "25",
-    "$type": "MatchaLatteReviews.Domain.Model.Music, MatchaLatteReviews",
-    "Type": 1,
-    "Length": 1514,
-    "Versions": [],
-    "ReleaseDate": "2025-11-08T00:00:00",
-    "Id": "d7c4bb6e-36fb-47d3-bfdf-71efe30d82e6",
-    "Title": "proba",
-    "Image": "image",
+    "$type": "MatchaLatteReviews.Domain.Model.Artist, MatchaLatteReviews",
+    "Debut": 2007,
+    "CountryIds": [
+      "7e849ebe-5bcf-4184-8339-3f48b9aa8263"
+    ],
+    "Id": "ab38c844-fee5-409b-b116-79918efa0ccd",
+    "Title": "Lady Gaga",
+    "Image": "ladygaga",
     "Rating": 5,
     "EditorId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
-    "Content": "neka content sada nista ne znaci",
-    "Date": "2025-10-29T15:21:13.0566727+01:00",
+    "Content": "Stefani Joanne Angelina Germanotta[a] (born March 28, 1986), known professionally as Lady Gaga, is an American singer, songwriter, and actress. Known for her image reinventions and versatility across the entertainment industry, she is an influential figure in popular music. With estimated sales of 124 million records, she is one of the best-selling music artists of all time. Publications such as Billboard and Rolling Stone have ranked her among the greatest artists in history.",
+    "Date": "0001-01-01T00:00:00",
     "Status": 1,
     "Views": 0,
     "ReviewIds": [],
     "GenreIds": [
-      "87bbf664-040b-45d6-bbe9-0c3706cf13d6",
-      "0eec2070-7a50-49ca-bf45-42104fc0e88b"
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
     ]
   }
 ]

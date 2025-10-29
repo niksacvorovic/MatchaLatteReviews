@@ -11,41 +11,6 @@
   },
   {
     "$id": "2",
-    "$type": "MatchaLatteReviews.Domain.Model.Editor, MatchaLatteReviews",
-    "ArticleIds": [],
-    "TaskListIds": [],
-    "GenresIds": [
-      "Pop"
-    ],
-    "UserId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
-    "Username": "marko_m",
-    "Password": "Marko123",
-    "FirstName": "Marko",
-    "LastName": "Miloševic",
-    "IsPublic": true,
-    "Role": 0
-  },
-  {
-    "$id": "3",
-    "$type": "MatchaLatteReviews.Domain.Model.Editor, MatchaLatteReviews",
-    "ArticleIds": [],
-    "TaskListIds": [],
-    "GenresIds": [
-      "Pop"
-    ],
-    "Articles": null,
-    "TaskList": null,
-    "Genres": null,
-    "UserId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
-    "Username": "editor",
-    "Password": "pass123",
-    "FirstName": "Jovan",
-    "LastName": "Stricevic",
-    "IsPublic": true,
-    "Role": 0
-  },
-  {
-    "$id": "4",
     "$type": "MatchaLatteReviews.Domain.Model.RegisteredUser, MatchaLatteReviews",
     "Premium": false,
     "ReviewIds": [],
@@ -59,7 +24,7 @@
     "Role": 1
   },
   {
-    "$id": "5",
+    "$id": "3",
     "$type": "MatchaLatteReviews.Domain.Model.RegisteredUser, MatchaLatteReviews",
     "Premium": false,
     "ReviewIds": [],
@@ -71,5 +36,23 @@
     "LastName": "Đorđević",
     "IsPublic": false,
     "Role": 1
+  },
+  {
+    "$id": "4",
+    "$type": "MatchaLatteReviews.Domain.Model.Editor, MatchaLatteReviews",
+    "ArticleIds": [
+      "ab38c844-fee5-409b-b116-79918efa0ccd"
+    ],
+    "TaskListIds": [],
+    "GenresIds": [
+      "2ab4a244-95ca-4e98-beea-4dce3faea328"
+    ],
+    "UserId": "a11c7427-0971-4ca5-9e16-bed9e818a205",
+    "Username": "marko_m",
+    "Password": "Marko123",
+    "FirstName": "Marko",
+    "LastName": "Miloševic",
+    "IsPublic": true,
+    "Role": 0
   }
 ]

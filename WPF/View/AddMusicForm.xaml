@@ -15,7 +15,7 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <!--Header-->
-        <Label Content="Add Musical Work Form" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Grid.Row="0"/>
+        <Label Content="Add Music Form" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Grid.Row="0"/>
         <!-- form -->
         <ScrollViewer VerticalScrollBarVisibility="Auto"
       Grid.Row="1"
@@ -85,7 +85,7 @@
 
 
                 <!--Save Button-->
-                <Grid Grid.Row="9">
+                <Grid Grid.Column="1" Grid.Row="9">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
