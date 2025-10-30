@@ -78,5 +78,25 @@
     "IsApproved": true,
     "AuthorId": "5475143f-bb3f-4a57-8a7d-d4f2c81e2c9b",
     "ArticleId": "55b6a3ac-5b1b-4e75-bd24-a4f78d42e707"
+  },
+  {
+    "$id": "9",
+    "ReviewId": "8b643a35-4471-4c0c-9a18-c3667b51f9fb",
+    "Rating": 4,
+    "Comment": "Wow",
+    "IsPublic": true,
+    "IsApproved": true,
+    "AuthorId": "d954a489-c60f-42d7-8725-c0af1ad75d52",
+    "ArticleId": "12s7a4c2-c2c1-52ic-759b-c5csb14218ab"
+  },
+  {
+    "$id": "10",
+    "ReviewId": "34ebb1c7-b0f7-448d-bb77-7bd84f226ca4",
+    "Rating": 4,
+    "Comment": "Cool",
+    "IsPublic": false,
+    "IsApproved": true,
+    "AuthorId": "d954a489-c60f-42d7-8725-c0af1ad75d52",
+    "ArticleId": "12s7a4c2-c2c1-52ic-759b-c5csb14218ab"
   }
 ]
